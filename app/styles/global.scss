@@ -1,0 +1,20 @@
+:root {
+  --color-primary: #ffcb74;
+  --color-black: #030712;
+  --color-off-white: #f5f5f5;
+  --color-white: #fafafa;
+  --color-slate-light: #f1f5f9;
+  --color-error: #dc2626;
+
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-dark: 0 4px 6px -1px rgb(0 0 0 / 0.15),
+    0 2px 4px -2px rgb(0 0 0 / 0.15);
+
+  --transition: 0.2s ease;
+
+  --header-height: 84px;
+}
+
+body {
+  background: var(--color-off-white);
+}
