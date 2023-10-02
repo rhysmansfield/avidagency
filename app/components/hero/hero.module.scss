@@ -4,10 +4,12 @@
   width: 100vw;
   min-height: 100vh;
   padding-top: calc(var(--header-height) + 16px);
+  padding-bottom: 48px;
 
   @media (min-width: 1024px) {
     height: 100vh;
     padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
