@@ -68,6 +68,7 @@
 }
 
 .button {
+  position: relative;
   font-size: 14px;
   font-weight: 600;
   background: var(--color-primary);
@@ -75,4 +76,41 @@
   border-radius: 8px;
   border: none;
   padding: 12px 16px;
+}
+
+.buttonState {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: var(--color-primary);
+  border-radius: 8px;
+}
+
+.formState {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--color-white);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+
+  svg {
+    fill: var(--color-white);
+    width: 16px;
+    aspect-ratio: 1;
+    margin-top: 3px;
+  }
+}
+
+.formStateError {
+  background: var(--color-error);
+}
+
+.formStateSuccess {
+  background: var(--color-success);
 }
