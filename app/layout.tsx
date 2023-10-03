@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   title: "Avid Media | Amplify, Visualise, Innovate, Deliver",
   description:
     "Avid Media is a digital agency based in Lancashire, UK. We specialise in creating bespoke digital solutions for small businesses.",
+  openGraph: {
+    title: "Avid Media | Amplify, Visualise, Innovate, Deliver",
+    description:
+      "Avid Media is a digital agency based in Lancashire, UK. We specialise in creating bespoke digital solutions for small businesses.",
+    url: "https://avidmedia.co.uk",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
