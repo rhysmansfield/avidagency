@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "next": "latest",
+    "nodemailer": "^6.9.5",
     "react": "latest",
     "react-dom": "latest",
     "sass": "^1.68.0"
   },
   "devDependencies": {
     "@types/node": "latest",
+    "@types/nodemailer": "^6.4.11",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "eslint": "latest",
