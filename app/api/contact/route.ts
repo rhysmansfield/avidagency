@@ -60,7 +60,7 @@ export async function POST(request: Request) {
     <h1>We have received your message!</h1>
     <p>We're just letting you know that we've received your enquiry and we will be in touch shortly.</p>
     <h3>Your enquiry:</h3>
-    <p>Some test enquiry goes here</p>
+    <p>${message}</p>
     <p>Thanks,<br/>Avid Media Team</p>
   `;
 
