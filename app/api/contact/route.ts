@@ -76,19 +76,18 @@ export async function POST(request: Request) {
       throw new Error("Recaptcha validation failed");
     }
 
-    // Customer email
-    await sendEmail({
-      to: email,
-      subject: "We have received your message!",
-      html: externalBody,
-    });
-
-    // Internal email
-    await sendEmail({
-      to: "info@avidmedia.io",
-      subject: "avidmedia.io: New contact form enquiry",
-      html: internalBody,
-    });
+    await Promise.all([
+      sendEmail({
+        to: email,
+        subject: "We have received your message!",
+        html: externalBody,
+      }),
+      sendEmail({
+        to: "info@avidmedia.io",
+        subject: "avidmedia.io: New contact form enquiry",
+        html: internalBody,
+      }),
+    ]);
   } catch (error) {
     console.error(error);
     return NextResponse.json(
