@@ -14,7 +14,15 @@ export const metadata: Metadata = {
     title: "Avid Media | Amplify, Visualise, Innovate, Deliver",
     description:
       "Avid Media is a digital agency based in Lancashire, UK. We specialise in creating bespoke digital solutions for small businesses.",
-    url: "https://avidmedia.co.uk",
+    url: "https://avidmedia.io",
+    images: [
+      {
+        url: "https://avidmedia.io/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Avid Media",
+      },
+    ],
     type: "website",
   },
   metadataBase: new URL("https://avidmedia.io"),
