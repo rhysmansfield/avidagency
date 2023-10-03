@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     url: "https://avidmedia.co.uk",
     type: "website",
   },
+  metadataBase: new URL("https://avidmedia.io"),
 };
 
 export default function RootLayout({
