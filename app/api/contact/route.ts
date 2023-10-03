@@ -43,12 +43,20 @@ export async function POST(request: Request) {
     </ul>
   `;
 
+  const externalBody = `
+    <h1>We have received your message!</h1>
+    <p>We're just letting you know that we've received your enquiry and we will be in touch shortly.</p>
+    <h3>Your enquiry:</h3>
+    <p>Some test enquiry goes here</p>
+    <p>Thanks,<br/>Avid Media Team</p>
+  `;
+
   try {
     // Customer email
     await sendEmail({
       to: email,
       subject: "We have received your message!",
-      html: "<p>We will get back to you soon.</p>",
+      html: externalBody,
     });
 
     // Internal email
