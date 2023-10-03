@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { sendEmail } from "@app/utils/send-email";
 
 export async function POST(request: Request) {
-  const { name, email, message } = await request.json();
+  const { name, email, message, recaptcha } = await request.json();
 
   if (!name) {
     return NextResponse.json(
@@ -24,6 +24,19 @@ export async function POST(request: Request) {
       { status: 400 }
     );
   }
+
+  if (!recaptcha) {
+    return NextResponse.json(
+      { message: "Please ensure you have completed the recaptcha" },
+      { status: 400 }
+    );
+  }
+
+  var verificationUrl =
+    "https://www.google.com/recaptcha/api/siteverify?secret=" +
+    process.env.RECAPTCHA_PRIVATE_KEY +
+    "&response=" +
+    recaptcha;
 
   const internalBody = `
     <p>There has been a new contact form enquiry on the website</p>
@@ -52,6 +65,17 @@ export async function POST(request: Request) {
   `;
 
   try {
+    // Validate recaptcha
+    const response = await fetch(verificationUrl, {
+      method: "POST",
+    });
+
+    const data = await response.json();
+
+    if (!data.success) {
+      throw new Error("Recaptcha validation failed");
+    }
+
     // Customer email
     await sendEmail({
       to: email,

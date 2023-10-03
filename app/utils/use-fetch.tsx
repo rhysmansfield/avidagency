@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { useReCaptcha } from "next-recaptcha-v3";
 
 type FetchProps = {
   method?: "GET" | "POST";
   url: string;
-  body: object;
+  body: { [key: string]: any };
   headers?: RequestInit["headers"];
 };
 
@@ -11,6 +12,7 @@ export const useFetch = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [data, setData] = useState<{ [key: string]: any } | null>(null);
+  const { executeRecaptcha } = useReCaptcha();
 
   const perform = async ({
     method = "GET",
@@ -21,6 +23,9 @@ export const useFetch = () => {
     setLoading(true);
     setError(null);
     setData(null);
+
+    const token = await executeRecaptcha("form_submit");
+    body["recaptcha"] = token || "";
 
     try {
       const request = await fetch(url, {

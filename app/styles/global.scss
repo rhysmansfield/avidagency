@@ -19,3 +19,7 @@
 body {
   background: var(--color-off-white);
 }
+
+.grecaptcha-badge {
+  display: none !important;
+}

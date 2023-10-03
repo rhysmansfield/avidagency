@@ -1,6 +1,6 @@
-import { Header } from "@app/components/header/header";
-
 import type { Metadata } from "next";
+import { ReCaptchaProvider } from "next-recaptcha-v3";
+import { Header } from "@app/components/header/header";
 
 import { poppins } from "@app/fonts/poppins";
 import "@app/styles/reset.scss";
@@ -27,10 +27,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
-        <Header />
-        {children}
-      </body>
+      <ReCaptchaProvider reCaptchaKey={process.env.RECAPTCHA_PUBLIC_KEY}>
+        <body className={poppins.className}>
+          <Header />
+          {children}
+        </body>
+      </ReCaptchaProvider>
     </html>
   );
 }
