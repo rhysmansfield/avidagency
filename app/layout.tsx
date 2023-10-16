@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { ReCaptchaProvider } from "next-recaptcha-v3";
-import { Header } from "@app/components/header/header";
 
-import { poppins } from "@app/fonts/poppins";
-import "@app/styles/reset.scss";
-import "@app/styles/global.scss";
+import { poppins } from "@/fonts/poppins";
+import "@/styles/reset.scss";
+import "@/styles/global.scss";
 
 export const metadata: Metadata = {
   title: "Avid Media | Amplify, Visualise, Innovate, Deliver",
@@ -35,12 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ReCaptchaProvider reCaptchaKey={process.env.RECAPTCHA_PUBLIC_KEY}>
-        <body className={poppins.className}>
-          <Header />
-          {children}
-        </body>
-      </ReCaptchaProvider>
+      <body className={poppins.className}>{children}</body>
     </html>
   );
 }
