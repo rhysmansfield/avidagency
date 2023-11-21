@@ -1,4 +1,14 @@
+@import "@/styles/mixins/_breakpoints.scss";
+
 :root {
   --c-brand-gold: #ffcb74;
+  --c-brand-gold-rgb: 255, 203, 116;
   --c-brand-black: #1a1a1a;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: map-get($breakpoints, "2xl");
+  padding: 0 1rem;
+  margin: 0 auto;
 }
