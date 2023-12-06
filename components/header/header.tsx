@@ -3,24 +3,21 @@ import { Logo } from "@/components/svg/logo/logo";
 import { classList } from "@/utils/class-list";
 
 import styles from "./header.module.scss";
+import { HeaderProps } from "./header.type";
 
-export const Header = () => (
+export const Header = ({ logoUrl, navItems }: HeaderProps) => (
   <header className={styles.root}>
     <div className={classList("wrapper", styles.wrapper)}>
-      <Link href="/">
+      <Link href={logoUrl}>
         <Logo className={styles.logo} />
       </Link>
       <nav>
         <ul className={styles["nav-list"]}>
-          <li className={styles["nav-item"]}>
-            <Link href="#about">About</Link>
-          </li>
-          <li className={styles["nav-item"]}>
-            <Link href="#services">Services</Link>
-          </li>
-          <li className={styles["nav-item"]}>
-            <Link href="#contact">Contact</Link>
-          </li>
+          {navItems.map(({ url, label }) => (
+            <li key={`nav-link-${label}`} className={styles["nav-item"]}>
+              <Link href={url}>{label}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>
