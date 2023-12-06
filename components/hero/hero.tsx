@@ -1,9 +1,8 @@
 "use client";
 
-import { TextSlideUp } from "@/components/animation/text-slide-up/text-slide-up";
-import { TextFadeIn } from "../animation/text-fade-in/text-fade-in";
-
 import styles from "./hero.module.scss";
+
+import { Animation } from "@/components/animation/animation";
 
 type HeroProps = {
   title: [string, string];
@@ -15,15 +14,19 @@ export const Hero = ({ title, text }: HeroProps) => {
     <section className={styles.root}>
       <div className="wrapper">
         <h1 className={styles.title}>
-          <TextSlideUp>{title[0]}</TextSlideUp>
-          <TextSlideUp delay={0.3} className={styles.highlight}>
+          <Animation animation="slide-up">{title[0]}</Animation>
+          <Animation
+            animation="slide-up"
+            delay={0.3}
+            className={styles.highlight}
+          >
             {title[1]}
-          </TextSlideUp>
+          </Animation>
         </h1>
 
-        <TextFadeIn delay={1} className={styles.text}>
+        <Animation animation="fade-in" delay={1} className={styles.text}>
           {text}
-        </TextFadeIn>
+        </Animation>
       </div>
     </section>
   );
