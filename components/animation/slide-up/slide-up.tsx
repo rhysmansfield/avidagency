@@ -4,6 +4,7 @@ import { MotionProps, TargetAndTransition, motion } from "framer-motion";
 import { AnimationComponentProps, MotionElementProps } from "../animation.type";
 
 import styles from "./slide-up.module.scss";
+import { classList } from "@/utils/class-list";
 
 export const SlideUp = ({
   element = motion.div,
@@ -20,6 +21,7 @@ export const SlideUp = ({
 
   const elementProps: MotionElementProps = {
     ...props,
+    className: undefined,
     initial: {
       y: "100%",
     },
@@ -43,7 +45,7 @@ export const SlideUp = ({
   }
 
   return (
-    <div className={styles.root}>
+    <div className={classList(styles.root, props?.className)}>
       {React.createElement(element, elementProps, children)}
     </div>
   );
