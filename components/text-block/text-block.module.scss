@@ -1,0 +1,24 @@
+.root {
+  background: var(--c-brand-black);
+  color: var(--c-neutral-white);
+  padding: 8.5rem 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.text {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.cta {
+  display: block;
+  margin-top: 2.5rem;
+}
