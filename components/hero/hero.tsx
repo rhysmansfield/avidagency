@@ -19,7 +19,12 @@ export const Hero = ({ title, text }: HeroProps) => (
         </Animation>
       </h1>
 
-      <Animation animation="fade-in" delay={1} className={styles.text}>
+      <Animation
+        element="p"
+        animation="fade-in"
+        delay={1}
+        className={styles.text}
+      >
         {text}
       </Animation>
     </div>

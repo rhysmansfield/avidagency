@@ -10,7 +10,7 @@ import {
 import { AnimationComponentProps, MotionElementProps } from "../animation.type";
 
 export const FadeIn = ({
-  element = motion.p,
+  element = motion.div,
   children,
   delay,
   duration = 0.6,
