@@ -11,7 +11,6 @@ export type AnimationProps = MotionElementProps & {
   animation: AnimationType;
   children: React.ReactNode;
   animateOnScroll?: boolean;
-  scrollRef?: RefObject<Element>;
   element?: AnimationElement;
   delay?: number;
   duration?: number;
@@ -24,7 +23,6 @@ export type AnimationComponentProps = MotionElementProps & {
     MotionElementProps
   >;
   animateOnScroll?: boolean;
-  scrollRef?: RefObject<Element>;
   delay?: number;
   duration?: number;
 };

@@ -9,34 +9,28 @@ import { TextBlockProps } from "./text-block.type";
 import styles from "./text-block.module.scss";
 
 export const TextBlock = ({ id, title, text, cta }: TextBlockProps) => {
-  const ref = useRef(null);
-
   return (
-    <section className={styles.root}>
-      <div ref={ref} className="wrapper">
+    <section id={id} className={styles.root}>
+      <div className="wrapper">
         <Animation
           element="h2"
           animation="slide-up"
           animateOnScroll
-          scrollRef={ref}
           className={styles.title}
         >
           {title}
         </Animation>
-        <Animation
-          animation="slide-up"
-          animateOnScroll
-          scrollRef={ref}
-          className={styles.text}
-        >
+        <Animation animation="slide-up" animateOnScroll className={styles.text}>
           {text}
         </Animation>
         {cta && (
-          <Button
-            url={cta.url}
-            label={cta.label}
-            additionalClassName={styles.cta}
-          />
+          <Animation animation="slide-up" animateOnScroll>
+            <Button
+              url={cta.url}
+              label={cta.label}
+              additionalClassName={styles.cta}
+            />
+          </Animation>
         )}
       </div>
     </section>

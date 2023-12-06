@@ -15,7 +15,6 @@ export const FadeIn = ({
   delay,
   duration = 0.6,
   animateOnScroll,
-  scrollRef,
   ...props
 }: AnimationComponentProps) => {
   const animation: TargetAndTransition = {
@@ -37,12 +36,7 @@ export const FadeIn = ({
 
   if (animateOnScroll) {
     elementProps.whileInView = animation;
-
-    const viewport: MotionProps["viewport"] = {
-      once: true,
-    };
-    if (scrollRef) viewport.root = scrollRef;
-
+    elementProps.viewport = { once: true };
     delete elementProps.animate;
   }
 
