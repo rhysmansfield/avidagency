@@ -1,0 +1,41 @@
+@import "@/styles/mixins/_breakpoints.scss";
+
+.root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.logo {
+  width: 2rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  @include min-width(md) {
+    gap: 2rem;
+  }
+}
+
+.nav-item {
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--c-neutral-white);
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

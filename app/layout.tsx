@@ -1,6 +1,8 @@
+import { Header } from "@/components/header/header";
+import { poppins } from "@/fonts/poppins";
+
 import type { Metadata } from "next";
 
-import { poppins } from "@/fonts/poppins";
 import "@/styles/reset.scss";
 import "@/styles/global.scss";
 
@@ -34,6 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
+        <Header />
         <main>{children}</main>
       </body>
     </html>
