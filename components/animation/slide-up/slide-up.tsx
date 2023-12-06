@@ -24,19 +24,14 @@ export const SlideUp = ({
     initial: {
       y: "100%",
     },
-    animate: animation,
+    whileInView: animateOnScroll ? animation : {},
+    animate: animateOnScroll ? {} : animation,
     transition: {
       delay,
       duration,
       ease: "easeOut",
     },
   };
-
-  if (animateOnScroll) {
-    elementProps.whileInView = animation;
-    elementProps.viewport = { once: true };
-    delete elementProps.animate;
-  }
 
   return (
     <div className={classList(styles.root, props?.className)}>

@@ -26,19 +26,14 @@ export const FadeIn = ({
     initial: {
       opacity: 0,
     },
-    animate: animation,
+    whileInView: animateOnScroll ? animation : {},
+    animate: animateOnScroll ? {} : animation,
     transition: {
       delay,
       duration,
       ease: "easeOut",
     },
   };
-
-  if (animateOnScroll) {
-    elementProps.whileInView = animation;
-    elementProps.viewport = { once: true };
-    delete elementProps.animate;
-  }
 
   return React.createElement(element, elementProps, children);
 };
