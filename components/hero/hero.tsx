@@ -1,13 +1,9 @@
 "use client";
-
-import styles from "./hero.module.scss";
-
 import { Animation } from "@/components/animation/animation";
 
-type HeroProps = {
-  title: [string, string];
-  text: JSX.Element;
-};
+import { HeroProps } from "./hero.type";
+
+import styles from "./hero.module.scss";
 
 export const Hero = ({ title, text }: HeroProps) => {
   return (
