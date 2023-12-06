@@ -10,6 +10,7 @@ export const Animation = ({
   element,
   delay,
   duration,
+  animateOnScroll,
   ...props
 }: AnimationProps) => {
   const getMotionElement = () => {
@@ -18,6 +19,8 @@ export const Animation = ({
         return motion.div;
       case "p":
         return motion.p;
+      case "h2":
+        return motion.h2;
       default:
         return undefined;
     }
@@ -29,6 +32,7 @@ export const Animation = ({
     element: motionElement,
     delay: delay,
     duration: duration,
+    animateOnScroll,
   };
 
   switch (animation) {

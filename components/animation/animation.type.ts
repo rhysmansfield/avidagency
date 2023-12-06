@@ -1,14 +1,17 @@
 import { ForwardRefComponent, HTMLMotionProps } from "framer-motion";
+import { RefObject } from "react";
 
 type AnimationType = "slide-up" | "fade-in";
 
-type AnimationElement = "div" | "p";
+type AnimationElement = "div" | "p" | "h2";
 
 export type MotionElementProps = HTMLMotionProps<AnimationElement>;
 
 export type AnimationProps = MotionElementProps & {
   animation: AnimationType;
   children: React.ReactNode;
+  animateOnScroll?: boolean;
+  scrollRef?: RefObject<Element>;
   element?: AnimationElement;
   delay?: number;
   duration?: number;
@@ -20,6 +23,8 @@ export type AnimationComponentProps = MotionElementProps & {
     HTMLDivElement | HTMLParagraphElement,
     MotionElementProps
   >;
+  animateOnScroll?: boolean;
+  scrollRef?: RefObject<Element>;
   delay?: number;
   duration?: number;
 };
