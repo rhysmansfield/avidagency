@@ -5,7 +5,9 @@
   place-items: center;
   background-color: var(--c-brand-black);
   color: var(--c-neutral-white);
-  min-height: 100vh;
+  min-height: min-content;
+  height: 100vh;
+  padding: 4rem 0;
 }
 
 .title {
