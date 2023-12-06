@@ -15,6 +15,7 @@ export default function Home() {
         }
       />
       <TextBlock
+        id="about"
         title="Who are Avid Media?"
         text={
           <>

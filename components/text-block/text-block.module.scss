@@ -1,3 +1,5 @@
+@import "@/styles/mixins/_breakpoints.scss";
+
 .root {
   background: var(--c-brand-black);
   color: var(--c-neutral-white);
@@ -6,11 +8,16 @@
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
-  line-height: 3.5rem;
+  line-height: 2.5rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
+
+  @include min-width(md) {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
 }
 
 .text {
@@ -19,6 +26,5 @@
 }
 
 .cta {
-  display: block;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
