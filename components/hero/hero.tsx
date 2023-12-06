@@ -4,7 +4,11 @@ import { TextSlideUp } from "@/components/animation/text-slide-up/text-slide-up"
 import { TextFadeIn } from "../animation/text-fade-in/text-fade-in";
 
 import styles from "./hero.module.scss";
-import { HeroProps } from "./hero.type";
+
+type HeroProps = {
+  title: [string, string];
+  text: JSX.Element;
+};
 
 export const Hero = ({ title, text }: HeroProps) => {
   return (
