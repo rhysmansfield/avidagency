@@ -36,14 +36,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Header
-          logoUrl="/"
-          navItems={[
-            { url: "#about", label: "About" },
-            { url: "#services", label: "Services" },
-            { url: "#contact", label: "Portfolio" },
-          ]}
-        />
         <main>{children}</main>
       </body>
     </html>
