@@ -1,4 +1,3 @@
-import { Header } from "@/components/header/header";
 import { poppins } from "@/fonts/poppins";
 
 import type { Metadata } from "next";
