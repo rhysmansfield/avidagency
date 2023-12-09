@@ -1,4 +1,4 @@
-@use "@/styles/mixins/_breakpoints" as *;
+@import "@/styles/mixins/_breakpoints.scss";
 
 .mobile-wrapper {
   position: relative;
