@@ -5,6 +5,9 @@
   --c-brand-gold-rgb: 255, 203, 116;
   --c-brand-black: #1a1a1a;
   --c-neutral-white: #ffffff;
+  --c-neutral-gray: #d2d6dc;
+
+  --wrapper-padding: 1rem;
 }
 
 html {
@@ -14,8 +17,8 @@ html {
 .wrapper {
   width: 100%;
   max-width: map-get($breakpoints, "2xl");
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: var(--wrapper-padding);
+  padding-right: var(--wrapper-padding);
   margin-left: auto;
   margin-right: auto;
 }
