@@ -1,0 +1,53 @@
+@use "@/styles/mixins/_breakpoints" as *;
+
+.mobile-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 16rem;
+  background-color: var(--c-neutral-gray);
+}
+
+.hero-image {
+  position: absolute;
+  animation: scrollBg 15s linear infinite;
+
+  &--mobile {
+    height: 800%;
+    width: 400%;
+    top: -100%;
+    left: -100%;
+    background-size: 400px auto;
+
+    @keyframes scrollBg {
+      0% {
+        transform: rotate(-13deg) translateY(0);
+      }
+      100% {
+        transform: rotate(-13deg) translateY(-639px);
+      }
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @include min-width(md) {
+      display: block;
+      height: 400%;
+      width: 400%;
+      top: -25%;
+      left: -100%;
+      background-size: 800px auto;
+
+      @keyframes scrollBg {
+        0% {
+          transform: rotate(-13deg) translateY(0);
+        }
+
+        100% {
+          transform: rotate(-13deg) translateY(-1278px);
+        }
+      }
+    }
+  }
+}
