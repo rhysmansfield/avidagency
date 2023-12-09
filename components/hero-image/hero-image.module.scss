@@ -5,6 +5,10 @@
   overflow: hidden;
   height: 16rem;
   background-color: var(--c-neutral-gray);
+
+  @include min-width(lg) {
+    display: none;
+  }
 }
 
 .hero-image {
@@ -31,7 +35,7 @@
   &--desktop {
     display: none;
 
-    @include min-width(md) {
+    @include min-width(lg) {
       display: block;
       height: 400%;
       width: 400%;
