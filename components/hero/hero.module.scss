@@ -3,24 +3,26 @@
 .root {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
   background-color: var(--c-brand-black);
+  padding: 4rem 0 6rem;
 
   @include min-width(lg) {
+    min-height: 100vh;
+    padding: 0;
     background-color: var(--c-neutral-gray);
   }
 }
 
 .content {
-  display: flex;
   position: relative;
-  min-height: 100vh;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: -5px -5px;
   color: var(--c-neutral-white);
 
   @include min-width(lg) {
+    display: flex;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
     min-width: map-get($breakpoints, "md");
@@ -34,7 +36,6 @@
 }
 
 .text-wrapper {
-  margin-top: 3rem;
   margin-bottom: 2rem;
   padding-left: var(--wrapper-padding);
   padding-right: var(--wrapper-padding);
