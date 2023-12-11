@@ -16,11 +16,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: var(--c-brand-black);
-  transform: trnaslate3d(0, 0, 0);
-}
-
 .wrapper {
   width: 100%;
   max-width: map-get($breakpoints, "2xl");
