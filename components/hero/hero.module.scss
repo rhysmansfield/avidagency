@@ -39,6 +39,10 @@
   margin-bottom: 2rem;
   padding-left: var(--wrapper-padding);
   padding-right: var(--wrapper-padding);
+
+  @include min-width(lg) {
+    margin-bottom: 0;
+  }
 }
 
 .title {
