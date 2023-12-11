@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 
 import "@/styles/reset.scss";
 import "@/styles/global.scss";
-import { HeroImage } from "@/components/hero-image/hero-image";
 
 export const metadata: Metadata = {
   title: "Avid Media | Amplify, Visualise, Innovate, Deliver",

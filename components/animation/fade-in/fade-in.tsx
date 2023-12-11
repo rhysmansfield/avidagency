@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  AnimationControls,
-  MotionProps,
-  TargetAndTransition,
-  VariantLabels,
-  motion,
-} from "framer-motion";
+import { TargetAndTransition, motion } from "framer-motion";
 
 import { AnimationComponentProps, MotionElementProps } from "../animation.type";
 

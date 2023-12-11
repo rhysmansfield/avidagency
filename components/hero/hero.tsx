@@ -1,17 +1,19 @@
 "use client";
 
+import Link from "next/link";
 import { Animation } from "@/components/animation/animation";
 import { HeroImage } from "@/components/hero-image/hero-image";
+import { Chevron } from "@/components/svg/Chevron";
+import { classList } from "@/utils/class-list";
+
+import { HeroProps } from "./hero.type";
 
 import styles from "./hero.module.scss";
-import { classList } from "@/utils/class-list";
-import Link from "next/link";
-import { Chevron } from "@/components/svg/Chevron";
 
-export const Hero = () => {
+export const Hero = ({ title, text, buttons, image }: HeroProps) => {
   return (
     <section className={styles.root}>
-      <HeroImage screen="desktop" />
+      <HeroImage screen="desktop" image={image} />
       <div
         className={styles.content}
         style={{
@@ -21,13 +23,13 @@ export const Hero = () => {
         <div>
           <div className={styles["text-wrapper"]}>
             <h1 className={styles.title}>
-              <Animation animation="slide-up">Avid</Animation>
+              <Animation animation="slide-up">{title[0]}</Animation>
               <Animation
                 animation="slide-up"
                 delay={0.3}
                 className={styles.highlight}
               >
-                Media
+                {title[1]}
               </Animation>
             </h1>
             <Animation
@@ -36,20 +38,18 @@ export const Hero = () => {
               delay={1}
               className={styles.paragraph}
             >
-              We work with a range of companies to transform their digital
-              identity, through <span>best-in-class</span> digital marketing and
-              web development.
+              {text}
             </Animation>
             <div className={styles["button-wrapper"]}>
               <Animation animation="fade-in" delay={1.3}>
                 <Link
-                  href="/"
+                  href={buttons[0].url}
                   className={classList(
                     styles.button,
                     styles["button--primary"]
                   )}
                 >
-                  Become a client
+                  {buttons[0].label}
                   <Chevron
                     direction="right"
                     className={styles["button--icon"]}
@@ -58,18 +58,18 @@ export const Hero = () => {
               </Animation>{" "}
               <Animation animation="fade-in" delay={1.6}>
                 <Link
-                  href="/"
+                  href={buttons[1].url}
                   className={classList(
                     styles.button,
                     styles["button--secondary"]
                   )}
                 >
-                  Meet the team
+                  {buttons[1].label}
                 </Link>
               </Animation>
             </div>
           </div>
-          <HeroImage screen="mobile" />
+          <HeroImage screen="mobile" image={image} />
         </div>
       </div>
     </section>

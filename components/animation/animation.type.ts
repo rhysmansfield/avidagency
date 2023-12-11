@@ -1,5 +1,4 @@
 import { ForwardRefComponent, HTMLMotionProps } from "framer-motion";
-import { RefObject } from "react";
 
 type AnimationType = "slide-up" | "fade-in";
 

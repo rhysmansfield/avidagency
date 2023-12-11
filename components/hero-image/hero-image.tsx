@@ -1,9 +1,11 @@
+import { classList } from "@/utils/class-list";
+
 import { HeroImageProps } from "./hero-image.type";
 
 import styles from "./hero-image.module.scss";
-import { classList } from "@/utils/class-list";
 
-export const HeroImage = ({ screen }: HeroImageProps) => {
+export const HeroImage = ({ screen, image }: HeroImageProps) => {
+  const { url, alt } = image;
   const className = classList(
     styles["hero-image"],
     styles[`hero-image--${screen}`]
@@ -14,8 +16,9 @@ export const HeroImage = ({ screen }: HeroImageProps) => {
       aria-hidden
       className={className}
       style={{
-        backgroundImage: "url('/images/hero-image.jpg')",
+        backgroundImage: `url(${url})`,
       }}
+      title={alt}
     ></div>
   );
 

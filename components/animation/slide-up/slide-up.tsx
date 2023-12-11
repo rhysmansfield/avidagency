@@ -1,10 +1,10 @@
 import React from "react";
-import { MotionProps, TargetAndTransition, motion } from "framer-motion";
+import { TargetAndTransition, motion } from "framer-motion";
+import { classList } from "@/utils/class-list";
 
 import { AnimationComponentProps, MotionElementProps } from "../animation.type";
 
 import styles from "./slide-up.module.scss";
-import { classList } from "@/utils/class-list";
 
 export const SlideUp = ({
   element = motion.div,
