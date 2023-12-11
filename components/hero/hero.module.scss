@@ -42,6 +42,8 @@
 
   @include min-width(lg) {
     margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -68,14 +70,18 @@
 .paragraph {
   font-size: 1.125rem;
   color: var(--c-neutral-gray);
-  max-width: 44rem;
   margin-bottom: 1.5rem;
+
+  @include min-width(sm) {
+    max-width: 36rem;
+  }
 
   @include min-width(md) {
     font-size: 1.25rem;
   }
 
   @include min-width(xl) {
+    max-width: 44rem;
     font-size: 1.5rem;
     margin-bottom: 2rem;
   }
