@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 import "@/styles/reset.scss";
 import "@/styles/global.scss";
+import { HeroImage } from "@/components/hero-image/hero-image";
 
 export const metadata: Metadata = {
   title: "Avid Media | Amplify, Visualise, Innovate, Deliver",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     url: "https://avidmedia.io",
     images: [
       {
-        url: "https://avidmedia.io/opengraph-image.png",
+        url: "https://avidmedia.io/images/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Avid Media",
