@@ -13,9 +13,8 @@
 
 .hero-image {
   position: absolute;
-  animation: scrollBg 30s linear infinite;
-  will-change: background-position;
   backface-visibility: hidden;
+  animation: scrollBg 30s linear infinite;
   pointer-events: none;
 
   &--mobile {
