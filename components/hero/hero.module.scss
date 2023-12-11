@@ -108,7 +108,8 @@
 }
 
 .button {
-  display: inline-flex;
+  display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -144,7 +145,7 @@
 
   &:hover {
     .button--icon {
-      transform: translateX(0.175rem);
+      transform: translateX(0.2rem);
     }
   }
 
