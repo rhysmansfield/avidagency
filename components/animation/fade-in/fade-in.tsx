@@ -22,6 +22,11 @@ export const FadeIn = ({
     },
     whileInView: animateOnScroll ? animation : {},
     animate: animateOnScroll ? {} : animation,
+    viewport: animateOnScroll
+      ? {
+          once: true,
+        }
+      : {},
     transition: {
       delay,
       duration,

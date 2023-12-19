@@ -26,6 +26,11 @@ export const SlideUp = ({
     },
     whileInView: animateOnScroll ? animation : {},
     animate: animateOnScroll ? {} : animation,
+    viewport: animateOnScroll
+      ? {
+          once: true,
+        }
+      : {},
     transition: {
       delay,
       duration,

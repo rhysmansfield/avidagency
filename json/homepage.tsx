@@ -20,3 +20,8 @@ export const heroProps: HeroProps = {
     alt: "Projects completed by Avid Media. Including Footasylum, Primo Sports, Heat and Slice Golf Balls.",
   },
 };
+
+export const textBlockProps = {
+  title: "What do we do?",
+  text: "Our team will take you through a bespoke process to upgrade your website and re-think your digital stategy. We'll also work with you on an ongoing basis, towards a target for monthly sales & leads and make sure they are achieved.",
+};
