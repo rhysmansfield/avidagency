@@ -2,8 +2,9 @@
 
 import { Animation } from "@/components/animation/animation";
 
-import styles from "./text-block.module.scss";
 import { TextBlockProps } from "./text-block.type";
+
+import styles from "./text-block.module.scss";
 
 export const TextBlock = ({ title, text }: TextBlockProps) => (
   <section className={styles.root}>
