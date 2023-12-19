@@ -1,9 +1,9 @@
-import { classList } from "@/utils/class-list";
+import Image from "next/image";
 import { Animation } from "../animation/animation";
-import styles from "./services-image.module.scss";
 
 import { ServicesImageProps } from "./services-image.type";
-import Image from "next/image";
+
+import styles from "./services-image.module.scss";
 
 export const ServicesImage = ({
   image,
