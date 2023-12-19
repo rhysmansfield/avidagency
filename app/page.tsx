@@ -10,6 +10,15 @@ export default function Home() {
       <Hero {...heroProps} />
       <TextBlock {...textBlockProps} />
       <Services {...servicesProps} />
+      <div
+        style={{
+          backgroundColor: "var(--c-brand-black)",
+          color: "var(--c-neutral-white)",
+          padding: "5rem",
+        }}
+      >
+        Content
+      </div>
     </>
   );
 }
