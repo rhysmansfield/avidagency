@@ -15,6 +15,7 @@ export const ServicesImage = ({
     <Animation
       animation="fade-in"
       animateOnScroll
+      amount={0.25}
       className={additionalClassName}
     >
       <svg viewBox="0 0 655 680" fill="none" className={styles.svg}>
