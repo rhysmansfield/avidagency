@@ -1,4 +1,8 @@
-import { ForwardRefComponent, HTMLMotionProps } from "framer-motion";
+import {
+  ForwardRefComponent,
+  HTMLMotionProps,
+  MotionAdvancedProps,
+} from "framer-motion";
 
 type AnimationType = "slide-up" | "fade-in";
 
@@ -9,6 +13,7 @@ export type MotionElementProps = HTMLMotionProps<AnimationElement>;
 export type AnimationProps = MotionElementProps & {
   animation: AnimationType;
   children: React.ReactNode;
+  amount?: "some" | "all" | number;
   animateOnScroll?: boolean;
   element?: AnimationElement;
   delay?: number;
@@ -21,6 +26,7 @@ export type AnimationComponentProps = MotionElementProps & {
     HTMLDivElement | HTMLParagraphElement,
     MotionElementProps
   >;
+  amount?: "some" | "all" | number;
   animateOnScroll?: boolean;
   delay?: number;
   duration?: number;

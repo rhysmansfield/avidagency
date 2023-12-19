@@ -8,6 +8,7 @@ export const FadeIn = ({
   children,
   delay,
   duration = 0.6,
+  amount,
   animateOnScroll,
   ...props
 }: AnimationComponentProps) => {
@@ -25,6 +26,7 @@ export const FadeIn = ({
     viewport: animateOnScroll
       ? {
           once: true,
+          amount: amount || "some",
         }
       : {},
     transition: {

@@ -11,6 +11,7 @@ export const SlideUp = ({
   children,
   delay,
   duration = 0.6,
+  amount,
   animateOnScroll,
   ...props
 }: AnimationComponentProps) => {
@@ -29,6 +30,7 @@ export const SlideUp = ({
     viewport: animateOnScroll
       ? {
           once: true,
+          amount: amount || "some",
         }
       : {},
     transition: {

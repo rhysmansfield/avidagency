@@ -37,15 +37,15 @@ export const servicesProps: ServicesProps = {
   },
   services: [
     {
-      title: "Digital Strategy",
+      title: "Digital strategy",
       text: "We work with you to define your digital strategy and roadmap, and then we help you execute it.",
     },
     {
-      title: "Website Development",
+      title: "Website development",
       text: "We build blazing-fast websites that not only look great, but also convert visitors into customers.",
     },
     {
-      title: "Ongoing Marketing",
+      title: "Ongoing marketing",
       text: "We help you grow your business with ongoing marketing services, including SEO, PPC, and more.",
     },
   ],

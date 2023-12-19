@@ -11,6 +11,7 @@ export const Animation = ({
   delay,
   duration,
   animateOnScroll,
+  amount,
   ...props
 }: AnimationProps) => {
   const getMotionElement = () => {
@@ -30,8 +31,9 @@ export const Animation = ({
   const componentProps: Omit<AnimationComponentProps, "children"> = {
     ...props,
     element: motionElement,
-    delay: delay,
-    duration: duration,
+    amount,
+    delay,
+    duration,
     animateOnScroll,
   };
 

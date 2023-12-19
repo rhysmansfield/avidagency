@@ -15,16 +15,16 @@ export const Services = ({ title, text, image, services }: ServicesProps) => {
           <Animation
             element="h2"
             animation="slide-up"
-            className={styles.title}
             animateOnScroll
+            className={styles.title}
           >
             {title}
           </Animation>
           <Animation
             element="p"
             animation="slide-up"
-            className={styles.paragraph}
             animateOnScroll
+            className={styles.paragraph}
           >
             {text}
           </Animation>
@@ -33,12 +33,19 @@ export const Services = ({ title, text, image, services }: ServicesProps) => {
         <div className={styles.services}>
           <ServicesImage image={image} additionalClassName={styles.image} />
 
-          <div>
-            <div>Item 1</div>
-            <div>Item 1</div>
-            <div>Item 1</div>
-            <div>Item 1</div>
-            <div>Item 1</div>
+          <div className={styles.items}>
+            {services.map(({ title: serviceTitle, text: serviceText }) => (
+              <Animation
+                key={`service-${serviceTitle}`}
+                animation="fade-in"
+                animateOnScroll
+                amount="all"
+                className={styles.item}
+              >
+                <h3 className={styles["item-title"]}>{serviceTitle}</h3>
+                <p className={styles["item-paragraph"]}>{serviceText}</p>
+              </Animation>
+            ))}
           </div>
         </div>
       </div>
