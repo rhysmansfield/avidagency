@@ -4,11 +4,11 @@
   position: relative;
   overflow: hidden;
   background-color: var(--c-brand-black);
-  padding: 2rem 0 4rem;
+  padding-top: 0;
 
   @include min-width(lg) {
     min-height: 100vh;
-    padding: 0;
+    padding-top: 0;
     background-color: var(--c-neutral-gray);
   }
 }
