@@ -1,8 +1,4 @@
-import {
-  ForwardRefComponent,
-  HTMLMotionProps,
-  MotionAdvancedProps,
-} from "framer-motion";
+import { ForwardRefComponent, HTMLMotionProps } from "framer-motion";
 
 type AnimationType = "slide-up" | "fade-in";
 
