@@ -29,7 +29,7 @@ export const textBlockProps: TextBlockProps = {
 };
 
 export const servicesProps: ServicesProps = {
-  title: "How we upgrade your business",
+  title: "Our services",
   text: "We offer 3 key services that will transform your digital identity & generate quality leads",
   image: {
     url: "/images/services-image.webp",
