@@ -6,7 +6,7 @@ export const primaryCta: CommonLink = {
   url: "#contact",
 };
 
-export const homepageHeroProps: HeroProps = {
+export const heroProps: HeroProps = {
   title: ["Avid", "Media"],
   text: (
     <>
