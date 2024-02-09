@@ -6,6 +6,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 
 import styles from "./contact-form.module.scss";
 import { classList } from "@/utils/class-list";
+import { Animation } from "../animation/animation";
 
 type Inputs = {
   name: string;
@@ -29,12 +30,26 @@ export const ContactForm = () => {
     <section className={styles.root}>
       <div className={classList(styles.wrapper, "wrapper")}>
         <div className={styles["text-wrapper"]}>
-          <h2 className={styles.title}>
+          <Animation
+            element="h2"
+            animation="fade-in"
+            animateOnScroll
+            amount="all"
+            className={styles.title}
+          >
             <div>Lets chat.</div>
             Tell us about your project.
-          </h2>
+          </Animation>
 
-          <p className={styles.text}>Let&apos;s create something together 👋</p>
+          <Animation
+            element="p"
+            animation="fade-in"
+            animateOnScroll
+            amount="all"
+            className={styles.text}
+          >
+            Let&apos;s create something together 👋
+          </Animation>
         </div>
 
         <div className={styles["form-wrapper"]}>

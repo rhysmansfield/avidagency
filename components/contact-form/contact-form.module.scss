@@ -15,7 +15,6 @@
   grid-template-rows: auto auto;
   gap: 2rem;
   width: 100%;
-  max-width: 80rem;
 
   @include min-width(md) {
     grid-template-columns: 1fr 1fr;
@@ -32,9 +31,9 @@
   margin-bottom: 1.25rem;
 
   @include min-width(md) {
-    font-size: 3.5rem;
-    line-height: 4.25rem;
-    margin-bottom: 1.5rem;
+    font-size: 4.25rem;
+    line-height: 5rem;
+    margin-bottom: 2rem;
   }
 
   > div {
@@ -46,13 +45,13 @@
   font-size: 1.125rem;
 
   @include min-width(md) {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
   }
 }
 
 .form-wrapper {
   width: 100%;
-  max-width: 32rem;
+  max-width: 36rem;
   margin-left: auto;
 
   @include min-width(md) {
@@ -98,6 +97,10 @@
   input,
   textarea {
     background-color: var(--c-neutral-white-10);
+  }
+
+  textarea {
+    min-height: 6rem;
   }
 
   button {
