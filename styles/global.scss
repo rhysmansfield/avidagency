@@ -1,0 +1,26 @@
+@import "@/styles/mixins/_breakpoints.scss";
+
+:root {
+  --c-brand-gold: #ffcb74;
+  --c-brand-gold-50: rgba(255, 203, 116, 0.5);
+  --c-brand-black: #1a1a1a;
+  --c-neutral-white: #ffffff;
+  --c-neutral-white-10: rgba(255, 255, 255, 0.1);
+  --c-neutral-white-20: rgba(255, 255, 255, 0.2);
+  --c-neutral-gray: #d2d6dc;
+
+  --wrapper-padding: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: map-get($breakpoints, "2xl");
+  padding-left: var(--wrapper-padding);
+  padding-right: var(--wrapper-padding);
+  margin-left: auto;
+  margin-right: auto;
+}

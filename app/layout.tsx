@@ -1,10 +1,9 @@
-import type { Metadata } from "next";
-import { ReCaptchaProvider } from "next-recaptcha-v3";
-import { Header } from "@app/components/header/header";
+import { poppins } from "@/fonts/poppins";
 
-import { poppins } from "@app/fonts/poppins";
-import "@app/styles/reset.scss";
-import "@app/styles/global.scss";
+import type { Metadata } from "next";
+
+import "@/styles/reset.scss";
+import "@/styles/global.scss";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
     url: "https://avidmedia.io",
     images: [
       {
-        url: "https://avidmedia.io/opengraph-image.png",
+        url: "https://avidmedia.io/images/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Avid Media",
@@ -47,12 +46,9 @@ export default function RootLayout({
         `}
         </Script>
       </head>
-      <ReCaptchaProvider reCaptchaKey={process.env.RECAPTCHA_PUBLIC_KEY}>
-        <body className={poppins.className}>
-          <Header />
-          {children}
-        </body>
-      </ReCaptchaProvider>
+      <body className={poppins.className}>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

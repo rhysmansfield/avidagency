@@ -1,40 +1,17 @@
-import { Hero } from "@app/components/hero/hero";
+import { Hero } from "@/components/hero/hero";
+import { TextBlock } from "@/components/text-block/text-block";
+import { Services } from "@/components/services/services";
+
+import { heroProps, servicesProps, textBlockProps } from "@/json/homepage";
+import { ContactForm } from "@/components/contact-form/contact-form";
 
 export default function Home() {
   return (
-    <main>
-      <Hero
-        title={
-          <>
-            <div>Let&apos;s chat.</div>
-            Tell us about your project.
-          </>
-        }
-        subtitle="Let's create something together 👋"
-        form={{
-          heading: "Send us a message 🚀",
-          fields: [
-            {
-              label: "Name",
-              name: "name",
-              type: "text",
-              required: true,
-            },
-            {
-              label: "Email",
-              name: "email",
-              type: "email",
-              required: true,
-            },
-            {
-              label: "Tell us more about your project",
-              name: "message",
-              type: "textarea",
-              required: true,
-            },
-          ],
-        }}
-      />
-    </main>
+    <>
+      <Hero {...heroProps} />
+      <TextBlock {...textBlockProps} />
+      <Services {...servicesProps} />
+      <ContactForm />
+    </>
   );
 }
