@@ -7,13 +7,13 @@ import "@/styles/reset.scss";
 import "@/styles/global.scss";
 
 export const metadata: Metadata = {
-  title: "Avid Media | Amplify, Visualise, Innovate, Deliver",
+  title: "Website & Digital Marketing Agency | Avid Media",
   description:
-    "Avid Media is a digital agency based in Lancashire, UK. We specialise in creating bespoke digital solutions for small businesses.",
+    "Unlock your brand's full potential with our innovative marketing agency. From strategic planning to creative execution.",
   openGraph: {
-    title: "Avid Media | Amplify, Visualise, Innovate, Deliver",
+    title: "Website & Digital Marketing Agency | Avid Media",
     description:
-      "Avid Media is a digital agency based in Lancashire, UK. We specialise in creating bespoke digital solutions for small businesses.",
+      "Unlock your brand's full potential with our innovative marketing agency. From strategic planning to creative execution.",
     url: "https://avidmedia.io",
     images: [
       {
