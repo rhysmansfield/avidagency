@@ -1,10 +1,10 @@
 import { poppins } from "@/fonts/poppins";
 
 import type { Metadata } from "next";
+import Script from "next/script";
 
 import "@/styles/reset.scss";
 import "@/styles/global.scss";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Avid Media | Amplify, Visualise, Innovate, Deliver",
