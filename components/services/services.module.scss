@@ -8,6 +8,10 @@
   @include min-width(lg) {
     padding: 6rem 0;
   }
+
+  @include min-width(xl) {
+    padding: 10rem 0;
+  }
 }
 
 .text-wrapper {

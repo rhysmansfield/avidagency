@@ -9,6 +9,10 @@
   @include min-width(md) {
     padding: 8rem 0;
   }
+
+  @include min-width(lg) {
+    padding: 12rem 0;
+  }
 }
 
 .title {
