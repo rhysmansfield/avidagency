@@ -3,10 +3,10 @@
 .root {
   background: var(--c-brand-black);
   color: var(--c-neutral-white);
-  padding: 6rem 0;
+  padding: 8rem 0 6rem;
 
   @include min-width(md) {
-    padding: 10rem 0;
+    padding: 16rem 0 10rem;
   }
 }
 
@@ -73,6 +73,11 @@
   }
 }
 
+.form-submitted {
+  color: var(--c-brand-gold);
+  margin-bottom: 1rem;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -90,12 +95,12 @@
   textarea {
     width: 100%;
     border: none;
-    padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
   }
 
   input,
   textarea {
+    padding: 0.5rem 0.75rem;
     background-color: var(--c-neutral-white-10);
   }
 
@@ -107,6 +112,7 @@
     background-color: var(--c-brand-gold);
     color: var(--c-brand-black);
     margin-top: 0.5rem;
+    padding: 0.75rem 1rem;
   }
 
   .error {

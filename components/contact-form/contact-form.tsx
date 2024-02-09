@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 import { useForm, SubmitHandler } from "react-hook-form";
 
@@ -16,14 +16,21 @@ type Inputs = {
 };
 
 export const ContactForm = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    await fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+
+    setIsSubmitted(true);
   };
 
   return (
@@ -52,8 +59,19 @@ export const ContactForm = () => {
           </Animation>
         </div>
 
-        <div className={styles["form-wrapper"]}>
+        <Animation
+          element="div"
+          animation="fade-in"
+          animateOnScroll
+          className={styles["form-wrapper"]}
+        >
           <h3 className={styles["form-title"]}>Send us a message 🚀</h3>
+          {isSubmitted && (
+            <div className={styles["form-submitted"]}>
+              Thank you for getting in touch! We will get back to you as soon as
+              possible.
+            </div>
+          )}
           <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
             <label>
               <div>Name</div>
@@ -91,9 +109,11 @@ export const ContactForm = () => {
               )}
             </label>
 
-            <button type="submit">Submit</button>
+            <button disabled={isSubmitted} type="submit">
+              Submit
+            </button>
           </form>
-        </div>
+        </Animation>
       </div>
     </section>
   );
