@@ -1,3 +1,4 @@
+import { ContactFormProps } from "@/components/contact-form/contact-form.type";
 import { HeroProps } from "@/components/hero/hero.type";
 import { ServicesProps } from "@/components/services/services.type";
 import { TextBlockProps } from "@/components/text-block/text-block.type";
@@ -49,4 +50,14 @@ export const servicesProps: ServicesProps = {
       text: "We help you grow your business with ongoing marketing services, including SEO, PPC, and more.",
     },
   ],
+};
+
+export const contactFormProps: ContactFormProps = {
+  title: (
+    <>
+      <div>Lets chat.</div> Tell us about your project.
+    </>
+  ),
+  text: "Let's create something together 👋",
+  formTitle: "Send us a message 🚀",
 };

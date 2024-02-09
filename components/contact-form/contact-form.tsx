@@ -7,6 +7,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import styles from "./contact-form.module.scss";
 import { classList } from "@/utils/class-list";
 import { Animation } from "@/components/animation/animation";
+import { ContactFormProps } from "./contact-form.type";
 
 type Inputs = {
   name: string;
@@ -15,7 +16,7 @@ type Inputs = {
   message: string;
 };
 
-export const ContactForm = () => {
+export const ContactForm = ({ title, text, formTitle }: ContactFormProps) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const {
@@ -36,7 +37,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <section className={styles.root}>
+    <section id="contact" className={styles.root}>
       <div className={classList(styles.wrapper, "wrapper")}>
         <div className={styles["text-wrapper"]}>
           <Animation
@@ -46,8 +47,7 @@ export const ContactForm = () => {
             amount="all"
             className={styles.title}
           >
-            <div>Lets chat.</div>
-            Tell us about your project.
+            {title}
           </Animation>
 
           <Animation
@@ -57,7 +57,7 @@ export const ContactForm = () => {
             amount="all"
             className={styles.text}
           >
-            Let&apos;s create something together 👋
+            {text}
           </Animation>
         </div>
 
@@ -67,7 +67,7 @@ export const ContactForm = () => {
           animateOnScroll
           className={styles["form-wrapper"]}
         >
-          <h3 className={styles["form-title"]}>Send us a message 🚀</h3>
+          <h3 className={styles["form-title"]}>{formTitle}</h3>
           {isSubmitted && (
             <div className={styles["form-submitted"]}>
               Thank you for getting in touch! We will get back to you as soon as

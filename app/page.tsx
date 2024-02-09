@@ -2,7 +2,12 @@ import { Hero } from "@/components/hero/hero";
 import { TextBlock } from "@/components/text-block/text-block";
 import { Services } from "@/components/services/services";
 
-import { heroProps, servicesProps, textBlockProps } from "@/json/homepage";
+import {
+  contactFormProps,
+  heroProps,
+  servicesProps,
+  textBlockProps,
+} from "@/json/homepage";
 import { ContactForm } from "@/components/contact-form/contact-form";
 
 export default function Home() {
@@ -11,7 +16,7 @@ export default function Home() {
       <Hero {...heroProps} />
       <TextBlock {...textBlockProps} />
       <Services {...servicesProps} />
-      <ContactForm />
+      <ContactForm {...contactFormProps} />
     </>
   );
 }
