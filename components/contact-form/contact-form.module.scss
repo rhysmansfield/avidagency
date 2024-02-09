@@ -113,6 +113,10 @@
     color: var(--c-brand-black);
     margin-top: 0.5rem;
     padding: 0.75rem 1rem;
+
+    &:disabled {
+      background-color: var(--c-neutral-white-20);
+    }
   }
 
   .error {

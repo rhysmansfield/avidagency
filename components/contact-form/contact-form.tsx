@@ -22,6 +22,7 @@ export const ContactForm = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
@@ -31,6 +32,7 @@ export const ContactForm = () => {
     });
 
     setIsSubmitted(true);
+    reset();
   };
 
   return (
