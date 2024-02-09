@@ -6,7 +6,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 
 import styles from "./contact-form.module.scss";
 import { classList } from "@/utils/class-list";
-import { Animation } from "../animation/animation";
+import { Animation } from "@/components/animation/animation";
 
 type Inputs = {
   name: string;

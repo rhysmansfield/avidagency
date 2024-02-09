@@ -1,41 +1,8 @@
 import { NextResponse } from "next/server";
+import { sendEmail } from "@/utils/send-email";
 
 export async function POST(request: Request) {
-  const { name, email, message, recaptcha } = await request.json();
-
-  if (!name) {
-    return NextResponse.json(
-      { message: "Ensure you have entered your name" },
-      { status: 400 }
-    );
-  }
-
-  if (!email || !email.match(/^[^@]+@[^@]+\.[^@]+$/)) {
-    return NextResponse.json(
-      { message: "Ensure you have entered a valid email address" },
-      { status: 400 }
-    );
-  }
-
-  if (!message) {
-    return NextResponse.json(
-      { message: "Ensure you have entered a message" },
-      { status: 400 }
-    );
-  }
-
-  if (!recaptcha) {
-    return NextResponse.json(
-      { message: "Please ensure you have completed the recaptcha" },
-      { status: 400 }
-    );
-  }
-
-  var verificationUrl =
-    "https://www.google.com/recaptcha/api/siteverify?secret=" +
-    process.env.RECAPTCHA_PRIVATE_KEY +
-    "&response=" +
-    recaptcha;
+  const { name, emailAddress, phoneNumber, message } = await request.json();
 
   const internalBody = `
     <p>There has been a new contact form enquiry on the website</p>
@@ -46,7 +13,11 @@ export async function POST(request: Request) {
       </li>
       <li>
         <p>Email</p> 
-        <p>${email}</p>
+        <p>${emailAddress}</p>
+      </li>
+      <li>
+        <p>Phone</p>
+        <p>${phoneNumber}</p>
       </li>
       <li>
       <p>Message</p> 
@@ -65,19 +36,9 @@ export async function POST(request: Request) {
 
   try {
     // Validate recaptcha
-    const response = await fetch(verificationUrl, {
-      method: "POST",
-    });
-
-    const data = await response.json();
-
-    if (!data.success) {
-      throw new Error("Recaptcha validation failed");
-    }
-
     await Promise.all([
       sendEmail({
-        to: email,
+        to: emailAddress,
         subject: "We have received your message!",
         html: externalBody,
       }),

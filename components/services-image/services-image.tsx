@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Animation } from "../animation/animation";
+import { Animation } from "@/components/animation/animation";
 
 import { ServicesImageProps } from "./services-image.type";
 
