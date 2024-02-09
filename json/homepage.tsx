@@ -17,7 +17,7 @@ export const heroProps: HeroProps = {
       through <span>best-in-class</span> digital marketing and web development.
     </>
   ),
-  buttons: [primaryCta, { label: "Meet the team", url: "#team" }],
+  buttons: [primaryCta, { label: "Our services", url: "#services" }],
   image: {
     url: "/images/hero-image.jpg",
     alt: "Projects completed by Avid Media. Including Footasylum, Primo Sports, Heat and Slice Golf Balls.",

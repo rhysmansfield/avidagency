@@ -9,7 +9,7 @@ import styles from "./services.module.scss";
 
 export const Services = ({ title, text, image, services }: ServicesProps) => {
   return (
-    <section className={styles.root}>
+    <section id="services" className={styles.root}>
       <div className="wrapper">
         <div className={styles["text-wrapper"]}>
           <Animation
