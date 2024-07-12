@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     title: "Website & Digital Marketing Agency | Avid Media",
     description:
       "Unlock your brand's full potential with our innovative marketing agency. From strategic planning to creative execution.",
-    url: "https://avidmedia.io",
+    url: "https://avidagency.co.uk",
     images: [
       {
-        url: "https://avidmedia.io/images/opengraph-image.png",
+        url: "https://avidagency.co.uk/images/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Avid Media",

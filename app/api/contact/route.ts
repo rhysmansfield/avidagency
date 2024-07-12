@@ -43,8 +43,8 @@ export async function POST(request: Request) {
         html: externalBody,
       }),
       sendEmail({
-        to: "info@avidmedia.io",
-        subject: "avidmedia.io: New contact form enquiry",
+        to: "info@avidagency.co.uk",
+        subject: "avidagency.co.uk: New contact form enquiry",
         html: internalBody,
       }),
     ]);
