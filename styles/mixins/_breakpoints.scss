@@ -33,10 +33,10 @@ $breakpoints: (
     @media screen and (min-width: $breakpoint) {
       @content;
     }
-  }
-
-  @media screen and (min-width: #{$value}) {
-    @content;
+  } @else {
+    @media screen and (min-width: #{$value}) {
+      @content;
+    }
   }
 }
 
@@ -47,9 +47,9 @@ $breakpoints: (
     @media screen and (max-width: $breakpoint) {
       @content;
     }
-  }
-
-  @media screen and (max-width: #{$value}) {
-    @content;
+  } @else {
+    @media screen and (max-width: #{$value}) {
+      @content;
+    }
   }
 }

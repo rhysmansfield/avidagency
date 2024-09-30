@@ -12,6 +12,10 @@
   --wrapper-padding: 1rem;
 }
 
+body {
+  background-color: var(--c-brand-black);
+}
+
 html {
   scroll-behavior: smooth;
 }
