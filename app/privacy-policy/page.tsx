@@ -1,6 +1,12 @@
 import Link from "next/link";
 
 import styles from "@/styles/pages/privacy-policy.module.scss";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Learn how Avid Agency collects and protects your information.",
+};
 
 const PrivacyPolicy = () => (
   <section className={styles.root}>

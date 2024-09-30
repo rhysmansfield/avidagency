@@ -1,1 +1,1 @@
-## AvidMedia NextJS App
+## AvidAgency NextJS App

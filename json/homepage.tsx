@@ -10,7 +10,7 @@ export const primaryCta: CommonLink = {
 };
 
 export const heroProps: HeroProps = {
-  title: ["Avid", "Media"],
+  title: ["Avid", "Agency"],
   text: (
     <>
       We work with a range of companies to transform their digital identity,
@@ -20,7 +20,7 @@ export const heroProps: HeroProps = {
   buttons: [primaryCta, { label: "Our services", url: "#services" }],
   image: {
     url: "/images/hero-image.jpg",
-    alt: "Projects completed by Avid Media. Including Footasylum, Primo Sports, Heat and Slice Golf Balls.",
+    alt: "Projects completed by Avid Agency. Including Footasylum, Primo Sports, Heat and Slice Golf Balls.",
   },
 };
 

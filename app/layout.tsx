@@ -7,11 +7,11 @@ import "@/styles/reset.scss";
 import "@/styles/global.scss";
 
 export const metadata: Metadata = {
-  title: "Website & Digital Marketing Agency | Avid Media",
+  title: "Website & Digital Marketing Agency | Avid Agency",
   description:
     "Unlock your brand's full potential with our innovative marketing agency. From strategic planning to creative execution.",
   openGraph: {
-    title: "Website & Digital Marketing Agency | Avid Media",
+    title: "Website & Digital Marketing Agency | Avid Agency",
     description:
       "Unlock your brand's full potential with our innovative marketing agency. From strategic planning to creative execution.",
     url: "https://avidagency.co.uk",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         url: "https://avidagency.co.uk/images/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Avid Media",
+        alt: "Avid Agency",
       },
     ],
     type: "website",

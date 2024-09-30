@@ -31,7 +31,7 @@ export async function POST(request: Request) {
     <p>We're just letting you know that we've received your enquiry and we will be in touch shortly.</p>
     <h3>Your enquiry:</h3>
     <p>${message}</p>
-    <p>Thanks,<br/>Avid Media Team</p>
+    <p>Thanks,<br/>Avid Agency Team</p>
   `;
 
   try {
