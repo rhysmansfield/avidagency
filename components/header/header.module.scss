@@ -2,21 +2,32 @@
 
 .root {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  height: var(--header-height);
+  color: var(--c-brand-day);
+  padding: 1.5rem var(--wrapper-padding);
+
+  @include min-width(md) {
+    grid-template-columns: auto 1fr;
+  }
 }
 
 .logo {
   width: 4rem;
 
+  @include min-width(md) {
+    width: 5rem;
+    transition: scale var(--transition);
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+
   &__wrapper {
     display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    color: var(--c-brand-day);
-
-    @include min-width(md) {
-      gap: 2rem;
-    }
   }
 }
 
@@ -26,6 +37,90 @@
   &__wrapper {
     display: flex;
     align-items: center;
-    gap: 1ch;
+    gap: 0.5rem;
+    font: var(--font-dm-sans-b3);
+    border-left: 1px solid var(--c-grey-light-24);
+    padding-left: 0.875rem;
+    margin-left: 0.875rem;
+
+    @include min-width(md) {
+      padding-left: 1.125rem;
+      margin-left: 1.125rem;
+    }
+  }
+}
+
+.desktop-nav {
+  display: none;
+
+  @include min-width(md) {
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font: var(--font-dm-sans-b3);
+  }
+
+  &__link {
+    display: block;
+    padding: 0.5rem 0.75rem;
+  }
+
+  &__cta {
+    background-color: var(--c-brand-pink);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    margin-left: 0.75rem;
+  }
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100dvh - var(--header-height));
+  margin-top: var(--header-height);
+  padding: 1.5rem var(--wrapper-padding);
+  background-color: var(--c-brand-night);
+
+  @include min-width(md) {
+    display: none;
+  }
+
+  &__button {
+    display: block;
+    border: none;
+    padding: 0.5rem;
+
+    @include min-width(md) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    width: 1.5rem;
+  }
+
+  &__list {
+    display: flex;
+    gap: 0.25rem;
+    flex-direction: column;
+    font: var(--font-dm-sans-s1);
+    margin: 0 -0.5rem;
+  }
+
+  &__link {
+    display: block;
+    padding: 1.25rem 0.5rem;
+  }
+
+  &__socials {
+    margin-top: auto;
   }
 }

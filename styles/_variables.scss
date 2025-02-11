@@ -2,12 +2,18 @@
 
 :root {
   --wrapper-padding: 1rem;
+  --header-height: 5.5rem;
 
   --c-brand-night: #1c1e20;
   --c-brand-day: #f8f8f8;
   --c-brand-verde: #c3ff47;
   --c-brand-azul: #1b9fff;
   --c-brand-pink: #f54891;
+
+  --c-grey-light-24: rgba(248, 248, 248, 0.24);
+
+  --transition-duration: 0.3s;
+  --transition: var(--transition-duration) ease;
 
   --font-space-grotesk-h1: 700 5rem/100% var(--font-heading);
   --font-space-grotesk-h2: 700 4rem/100% var(--font-heading);
@@ -39,6 +45,8 @@
   --font-dm-sans-b4-m: 500 0.625rem/130% var(--font-body);
 
   @include min-width(md) {
+    --header-height: 5.375rem;
+
     --font-space-grotesk-h1: 700 10rem/100% var(--font-heading);
     --font-space-grotesk-h2: 700 7.5rem/100% var(--font-heading);
     --font-space-grotesk-h3: 700 5rem/100% var(--font-heading);

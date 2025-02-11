@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactElement } from 'react';
+import { HTMLAttributes } from 'react';
 
 export const ShopifySvg = (props: HTMLAttributes<SVGElement>) => (
   <svg

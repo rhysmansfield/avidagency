@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 
 import { Icon } from '@/components/icon/icon';
+import { UnderlineLink } from '@/components/underline-link/underline-link';
 
 import { classList } from '@/utils/class-list';
 
@@ -10,34 +13,59 @@ export const Header = () => {
   return (
     <header className={classList('wrapper', styles.root)}>
       <div className={styles['logo__wrapper']}>
-        <Icon name="logo" title="Avid Agency" className={styles.logo} />
+        <Link href="/">
+          <Icon name="logo" title="Avid Agency" className={styles.logo} />
+        </Link>
         <div className={styles['shopify__wrapper']}>
           For everything
           <Icon name="shopify" title="Shopify" className={styles.shopify} />
         </div>
       </div>
 
-      <nav>
-        <ul>
+      <nav className={styles['desktop-nav']}>
+        <ul className={styles['desktop-nav__list']}>
           <li>
-            <Link href="/">Services</Link>
+            <UnderlineLink href="/" className={styles['desktop-nav__link']}>
+              Services
+            </UnderlineLink>
           </li>
           <li>
-            <Link href="/">Products</Link>
+            <UnderlineLink href="/" className={styles['desktop-nav__link']}>
+              Projects
+            </UnderlineLink>
           </li>
           <li>
-            <Link
-              href="/"
-              style={{
-                backgroundColor: 'pink',
-                padding: '4px 12px',
-                borderRadius: '9999px',
-              }}
-            >
-              Let's talk
+            <Link href="/" className={styles['desktop-nav__cta']}>
+              Let&apos;s talk
             </Link>
           </li>
         </ul>
+      </nav>
+
+      <button className={styles['mobile-nav__button']}>
+        <Icon name="menu" title="Menu" className={styles['mobile-nav__icon']} />
+      </button>
+
+      <nav className={classList('wrapper', styles['mobile-nav'])}>
+        <ul className={styles['mobile-nav__list']}>
+          <li>
+            <Link href="/" className={styles['mobile-nav__link']}>
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link href="/" className={styles['mobile-nav__link']}>
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link href="/" className={styles['mobile-nav__link']}>
+              Let&apos;s talk
+            </Link>
+          </li>
+        </ul>
+
+        <ul className={styles['mobile-nav__socials']}>Socials</ul>
       </nav>
     </header>
   );
