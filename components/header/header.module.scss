@@ -1,0 +1,31 @@
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.logo {
+  width: 4rem;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    color: var(--c-brand-day);
+
+    @include min-width(md) {
+      gap: 2rem;
+    }
+  }
+}
+
+.shopify {
+  width: 3.5rem;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1ch;
+  }
+}

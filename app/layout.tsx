@@ -1,8 +1,13 @@
 import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { ReCaptchaProvider } from 'next-recaptcha-v3';
+import { DM_Sans, Space_Grotesk } from 'next/font/google';
 
 import { ReactQueryContext } from '@/context/react-query-context';
+
+import { Header } from '@/components/header/header';
+
+import { classList } from '@/utils/class-list';
 
 import { CommonLayoutProps } from '@/types/common.type';
 
@@ -30,13 +35,29 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://avidagency.co.uk'),
 };
 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['500', '700'],
+  variable: '--font-heading',
+});
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-body',
+});
+
 const RootLayout = ({ children }: CommonLayoutProps) => {
   return (
     <ReactQueryContext>
       <ReCaptchaProvider reCaptchaKey={process.env.RECAPTCHA_PUBLIC_KEY}>
         <GoogleTagManager gtmId="GTM-PSPRMMW8" />
-        <html lang="en">
-          <body>
+        <html
+          lang="en"
+          className={classList(spaceGrotesk.variable, dmSans.variable)}
+        >
+          <body className={dmSans.className}>
+            <Header />
             <main>{children}</main>
           </body>
         </html>
