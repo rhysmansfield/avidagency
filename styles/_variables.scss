@@ -1,3 +1,5 @@
+@use '@/styles/mixins/breakpoints' as *;
+
 :root {
   --wrapper-padding: 1rem;
 
@@ -6,4 +8,64 @@
   --c-brand-verde: #c3ff47;
   --c-brand-azul: #1b9fff;
   --c-brand-pink: #f54891;
+
+  --font-space-grotesk-h1: 700 5rem/100% var(--font-heading);
+  --font-space-grotesk-h2: 700 4rem/100% var(--font-heading);
+  --font-space-grotesk-h3: 700 3.5rem/100% var(--font-heading);
+  --font-space-grotesk-h4: 700 3rem/100% var(--font-heading);
+  --font-space-grotesk-s1: 500 2.5rem/120% var(--font-heading);
+  --font-space-grotesk-s2: 500 2rem/120% var(--font-heading);
+  --font-space-grotesk-s3: 500 1.5rem/120% var(--font-heading);
+  --font-space-grotesk-s4: 500 1.25rem/120% var(--font-heading);
+  --font-space-grotesk-b1: 500 1rem/130% var(--font-heading);
+  --font-space-grotesk-b2: 500 0.875rem/130% var(--font-heading);
+  --font-space-grotesk-b3: 500 0.75rem/130% var(--font-heading);
+  --font-space-grotesk-b4: 500 0.625rem/130% var(--font-heading);
+  --font-dm-sans-h1: 700 5rem/100% var(--font-body);
+  --font-dm-sans-h2: 700 4rem/100% var(--font-body);
+  --font-dm-sans-h3: 700 3.5rem/100% var(--font-body);
+  --font-dm-sans-h4: 700 3rem/100% var(--font-body);
+  --font-dm-sans-s1: 500 2.5rem/120% var(--font-body);
+  --font-dm-sans-s2: 500 2rem/120% var(--font-body);
+  --font-dm-sans-s3: 500 1.5rem/120% var(--font-body);
+  --font-dm-sans-s4: 500 1.25rem/120% var(--font-body);
+  --font-dm-sans-b1: 400 1rem/130% var(--font-body);
+  --font-dm-sans-b2: 400 0.875rem/130% var(--font-body);
+  --font-dm-sans-b3: 400 0.75rem/130% var(--font-body);
+  --font-dm-sans-b4: 400 0.625rem/130% var(--font-body);
+  --font-dm-sans-b1-m: 500 1rem/130% var(--font-body);
+  --font-dm-sans-b2-m: 500 0.875rem/130% var(--font-body);
+  --font-dm-sans-b3-m: 500 0.75rem/130% var(--font-body);
+  --font-dm-sans-b4-m: 500 0.625rem/130% var(--font-body);
+
+  @include min-width(md) {
+    --font-space-grotesk-h1: 700 10rem/100% var(--font-heading);
+    --font-space-grotesk-h2: 700 7.5rem/100% var(--font-heading);
+    --font-space-grotesk-h3: 700 5rem/100% var(--font-heading);
+    --font-space-grotesk-h4: 700 4rem/100% var(--font-heading);
+    --font-space-grotesk-s1: 500 3rem/120% var(--font-heading);
+    --font-space-grotesk-s2: 500 2.5rem/120% var(--font-heading);
+    --font-space-grotesk-s3: 500 2rem/120% var(--font-heading);
+    --font-space-grotesk-s4: 500 1.5rem/120% var(--font-heading);
+    --font-space-grotesk-b1: 500 1.25rem/130% var(--font-heading);
+    --font-space-grotesk-b2: 500 1rem/130% var(--font-heading);
+    --font-space-grotesk-b3: 500 0.875rem/130% var(--font-heading);
+    --font-space-grotesk-b4: 500 0.75rem/130% var(--font-heading);
+    --font-dm-sans-h1: 700 10rem/100% var(--font-body);
+    --font-dm-sans-h2: 700 7.5rem/100% var(--font-body);
+    --font-dm-sans-h3: 700 5rem/100% var(--font-body);
+    --font-dm-sans-h4: 700 4rem/100% var(--font-body);
+    --font-dm-sans-s1: 500 3rem/120% var(--font-body);
+    --font-dm-sans-s2: 500 2.5rem/120% var(--font-body);
+    --font-dm-sans-s3: 500 2rem/120% var(--font-body);
+    --font-dm-sans-s4: 500 1.5rem/120% var(--font-body);
+    --font-dm-sans-b1: 400 1.25rem/130% var(--font-body);
+    --font-dm-sans-b2: 400 1rem/130% var(--font-body);
+    --font-dm-sans-b3: 400 0.875rem/130% var(--font-body);
+    --font-dm-sans-b4: 400 0.75rem/130% var(--font-body);
+    --font-dm-sans-b1-m: 500 1.25rem/130% var(--font-body);
+    --font-dm-sans-b2-m: 500 1rem/130% var(--font-body);
+    --font-dm-sans-b3-m: 500 0.875rem/130% var(--font-body);
+    --font-dm-sans-b4-m: 500 0.75rem/130% var(--font-body);
+  }
 }
