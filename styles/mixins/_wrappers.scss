@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use '@/styles/mixins/breakpoints' as *;
+
+@mixin wrapper-properties {
+  position: relative;
+  width: 100%;
+  max-width: map.get($breakpoints, 'xl');
+  padding-left: var(--wrapper-padding);
+  padding-right: var(--wrapper-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin wrappers {
+  .wrapper {
+    @include wrapper-properties;
+  }
+}

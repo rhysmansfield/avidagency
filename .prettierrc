@@ -1,0 +1,22 @@
+{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "semi": true,
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "^@/hooks/(.*)$",
+    "^@/context/(.*)$",
+    "^@/components/(.*)$",
+    "^@/utils/(.*)$",
+    "^@/data/(.*)$",
+    "^@/public/(.*)$",
+    "^./*.*.type",
+    "^./*.*.scss",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"]
+}

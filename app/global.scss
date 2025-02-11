@@ -1,0 +1,14 @@
+@use '@/styles/reset.scss';
+@use '@/styles/variables.scss';
+@use '@/styles/mixins/wrappers.scss' as *;
+
+html {
+  background-color: var(--c-brand-night);
+  scroll-behavior: smooth;
+}
+
+.grecaptcha-badge {
+  display: none !important;
+}
+
+@include wrappers;
