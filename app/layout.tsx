@@ -57,7 +57,30 @@ const RootLayout = ({ children }: CommonLayoutProps) => {
           className={classList(spaceGrotesk.variable, dmSans.variable)}
         >
           <body className={dmSans.className}>
-            <Header />
+            <Header
+              items={[
+                { label: 'Services', href: '/services' },
+                { label: 'Projects', href: '/projects' },
+              ]}
+              cta={{
+                label: "Let's talk",
+                href: '/contact',
+              }}
+              socials={[
+                {
+                  label: 'Facebook',
+                  href: 'https://www.facebook.com/avidagencyuk',
+                  icon: 'menu',
+                  external: true,
+                },
+                {
+                  label: 'Instagram',
+                  href: 'https://www.instagram.com/avidagencyuk',
+                  icon: 'menu',
+                  external: true,
+                },
+              ]}
+            />
             <main>{children}</main>
           </body>
         </html>

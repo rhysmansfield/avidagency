@@ -7,9 +7,11 @@ import { UnderlineLink } from '@/components/underline-link/underline-link';
 
 import { classList } from '@/utils/class-list';
 
+import { HeaderProps } from './header.type';
+
 import styles from './header.module.scss';
 
-export const Header = () => {
+export const Header = ({ items, cta, socials }: HeaderProps) => {
   return (
     <header className={classList('wrapper', styles.root)}>
       <div className={styles['logo__wrapper']}>
@@ -24,19 +26,24 @@ export const Header = () => {
 
       <nav className={styles['desktop-nav']}>
         <ul className={styles['desktop-nav__list']}>
+          {items.map(({ href, label, external }) => (
+            <li key={label}>
+              <UnderlineLink
+                href={href}
+                target={external ? '_blank' : undefined}
+                className={styles['desktop-nav__link']}
+              >
+                {label}
+              </UnderlineLink>
+            </li>
+          ))}
           <li>
-            <UnderlineLink href="/" className={styles['desktop-nav__link']}>
-              Services
-            </UnderlineLink>
-          </li>
-          <li>
-            <UnderlineLink href="/" className={styles['desktop-nav__link']}>
-              Projects
-            </UnderlineLink>
-          </li>
-          <li>
-            <Link href="/" className={styles['desktop-nav__cta']}>
-              Let&apos;s talk
+            <Link
+              href={cta.href}
+              target={cta.external ? '_blank' : undefined}
+              className={styles['desktop-nav__cta']}
+            >
+              {cta.label}
             </Link>
           </li>
         </ul>
@@ -48,24 +55,36 @@ export const Header = () => {
 
       <nav className={classList('wrapper', styles['mobile-nav'])}>
         <ul className={styles['mobile-nav__list']}>
-          <li>
-            <Link href="/" className={styles['mobile-nav__link']}>
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link href="/" className={styles['mobile-nav__link']}>
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link href="/" className={styles['mobile-nav__link']}>
-              Let&apos;s talk
-            </Link>
-          </li>
+          {[...items, cta].map(({ href, label, external }) => (
+            <li key={label}>
+              <Link
+                href={href}
+                target={external ? '_blank' : undefined}
+                className={styles['mobile-nav__link']}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
 
-        <ul className={styles['mobile-nav__socials']}>Socials</ul>
+        <ul className={styles['mobile-nav__socials']}>
+          {socials.map(({ href, label, external, icon }) => (
+            <li key={href}>
+              <Link
+                href={href}
+                target={external ? '_blank' : undefined}
+                className={styles['mobile-nav__social']}
+              >
+                <Icon
+                  name={icon}
+                  title={label}
+                  className={styles['mobile-nav__social__icon']}
+                />
+              </Link>
+            </li>
+          ))}
+        </ul>
       </nav>
     </header>
   );

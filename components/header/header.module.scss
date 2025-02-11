@@ -121,6 +121,18 @@
   }
 
   &__socials {
+    display: flex;
+    align-items: center;
     margin-top: auto;
+    margin: auto -0.5rem -0.5rem;
+  }
+
+  &__social {
+    display: block;
+    padding: 0.5rem;
+
+    &__icon {
+      width: 2rem;
+    }
   }
 }
