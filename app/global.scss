@@ -11,6 +11,12 @@ body {
   position: relative;
 }
 
+body.body--no-scroll {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+
 .grecaptcha-badge {
   display: none !important;
 }

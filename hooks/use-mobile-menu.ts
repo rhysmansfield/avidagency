@@ -12,8 +12,8 @@ export const useMobileMenu = (): useMobileMenuHook => {
   };
 
   useEffect(() => {
-    if (isMobileMenuOpen) document.body.style.overflow = 'hidden';
-    else document.body.style.overflow = '';
+    if (isMobileMenuOpen) document.body.classList.add('body--no-scroll');
+    else document.body.classList.remove('body--no-scroll');
   }, [isMobileMenuOpen]);
 
   return {
