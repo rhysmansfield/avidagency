@@ -1,3 +1,5 @@
+import { IconName } from '@/components/icon/icon.type';
+
 export type ExcludeProps<T, Ignore = never> = {
   [K in keyof T]?: K extends Ignore ? T[K] : never;
 };
@@ -6,6 +8,10 @@ export type CommonLink = {
   label: string;
   href: string;
   external?: boolean;
+};
+
+export type CommonIconLink = CommonLink & {
+  icon: IconName;
 };
 
 export type CommonImage = {

@@ -110,7 +110,6 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
               <Link
                 href={href}
                 target={external ? '_blank' : undefined}
-                onClick={closeMobileMenu}
                 className={classList(
                   styles['mobile-nav__animated'],
                   styles['mobile-nav__social'],

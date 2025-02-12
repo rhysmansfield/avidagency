@@ -9,6 +9,8 @@ import { Header } from '@/components/header/header';
 
 import { classList } from '@/utils/class-list';
 
+import { SOCIAL_URLs } from '@/data/urls';
+
 import { CommonLayoutProps } from '@/types/common.type';
 
 import './global.scss';
@@ -66,20 +68,7 @@ const RootLayout = ({ children }: CommonLayoutProps) => {
                 label: "Let's talk",
                 href: '/contact',
               }}
-              socials={[
-                {
-                  label: 'Facebook',
-                  href: 'https://www.facebook.com/avidagencyuk',
-                  icon: 'menu',
-                  external: true,
-                },
-                {
-                  label: 'Instagram',
-                  href: 'https://www.instagram.com/avidagencyuk',
-                  icon: 'menu',
-                  external: true,
-                },
-              ]}
+              socials={SOCIAL_URLs}
             />
             <main>{children}</main>
           </body>
