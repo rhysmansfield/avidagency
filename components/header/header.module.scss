@@ -105,9 +105,7 @@
 
   &__animated {
     opacity: 0;
-    transform: translate3d(0, 20px, 0);
-    will-change: opacity, transform;
-    transform-style: preserve-3d;
+    transform: translateY(1.25rem);
   }
 
   &--open &__animated {
@@ -165,11 +163,11 @@
 
 @keyframes fade-slide-up {
   0% {
-    transform: translate3d(0, 20px, 0);
+    transform: translateY(1.25rem);
     opacity: 0;
   }
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
