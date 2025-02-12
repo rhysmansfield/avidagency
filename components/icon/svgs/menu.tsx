@@ -10,6 +10,6 @@ export const MenuSvg = (props: HTMLAttributes<SVGElement>) => (
     stroke="currentColor"
     {...props}
   >
-    <path d="M3 12h18M3 6h18M3 18h18" />
+    <path d="M1 12h22M1 4h22M1 20h22" />
   </svg>
 );

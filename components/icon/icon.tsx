@@ -1,5 +1,6 @@
 import { cloneElement } from 'react';
 
+import { CloseSvg } from '@/components/icon/svgs/close';
 import { LogoSvg } from '@/components/icon/svgs/logo';
 import { MenuSvg } from '@/components/icon/svgs/menu';
 import { ShopifySvg } from '@/components/icon/svgs/shopify';
@@ -11,6 +12,7 @@ export const Icon = ({ name, ...props }: IconProps) => {
     logo: <LogoSvg />,
     shopify: <ShopifySvg />,
     menu: <MenuSvg />,
+    close: <CloseSvg />,
   };
 
   return cloneElement(icons[name], props);

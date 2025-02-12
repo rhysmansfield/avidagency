@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 
+import { useMobileMenu } from '@/hooks/use-mobile-menu';
+
 import { Icon } from '@/components/icon/icon';
 import { UnderlineLink } from '@/components/underline-link/underline-link';
 
@@ -12,10 +14,13 @@ import { HeaderProps } from './header.type';
 import styles from './header.module.scss';
 
 export const Header = ({ items, cta, socials }: HeaderProps) => {
+  const { isMobileMenuOpen, toggleMobileMenu, closeMobileMenu } =
+    useMobileMenu();
+
   return (
     <header className={classList('wrapper', styles.root)}>
       <div className={styles['logo__wrapper']}>
-        <Link href="/">
+        <Link href="/" onClick={closeMobileMenu}>
           <Icon name="logo" title="Avid Agency" className={styles.logo} />
         </Link>
         <div className={styles['shopify__wrapper']}>
@@ -50,16 +55,28 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
       </nav>
 
       <button className={styles['mobile-nav__button']}>
-        <Icon name="menu" title="Menu" className={styles['mobile-nav__icon']} />
+        <Icon
+          name={isMobileMenuOpen ? 'close' : 'menu'}
+          title="Toggle menu"
+          onClick={toggleMobileMenu}
+          className={styles['mobile-nav__icon']}
+        />
       </button>
 
-      <nav className={classList('wrapper', styles['mobile-nav'])}>
+      <nav
+        className={classList(
+          'wrapper',
+          styles['mobile-nav'],
+          isMobileMenuOpen && styles['mobile-nav--open'],
+        )}
+      >
         <ul className={styles['mobile-nav__list']}>
           {[...items, cta].map(({ href, label, external }) => (
             <li key={label}>
               <Link
                 href={href}
                 target={external ? '_blank' : undefined}
+                onClick={closeMobileMenu}
                 className={styles['mobile-nav__link']}
               >
                 {label}
@@ -74,6 +91,7 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
               <Link
                 href={href}
                 target={external ? '_blank' : undefined}
+                onClick={closeMobileMenu}
                 className={styles['mobile-nav__social']}
               >
                 <Icon
