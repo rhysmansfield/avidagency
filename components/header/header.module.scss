@@ -149,7 +149,7 @@ a.desktop-nav__cta {
   &__cta {
     display: flex;
     align-items: center;
-    gap: 1.125rem;
+    gap: 1rem;
     color: var(--c-brand-wink);
 
     &__icon {
@@ -170,6 +170,7 @@ a.desktop-nav__cta {
 
     &__icon {
       width: 1.875rem;
+      aspect-ratio: 1;
     }
   }
 }
