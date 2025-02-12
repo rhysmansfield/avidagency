@@ -15,7 +15,7 @@
   --c-grey-light-24: rgba(248, 248, 248, 0.24);
 
   --transition-duration: 0.3s;
-  --transition-timing: ease;
+  --transition-timing: cubic-bezier(0.5, 0.25, 0, 1);
   --transition: var(--transition-duration) var(--transition-timing);
 
   --font-space-grotesk-h1: 700 5rem/100% var(--font-heading);
