@@ -1,0 +1,30 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font: var(--font-dm-sans-b2-m);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  transition:
+    scale var(--transition),
+    background-color var(--transition),
+    color var(--transition);
+
+  &:active {
+    scale: 0.95;
+  }
+
+  &.theme-pink {
+    background-color: var(--c-brand-wink);
+    color: var(--c-brand-day);
+
+    &:hover {
+      background-color: var(--c-accent-wink);
+      color: var(--c-brand-wink);
+    }
+  }
+}
+
+.icon {
+  width: 0.75rem;
+}

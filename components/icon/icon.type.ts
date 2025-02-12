@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactElement } from 'react';
 
-export type IconName = 'logo' | 'shopify' | 'menu' | 'close';
+export type IconName = 'logo' | 'shopify' | 'menu' | 'close' | 'arrow-right';
 
 export type IconComponents = {
   [key in IconName]: ReactElement;

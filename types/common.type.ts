@@ -1,3 +1,7 @@
+export type ExcludeProps<T, Ignore = never> = {
+  [K in keyof T]?: K extends Ignore ? T[K] : never;
+};
+
 export type CommonLink = {
   label: string;
   href: string;

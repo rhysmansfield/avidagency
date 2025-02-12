@@ -14,6 +14,8 @@ import { HeaderProps } from './header.type';
 
 import styles from './header.module.scss';
 
+import { Button } from '../button/button';
+
 export const Header = ({ items, cta, socials }: HeaderProps) => {
   const { isMobileMenuOpen, toggleMobileMenu, closeMobileMenu } =
     useMobileMenu();
@@ -48,13 +50,15 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
             </li>
           ))}
           <li>
-            <Link
+            <Button
+              theme="pink"
+              appearance="link"
               href={cta.href}
               target={cta.external ? '_blank' : undefined}
               className={styles['desktop-nav__cta']}
             >
               {cta.label}
-            </Link>
+            </Button>
           </li>
         </ul>
       </nav>
