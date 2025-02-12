@@ -13,9 +13,11 @@ export const useMobileMenu = (): useMobileMenuHook => {
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      window.scrollY = 0;
+      window.scrollTo(0, 0);
       document.body.classList.add('body--no-scroll');
     } else document.body.classList.remove('body--no-scroll');
+
+    return () => document.body.classList.remove('body--no-scroll');
   }, [isMobileMenuOpen]);
 
   return {
