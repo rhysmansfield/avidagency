@@ -94,13 +94,27 @@
     opacity var(--transition),
     visibility var(--transition);
 
+  @include min-width(md) {
+    display: none;
+  }
+
   &--open {
     opacity: 1;
     visibility: visible;
   }
 
-  @include min-width(md) {
-    display: none;
+  &__animated {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  &--open &__animated {
+    animation: fade-slide-up var(--transition)
+      calc(
+        var(--transition-duration) +
+          (var(--transition-index) * var(--transition-duration) * 0.75)
+      )
+      forwards;
   }
 
   &__button {
@@ -144,5 +158,16 @@
     &__icon {
       width: 2rem;
     }
+  }
+}
+
+@keyframes fade-slide-up {
+  0% {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }

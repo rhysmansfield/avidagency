@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { CSSProperties } from 'react';
 
 import { useMobileMenu } from '@/hooks/use-mobile-menu';
 
@@ -71,13 +72,21 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
         )}
       >
         <ul className={styles['mobile-nav__list']}>
-          {[...items, cta].map(({ href, label, external }) => (
+          {[...items, cta].map(({ href, label, external }, index) => (
             <li key={label}>
               <Link
                 href={href}
                 target={external ? '_blank' : undefined}
                 onClick={closeMobileMenu}
-                className={styles['mobile-nav__link']}
+                className={classList(
+                  styles['mobile-nav__animated'],
+                  styles['mobile-nav__link'],
+                )}
+                style={
+                  {
+                    '--transition-index': index,
+                  } as CSSProperties
+                }
               >
                 {label}
               </Link>
@@ -86,13 +95,21 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
         </ul>
 
         <ul className={styles['mobile-nav__socials']}>
-          {socials.map(({ href, label, external, icon }) => (
+          {socials.map(({ href, label, external, icon }, index) => (
             <li key={href}>
               <Link
                 href={href}
                 target={external ? '_blank' : undefined}
                 onClick={closeMobileMenu}
-                className={styles['mobile-nav__social']}
+                className={classList(
+                  styles['mobile-nav__animated'],
+                  styles['mobile-nav__social'],
+                )}
+                style={
+                  {
+                    '--transition-index': [...items, cta].length + index,
+                  } as CSSProperties
+                }
               >
                 <Icon
                   name={icon}
