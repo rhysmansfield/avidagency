@@ -82,7 +82,7 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
         )}
       >
         <ul className={styles['mobile-nav__list']}>
-          {[...items, cta].map(({ href, label, external }, index) => (
+          {items.map(({ href, label, external }, index) => (
             <li key={label}>
               <Link
                 href={href}
@@ -102,6 +102,30 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
               </Link>
             </li>
           ))}
+
+          <li>
+            <Link
+              href={cta.href}
+              target={cta.external ? '_blank' : undefined}
+              onClick={closeMobileMenu}
+              className={classList(
+                styles['mobile-nav__animated'],
+                styles['mobile-nav__link'],
+                styles['mobile-nav__cta'],
+              )}
+              style={
+                {
+                  '--transition-index': items.length,
+                } as CSSProperties
+              }
+            >
+              {cta.label}
+              <Icon
+                name="arrow-right"
+                className={styles['mobile-nav__cta__icon']}
+              />
+            </Link>
+          </li>
         </ul>
 
         <ul className={styles['mobile-nav__socials']}>
@@ -116,7 +140,7 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
                 )}
                 style={
                   {
-                    '--transition-index': [...items, cta].length + index,
+                    '--transition-index': items.length + 1 + index,
                   } as CSSProperties
                 }
               >
