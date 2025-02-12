@@ -17,6 +17,10 @@ body.body--no-scroll {
   overflow: hidden;
 }
 
+* {
+  outline-color: var(--c-brand-day);
+}
+
 .grecaptcha-badge {
   display: none !important;
 }

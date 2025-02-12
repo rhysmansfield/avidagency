@@ -20,8 +20,12 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
 
   return (
     <header className={classList('wrapper', styles.root)}>
-      <div className={styles['logo__wrapper']}>
-        <Link href="/" onClick={closeMobileMenu}>
+      <div className={styles.brand}>
+        <Link
+          href="/"
+          onClick={closeMobileMenu}
+          className={styles['logo__wrapper']}
+        >
           <Icon name="logo" title="Avid Agency" className={styles.logo} />
         </Link>
         <div className={styles['shopify__wrapper']}>
@@ -55,11 +59,13 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
         </ul>
       </nav>
 
-      <button className={styles['mobile-nav__button']}>
+      <button
+        className={styles['mobile-nav__button']}
+        onClick={toggleMobileMenu}
+      >
         <Icon
           name={isMobileMenuOpen ? 'close' : 'menu'}
           title="Toggle menu"
-          onClick={toggleMobileMenu}
           className={styles['mobile-nav__icon']}
         />
       </button>
