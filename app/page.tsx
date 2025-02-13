@@ -17,6 +17,7 @@ const Home = () => (
 
     <LogoSwiper
       title="Trusted by:"
+      items={[
         'footasylum',
         'pets',
         'heat',
