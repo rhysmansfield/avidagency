@@ -1,3 +1,7 @@
+'use client';
+
+import { useState } from 'react';
+
 import { Icon } from '@/components/icon/icon';
 import { IconName } from '@/components/icon/icon.type';
 
@@ -11,15 +15,27 @@ export const LogoSwiper = ({
 }: {
   title: string;
   items: IconName[];
-}) => (
-  <section className={styles.root}>
-    <p className={classList('wrapper', styles.title)}>{title}</p>
-    <div className={styles.slider}>
-      {items.map((icon, index) => (
-        <div key={icon} className={styles.slide}>
-          <Icon name={icon} title="" className={styles['slide__icon']} />
-        </div>
-      ))}
-    </div>
-  </section>
-);
+}) => {
+  const [isAnimating, setIsAnimating] = useState<boolean>(true);
+
+  return (
+    <section className={styles.root}>
+      <p className={classList('wrapper', styles.title)}>{title}</p>
+      <div
+        className={classList(
+          styles.slider,
+          isAnimating && styles['slider--animating'],
+        )}
+        onAnimationEnd={() => {
+          setIsAnimating(false);
+        }}
+      >
+        {items.map((icon, index) => (
+          <div key={icon} className={styles.slide}>
+            <Icon name={icon} title="" className={styles['slide__icon']} />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
