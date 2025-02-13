@@ -1,5 +1,5 @@
 import { Hero } from '@/components/hero/hero';
-import { TrustedBy } from '@/components/trusted-by/trusted-by';
+import { LogoSwiper } from '@/components/logo-swiper/logo-swiper';
 
 import { URLs } from '@/data/urls';
 
@@ -15,7 +15,17 @@ const Home = () => (
       }}
     />
 
-    <TrustedBy />
+    <LogoSwiper
+      title="Trusted by:"
+      items={[
+        'pets',
+        'footasylum',
+        'heat',
+        'meta',
+        'shopify-partners',
+        'sparklayer',
+      ]}
+    />
   </>
 );
 

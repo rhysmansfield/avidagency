@@ -23,7 +23,7 @@ $spacing: max(
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
-  gap: 2.5rem;
+  gap: 2rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-padding: 0 $spacing;
@@ -31,6 +31,10 @@ $spacing: max(
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  @include min-width(md) {
+    gap: 3rem;
   }
 }
 
