@@ -37,7 +37,7 @@ $spacing: max(
   }
 
   &--animating {
-    width: calc(100% + 2rem);
+    width: calc(100% + 4rem);
   }
 
   @include min-width(md) {
@@ -77,7 +77,7 @@ $spacing: max(
     transform: translateX(0);
   }
   50% {
-    transform: translateX(-2rem);
+    transform: translateX(-4rem);
   }
   100% {
     transform: translateX(0);
