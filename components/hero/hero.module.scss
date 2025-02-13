@@ -2,7 +2,7 @@
 
 .root {
   display: grid;
-  gap: 2.5rem;
+  gap: 2.25rem;
   margin: 2.5rem auto;
 
   @include min-width(md) {
