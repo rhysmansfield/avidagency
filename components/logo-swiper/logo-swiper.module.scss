@@ -42,7 +42,11 @@ $spacing: max(
 
   @include min-width(md) {
     gap: 3rem;
-    animation: none;
+    animation-play-state: paused;
+
+    &--animating {
+      width: 100%;
+    }
   }
 }
 
