@@ -5,6 +5,7 @@ import { CSSProperties } from 'react';
 
 import { useMobileMenu } from '@/hooks/use-mobile-menu';
 
+import { Button } from '@/components/button/button';
 import { Icon } from '@/components/icon/icon';
 import { UnderlineLink } from '@/components/underline-link/underline-link';
 
@@ -15,8 +16,6 @@ import { URLs } from '@/data/urls';
 import { HeaderProps } from './header.type';
 
 import styles from './header.module.scss';
-
-import { Button } from '../button/button';
 
 export const Header = ({ items, cta, socials }: HeaderProps) => {
   const { isMobileMenuOpen, toggleMobileMenu, closeMobileMenu } =
