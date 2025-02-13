@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useMobileMenuHook } from './use-mobile-menu.type';
 
 export const useMobileMenu = (): useMobileMenuHook => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 

@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { CommonLayoutProps } from '@/types/common.type';
 
 export const ReactQueryContext = ({ children }: CommonLayoutProps) => {
-  const [queryClient] = useState(
+  const [queryClient] = useState<QueryClient>(
     () =>
       new QueryClient({
         defaultOptions: {
