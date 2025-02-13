@@ -6,6 +6,7 @@ $spacing: max(
 );
 
 .root {
+  color: var(--c-grey-light-80);
   margin: 2.5rem auto;
 
   @include min-width(md) {
@@ -15,7 +16,6 @@ $spacing: max(
 
 .title {
   font: var(--font-dm-sans-b2);
-  color: var(--c-grey-light-80);
   margin-bottom: 1rem;
 }
 
@@ -23,17 +23,24 @@ $spacing: max(
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 2.5rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-padding: 0 $spacing;
   scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .slide {
   scroll-snap-align: start;
-  background: grey;
-  height: 64px;
+  height: 1.5rem;
+
+  @include min-width(md) {
+    height: 2rem;
+  }
 
   &:first-child {
     margin-left: $spacing;
@@ -41,5 +48,10 @@ $spacing: max(
 
   &:last-child {
     margin-right: $spacing;
+  }
+
+  &__icon {
+    width: auto;
+    height: 100%;
   }
 }

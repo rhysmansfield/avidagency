@@ -8,7 +8,13 @@ export type IconName =
   | 'arrow-right'
   | 'facebook'
   | 'instagram'
-  | 'tiktok';
+  | 'tiktok'
+  | 'pets'
+  | 'footasylum'
+  | 'heat'
+  | 'meta'
+  | 'shopify-partners'
+  | 'sparklayer';
 
 export type IconComponents = {
   [key in IconName]: ReactElement;
