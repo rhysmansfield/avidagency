@@ -10,7 +10,7 @@ export default function Home() {
       cta={{
         href: URLs.CONTACT,
         label: "Let's work together",
-        theme: 'pink',
+        theme: 'verde',
       }}
     />
   );

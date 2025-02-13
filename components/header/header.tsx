@@ -53,7 +53,7 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
           ))}
           <li>
             <Button
-              theme="pink"
+              theme="wink"
               appearance="link"
               href={cta.href}
               target={cta.external ? '_blank' : undefined}

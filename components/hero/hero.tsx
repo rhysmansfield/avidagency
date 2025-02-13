@@ -1,6 +1,10 @@
 import { Button } from '@/components/button/button';
 
+import { classList } from '@/utils/class-list';
+
 import { CommonButton } from '@/types/common.type';
+
+import styles from './hero.module.scss';
 
 export const Hero = ({
   title,
@@ -11,15 +15,16 @@ export const Hero = ({
   text: string;
   cta: CommonButton;
 }) => (
-  <section>
-    <h1>{title}</h1>
-    <div>
-      <p>{text}</p>
+  <section className={classList('wrapper', styles.root)}>
+    <h1 className={styles.title}>{title}</h1>
+    <div className={styles.content}>
+      <p className={styles.text}>{text}</p>
       <Button
-        theme="pink"
+        theme={cta.theme}
         appearance="link"
         href={cta.href}
         target={cta.external ? '_blank' : undefined}
+        className={styles.cta}
       >
         {cta.label}
       </Button>

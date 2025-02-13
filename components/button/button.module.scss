@@ -14,13 +14,25 @@
     scale: 0.95;
   }
 
-  &.theme-pink {
-    background-color: var(--c-brand-wink);
-    color: var(--c-brand-day);
+  &.theme {
+    &-wink {
+      background-color: var(--c-brand-wink);
+      color: var(--c-brand-day);
 
-    &:hover {
-      background-color: var(--c-accent-wink);
-      color: var(--c-brand-wink);
+      &:hover {
+        background-color: var(--c-accent-wink);
+        color: var(--c-brand-wink);
+      }
+    }
+
+    &-verde {
+      background-color: var(--c-brand-verde);
+      color: var(--c-brand-night);
+
+      &:hover {
+        background-color: var(--c-accent-verde);
+        color: var(--c-brand-verde);
+      }
     }
   }
 }

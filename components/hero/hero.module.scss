@@ -1,0 +1,27 @@
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  display: grid;
+  gap: 2.5rem;
+  margin: 2.5rem auto;
+
+  @include min-width(md) {
+    margin: 5rem auto;
+  }
+
+  @include min-width(lg) {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+  }
+}
+
+.title {
+  font: var(--font-dm-sans-h4);
+  text-wrap-style: balance;
+}
+
+.text {
+  font: var(--font-dm-sans-b2);
+  color: var(--c-grey-light-80);
+  margin-bottom: 1.5rem;
+}
