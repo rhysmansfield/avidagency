@@ -8,6 +8,7 @@ $spacing: max(
 .root {
   color: var(--c-grey-light-80);
   margin: 2.5rem auto;
+  overflow: hidden;
 
   @include min-width(md) {
     margin: 5rem auto;
@@ -29,12 +30,17 @@ $spacing: max(
   scroll-padding: 0 $spacing;
   scrollbar-width: none;
 
+  // once
+  animation: bounce calc(var(--transition-duration) * 2)
+    var(--transition-timing) 1 forwards;
+
   &::-webkit-scrollbar {
     display: none;
   }
 
   @include min-width(md) {
     gap: 3rem;
+    animation: none;
   }
 }
 
@@ -57,5 +63,17 @@ $spacing: max(
   &__icon {
     width: auto;
     height: 100%;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
