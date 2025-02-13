@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ComponentProps } from 'react';
 
-import { ExcludeProps } from '@/types/common.type';
+import { CommonLink, ExcludeProps } from '@/types/common.type';
 
 type SharedButtonProps = {
   theme: 'pink';

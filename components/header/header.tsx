@@ -10,6 +10,8 @@ import { UnderlineLink } from '@/components/underline-link/underline-link';
 
 import { classList } from '@/utils/class-list';
 
+import { URLs } from '@/data/urls';
+
 import { HeaderProps } from './header.type';
 
 import styles from './header.module.scss';
@@ -24,7 +26,7 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
     <header className={classList('wrapper', styles.root)}>
       <div className={styles.brand}>
         <Link
-          href="/"
+          href={URLs.HOME}
           onClick={closeMobileMenu}
           className={styles['logo__wrapper']}
         >

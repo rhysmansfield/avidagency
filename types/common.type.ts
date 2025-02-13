@@ -1,3 +1,6 @@
+import { ReactNode } from 'react';
+
+import { ButtonProps } from '@/components/button/button.type';
 import { IconName } from '@/components/icon/icon.type';
 
 export type ExcludeProps<T, Ignore = never> = {
@@ -10,9 +13,9 @@ export type CommonLink = {
   external?: boolean;
 };
 
-export type CommonIconLink = CommonLink & {
-  icon: IconName;
-};
+export type CommonIconLink = CommonLink & { icon: IconName };
+
+export type CommonButton = CommonLink & Pick<ButtonProps, 'theme'>;
 
 export type CommonImage = {
   src: string;
@@ -33,5 +36,5 @@ export type CommonPageProps = Readonly<{
 }>;
 
 export type CommonLayoutProps = Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>;

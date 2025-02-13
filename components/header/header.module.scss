@@ -6,7 +6,6 @@
   align-items: center;
   gap: 1rem;
   height: var(--header-height);
-  color: var(--c-brand-day);
   padding: 1.5rem var(--wrapper-padding);
 
   @include min-width(md) {

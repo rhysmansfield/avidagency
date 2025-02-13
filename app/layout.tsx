@@ -9,7 +9,7 @@ import { Header } from '@/components/header/header';
 
 import { classList } from '@/utils/class-list';
 
-import { SOCIAL_URLs } from '@/data/urls';
+import { SOCIAL_URLs, URLs } from '@/data/urls';
 
 import { CommonLayoutProps } from '@/types/common.type';
 
@@ -61,12 +61,12 @@ const RootLayout = ({ children }: CommonLayoutProps) => {
           <body className={dmSans.className}>
             <Header
               items={[
-                { label: 'Services', href: '/services' },
-                { label: 'Projects', href: '/projects' },
+                { label: 'Services', href: URLs.SERVICES },
+                { label: 'Projects', href: URLs.PROJECTS },
               ]}
               cta={{
                 label: "Let's talk",
-                href: '/contact',
+                href: URLs.CONTACT,
               }}
               socials={SOCIAL_URLs}
             />
