@@ -1,0 +1,45 @@
+@use '@/styles/mixins/breakpoints' as *;
+
+$spacing: max(
+  var(--wrapper-padding),
+  calc((100vw - var(--wrapper-sizing) + var(--wrapper-padding) * 2) / 2)
+);
+
+.root {
+  margin: 2.5rem auto;
+
+  @include min-width(md) {
+    margin: 5rem auto;
+  }
+}
+
+.title {
+  font: var(--font-dm-sans-b2);
+  color: var(--c-grey-light-80);
+  margin-bottom: 1rem;
+}
+
+.slider {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 $spacing;
+  scrollbar-width: none;
+}
+
+.slide {
+  scroll-snap-align: start;
+  background: grey;
+  height: 64px;
+
+  &:first-child {
+    margin-left: $spacing;
+  }
+
+  &:last-child {
+    margin-right: $spacing;
+  }
+}
