@@ -11,15 +11,17 @@ export const Hero = ({ title, text, cta }: HeroProps) => (
     <h1 className={styles.title}>{title}</h1>
     <div className={styles.content}>
       <p className={styles.text}>{text}</p>
-      <Button
-        theme={cta.theme}
-        appearance="link"
-        href={cta.href}
-        target={cta.external ? '_blank' : undefined}
-        className={styles.cta}
-      >
-        {cta.label}
-      </Button>
+      {cta && (
+        <Button
+          theme={cta.theme}
+          appearance="link"
+          href={cta.href}
+          target={cta.external ? '_blank' : undefined}
+          className={styles.cta}
+        >
+          {cta.label}
+        </Button>
+      )}
     </div>
   </section>
 );
