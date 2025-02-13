@@ -18,11 +18,11 @@ const Home = () => (
     <LogoSwiper
       title="Trusted by:"
       items={[
+        'shopify-partners',
+        'meta',
         'pets',
         'footasylum',
         'heat',
-        'meta',
-        'shopify-partners',
         'sparklayer',
       ]}
     />
