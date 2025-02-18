@@ -1,5 +1,6 @@
 import { Hero } from '@/components/hero/hero';
 import { LogoSwiper } from '@/components/logo-swiper/logo-swiper';
+import { RadialImage } from '@/components/radial-image/radial-image';
 
 import { URLs } from '@/data/urls';
 
@@ -26,6 +27,8 @@ const Home = () => (
         'sparklayer',
       ]}
     />
+
+    <RadialImage />
   </>
 );
 

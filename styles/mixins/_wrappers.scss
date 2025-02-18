@@ -14,4 +14,10 @@
   .wrapper {
     @include wrapper-properties;
   }
+
+  @include min-width(md) {
+    .wrapper--md {
+      @include wrapper-properties;
+    }
+  }
 }
