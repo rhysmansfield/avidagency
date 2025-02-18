@@ -25,6 +25,7 @@
     opacity: 0.24;
     transform: translate(-50%, -50%);
     filter: blur(2rem);
+    pointer-events: none;
 
     @include min-width(sm) {
       width: 64rem;
