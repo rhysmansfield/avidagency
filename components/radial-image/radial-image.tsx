@@ -9,7 +9,7 @@ export const RadialImage = () => (
     <div className={styles['image__wrapper']}>
       <Image
         unoptimized
-        src="https://i.imgur.com/jM8iws7.png"
+        src="https://i.imgur.com/E9DiSvi.png"
         alt="Mockup"
         width={1286}
         height={2426}
@@ -18,7 +18,7 @@ export const RadialImage = () => (
 
       <Image
         unoptimized
-        src="https://i.imgur.com/iiXzmqo.png"
+        src="https://i.imgur.com/91XNl2i.png"
         alt="Mockup"
         width={2287}
         height={2426}
