@@ -5,7 +5,7 @@ import { classList } from '@/utils/class-list';
 import styles from './radial-image.module.scss';
 
 export const RadialImage = () => (
-  <section className={classList('wrapper--md', styles.root)}>
+  <section className={styles.root}>
     <div className={styles['image__wrapper']}>
       <Image
         unoptimized
