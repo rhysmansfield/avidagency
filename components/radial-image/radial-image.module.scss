@@ -50,8 +50,6 @@
 
     @include min-width(md) {
       display: block;
-      max-width: 52rem;
-      margin: 0 auto;
     }
   }
 
@@ -70,6 +68,11 @@
         transparent 60%,
         var(--c-brand-night) 100%
       );
+    }
+
+    @include min-width(md) {
+      max-width: 52rem;
+      margin: 0 auto;
     }
   }
 }
