@@ -32,11 +32,11 @@ const Home = () => (
       images={{
         mobile: {
           src: 'https://avidagency.s3.eu-north-1.amazonaws.com/homepage/mobile.webp',
-          alt: 'Radial image mobile',
+          alt: 'Hand holding a phone showing The DFC Experience website',
         },
         desktop: {
           src: 'https://avidagency.s3.eu-north-1.amazonaws.com/homepage/desktop.webp',
-          alt: 'Radial image desktop',
+          alt: 'Hand holding a phone showing The DFC Experience website',
         },
       }}
     />
