@@ -1,5 +1,3 @@
-@use '@/styles/mixins/breakpoints' as *;
-
 @mixin wrapper-properties {
   position: relative;
   width: 100%;
@@ -13,11 +11,5 @@
 @mixin wrappers {
   .wrapper {
     @include wrapper-properties;
-  }
-
-  @include min-width(md) {
-    .wrapper--md {
-      @include wrapper-properties;
-    }
   }
 }
