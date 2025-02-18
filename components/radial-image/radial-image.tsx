@@ -2,15 +2,18 @@ import Image from 'next/image';
 
 import { classList } from '@/utils/class-list';
 
+import { RadialImageProps } from './radial-image.type';
+
 import styles from './radial-image.module.scss';
 
-export const RadialImage = () => (
+export const RadialImage = ({
+  images: { mobile, desktop },
+}: RadialImageProps) => (
   <section className={styles.root}>
     <div className={styles['image__wrapper']}>
       <Image
         unoptimized
-        src="https://i.imgur.com/E9DiSvi.png"
-        alt="Mockup"
+        {...mobile}
         width={1286}
         height={2426}
         className={classList(styles.image, styles['image--mobile'])}
@@ -18,8 +21,7 @@ export const RadialImage = () => (
 
       <Image
         unoptimized
-        src="https://i.imgur.com/91XNl2i.png"
-        alt="Mockup"
+        {...desktop}
         width={2287}
         height={2426}
         className={classList(styles.image, styles['image--desktop'])}

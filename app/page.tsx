@@ -28,7 +28,18 @@ const Home = () => (
       ]}
     />
 
-    <RadialImage />
+    <RadialImage
+      images={{
+        mobile: {
+          src: 'https://avidagency.s3.eu-north-1.amazonaws.com/homepage/mobile.webp',
+          alt: 'Radial image mobile',
+        },
+        desktop: {
+          src: 'https://avidagency.s3.eu-north-1.amazonaws.com/homepage/desktop.webp',
+          alt: 'Radial image desktop',
+        },
+      }}
+    />
   </>
 );
 
