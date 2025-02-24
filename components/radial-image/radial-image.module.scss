@@ -12,9 +12,9 @@
   &:before {
     content: '';
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 50%;
-    width: 175vw;
+    width: 150vw;
     aspect-ratio: 1;
     background-image: radial-gradient(
       closest-side,
@@ -29,6 +29,10 @@
 
     @include min-width(sm) {
       width: 60rem;
+    }
+
+    @include min-width(md) {
+      top: 25%;
     }
   }
 }
