@@ -6,13 +6,14 @@ import {
 import { useReCaptcha } from 'next-recaptcha-v3';
 
 import { AxiosApiResponse } from '@/types/api/axios';
-import { ReCaptchaRequest } from '@/types/api/recaptcha';
 
 export const useReCaptchaMutate = <TFields, TResponse>(
   mutationKey: MutationKey,
   mutationFn: MutationFunction<
     AxiosApiResponse<TResponse>,
-    TFields & ReCaptchaRequest
+    TFields & {
+      recaptcha: string;
+    }
   >,
 ) => {
   const { executeRecaptcha } = useReCaptcha();
