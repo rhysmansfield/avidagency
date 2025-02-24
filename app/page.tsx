@@ -29,15 +29,9 @@ const Home = () => (
     />
 
     <RadialImage
-      images={{
-        mobile: {
-          src: 'https://avidagency.s3.eu-north-1.amazonaws.com/homepage/mobile.webp',
-          alt: 'Hand holding a phone showing The DFC Experience website',
-        },
-        desktop: {
-          src: 'https://avidagency.s3.eu-north-1.amazonaws.com/homepage/desktop.webp',
-          alt: 'Hand holding a phone showing The DFC Experience website',
-        },
+      image={{
+        src: 'https://avidagency.s3.eu-north-1.amazonaws.com/homepage/hero-phone.webp',
+        alt: 'Hand holding a phone showing The DFC Experience website',
       }}
     />
   </>

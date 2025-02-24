@@ -6,25 +6,15 @@ import { RadialImageProps } from './radial-image.type';
 
 import styles from './radial-image.module.scss';
 
-export const RadialImage = ({
-  images: { mobile, desktop },
-}: RadialImageProps) => (
+export const RadialImage = ({ image }: RadialImageProps) => (
   <section className={styles.root}>
     <div className={styles['image__wrapper']}>
       <Image
         unoptimized
-        {...mobile}
-        width={1286}
-        height={2426}
-        className={classList(styles.image, styles['image--mobile'])}
-      />
-
-      <Image
-        unoptimized
-        {...desktop}
+        {...image}
         width={2287}
         height={2426}
-        className={classList(styles.image, styles['image--desktop'])}
+        className={classList(styles.image)}
       />
     </div>
   </section>
