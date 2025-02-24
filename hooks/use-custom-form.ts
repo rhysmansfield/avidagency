@@ -22,7 +22,7 @@ const useCustomMutate = <TFields extends FieldValues, TResponse>(
   url: string,
 ): CustomFormMutationResult<TFields, TResponse> => {
   const apiCall = createApi<TFields, TResponse>(url);
-  return useReCaptchaMutate([queryKey], apiCall);
+  return useReCaptchaMutate<TFields, TResponse>([queryKey], apiCall);
 };
 
 export const useCustomForm = <TFields extends FieldValues, TResponse>({
