@@ -7,7 +7,6 @@ import { useMobileMenu } from '@/hooks/use-mobile-menu';
 
 import { Button } from '@/components/button/button';
 import { Icon } from '@/components/icon/icon';
-import { UnderlineLink } from '@/components/underline-link/underline-link';
 
 import { classList } from '@/utils/class-list';
 
@@ -41,13 +40,16 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
         <ul className={styles['desktop-nav__list']}>
           {items.map(({ href, label, external }) => (
             <li key={label}>
-              <UnderlineLink
+              <Link
                 href={href}
                 target={external ? '_blank' : undefined}
-                className={styles['desktop-nav__link']}
+                className={classList(
+                  'underline__wrapper',
+                  styles['desktop-nav__link'],
+                )}
               >
-                {label}
-              </UnderlineLink>
+                <span className="underline__text">{label}</span>
+              </Link>
             </li>
           ))}
           <li>
