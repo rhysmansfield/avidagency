@@ -7,22 +7,22 @@ import {
   FieldValues,
 } from 'react-hook-form';
 
-export type CustomFormMutationResult<T, R> = UseMutationResult<
-  R | undefined,
+export type CustomFormMutationResult<TFields, TResponse> = UseMutationResult<
+  TResponse | undefined,
   Error,
-  T
+  TFields
 >;
 
-export type CustomFormProps<T extends FieldValues> = {
+export type CustomFormProps<TFields extends FieldValues> = {
   queryKey: string;
   url: string;
-  defaultValues: DefaultValues<T>;
+  defaultValues: DefaultValues<TFields>;
 };
 
-export type UseCustomFormResult<T extends FieldValues, R> = {
-  data?: R;
+export type UseCustomFormResult<TFields extends FieldValues, TResponse> = {
+  data?: TResponse;
   ref: RefObject<HTMLFormElement | null>;
   onSubmit: (e: BaseSyntheticEvent) => Promise<void>;
-  control: Control<T>;
-  errors: FieldErrors<T>;
+  control: Control<TFields>;
+  errors: FieldErrors<TFields>;
 } & Pick<UseMutationResult, 'isSuccess' | 'isError' | 'isPending'>;

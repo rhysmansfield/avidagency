@@ -13,23 +13,23 @@ import {
 import { useReCaptchaMutate } from './use-recaptcha-mutate';
 
 const createApi =
-  <T, R>(url: string) =>
-  (request: T): Promise<AxiosApiResponse<R>> =>
+  <TFields extends FieldValues, TResponse>(url: string) =>
+  (request: TFields): Promise<AxiosApiResponse<TResponse>> =>
     axios.post(url, { data: request });
 
-const useCustomMutate = <T, R>(
+const useCustomMutate = <TFields extends FieldValues, TResponse>(
   queryKey: string,
   url: string,
-): CustomFormMutationResult<T, R> => {
-  const apiCall = createApi<T, R>(url);
+): CustomFormMutationResult<TFields, TResponse> => {
+  const apiCall = createApi<TFields, TResponse>(url);
   return useReCaptchaMutate([queryKey], apiCall);
 };
 
-export const useCustomForm = <T extends FieldValues, R>({
+export const useCustomForm = <TFields extends FieldValues, TResponse>({
   queryKey,
   url,
   defaultValues,
-}: CustomFormProps<T>): UseCustomFormResult<T, R> => {
+}: CustomFormProps<TFields>): UseCustomFormResult<TFields, TResponse> => {
   const ref = useRef<HTMLFormElement>(null);
 
   const {
@@ -37,16 +37,16 @@ export const useCustomForm = <T extends FieldValues, R>({
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<T>({
+  } = useForm<TFields>({
     defaultValues,
   });
 
-  const { data, mutate, isError, isSuccess, isPending } = useCustomMutate<T, R>(
-    queryKey,
-    url,
-  );
+  const { data, mutate, isError, isSuccess, isPending } = useCustomMutate<
+    TFields,
+    TResponse
+  >(queryKey, url);
 
-  const onSubmit = (values: T) => {
+  const onSubmit = (values: TFields) => {
     mutate(values);
   };
 

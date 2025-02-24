@@ -4,8 +4,8 @@ import {
   RawAxiosResponseHeaders,
 } from 'axios';
 
-export type AxiosApiResponse<R> = {
-  data?: R;
+export type AxiosApiResponse<TResponse> = {
+  data?: TResponse;
   error: AxiosError | null;
   headers: AxiosResponseHeaders | Partial<RawAxiosResponseHeaders>;
   isError: boolean;
