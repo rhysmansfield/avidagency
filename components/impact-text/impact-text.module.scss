@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  font: var(--font-dm-sans-h4);
+  text-align: center;
+  margin: 5rem 0;
+
+  @include min-width(sm) {
+    margin: 10rem auto;
+  }
+
+  @include min-width(md) {
+    max-width: #{map.get($breakpoints, 'lg')};
+  }
+
+  span {
+    font: var(--font-space-grotesk-h4);
+    color: var(--c-brand-wink);
+  }
+}
