@@ -8,15 +8,15 @@ import { useReCaptcha } from 'next-recaptcha-v3';
 import { AxiosApiResponse } from '@/types/api/axios';
 import { ReCaptchaRequest } from '@/types/api/recaptcha';
 
-export const useReCaptchaMutate = <TData>(
+export const useReCaptchaMutate = <T>(
   mutationKey: MutationKey,
-  mutationFn: MutationFunction<AxiosApiResponse, TData & ReCaptchaRequest>,
+  mutationFn: MutationFunction<AxiosApiResponse, T & ReCaptchaRequest>,
 ) => {
   const { executeRecaptcha } = useReCaptcha();
 
   return useMutation({
     mutationKey: [mutationKey],
-    mutationFn: async (request: TData) => {
+    mutationFn: async (request: T) => {
       const recaptcha = await executeRecaptcha('form_submit');
 
       const { isError, error } = await mutationFn({
