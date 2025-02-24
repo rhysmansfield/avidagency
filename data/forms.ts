@@ -1,11 +1,11 @@
 import { useCustomForm } from '@/hooks/use-custom-form';
 
-import { ExampleRequest } from './forms.type';
+import { ExampleRequest, ExampleResponse } from './forms.type';
 
 export const useExampleForm = () =>
-  useCustomForm<ExampleRequest>({
+  useCustomForm<ExampleRequest, ExampleResponse>({
     queryKey: 'Example',
-    url: '/example',
+    url: '/api/example',
     defaultValues: {
       test: '',
     },
