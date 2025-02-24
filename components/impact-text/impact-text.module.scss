@@ -4,7 +4,7 @@
 .root {
   font: var(--font-dm-sans-h4);
   text-align: center;
-  margin: 5rem 0;
+  margin: 6rem 0;
 
   @include min-width(sm) {
     margin: 10rem auto;
