@@ -34,6 +34,16 @@
         color: var(--c-brand-verde);
       }
     }
+
+    &-night {
+      background-color: var(--c-brand-night);
+      color: var(--c-brand-day);
+
+      &:hover {
+        background-color: var(--c-accent-day);
+        color: var(--c-brand-night);
+      }
+    }
   }
 }
 

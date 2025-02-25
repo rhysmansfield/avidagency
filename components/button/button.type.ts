@@ -4,7 +4,7 @@ import { ComponentProps } from 'react';
 import { ExcludeProps } from '@/types/common.type';
 
 type SharedButtonProps = {
-  theme: 'wink' | 'verde';
+  theme: 'wink' | 'verde' | 'night';
 };
 
 type ButtonLinkProps = {
