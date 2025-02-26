@@ -64,6 +64,6 @@ export const useCustomForm = <TFields extends FieldValues, TResponse>({
     onSubmit: handleSubmit(onSubmit),
     control,
     fieldErrors,
-    apiError: apiError?.response?.data.message,
+    apiError: apiError?.response?.data.error,
   };
 };

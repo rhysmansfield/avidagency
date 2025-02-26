@@ -7,14 +7,20 @@ export const POST = async (
   request: NextRequest,
 ): ApiResponse<ExampleResponse> => {
   const json: ApiRequest<ExampleRequest> = await request.json();
-  let { data } = json;
+  let {
+    data: { recaptcha, services },
+  } = json;
 
-  if (data.services.length > 0) {
-    return NextResponse.json({ services: data.services });
+  if (!recaptcha) {
+    return NextResponse.json({ error: 'NO_RECAPTCHA' }, { status: 400 });
   }
 
-  return NextResponse.json(
-    { message: 'NO_SERVICES', test: true },
-    { status: 400 },
-  );
+  if (services.length < 1) {
+    return NextResponse.json({ error: 'NO_SERVICES' }, { status: 400 });
+  }
+
+  return NextResponse.json({
+    message: 'Success',
+    services,
+  });
 };
