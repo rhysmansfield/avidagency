@@ -6,16 +6,16 @@ import {
 import { NextResponse } from 'next/server';
 
 export type ApiRequest<TResponse> = {
-  data: TResponse & { recaptcha: string };
+  data: TResponse;
 };
 
 export type ApiResponse<TResponse> = Promise<
-  | NextResponse<TResponse & { message: string }>
-  | NextResponse<{ error: string } | Record<string, boolean>>
+  | NextResponse<TResponse>
+  | NextResponse<{ message: string } | Record<string, boolean>>
 >;
 
 export type AxiosApiError = AxiosError<{
-  error: string;
+  message: string;
 }> | null;
 
 export type AxiosApiResponse<TResponse> = {
