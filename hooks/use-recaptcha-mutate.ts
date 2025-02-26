@@ -20,12 +20,10 @@ export const useReCaptchaMutate = <TFields, TResponse>({
     mutationFn: async (request: TFields): Promise<TResponse | undefined> => {
       const recaptcha = await executeRecaptcha('form_submit');
 
-      const { data, isError, error } = await mutationFn({
+      const { data } = await mutationFn({
         ...request,
         recaptcha,
       });
-
-      if (isError) throw error;
 
       return data;
     },
