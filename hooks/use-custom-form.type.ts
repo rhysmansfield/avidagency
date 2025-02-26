@@ -1,4 +1,4 @@
-import { UseMutationResult } from '@tanstack/react-query';
+import { MutationKey, UseMutationResult } from '@tanstack/react-query';
 import { BaseSyntheticEvent, RefObject } from 'react';
 import {
   Control,
@@ -7,14 +7,8 @@ import {
   FieldValues,
 } from 'react-hook-form';
 
-export type CustomFormMutationResult<TFields, TResponse> = UseMutationResult<
-  TResponse | undefined,
-  Error,
-  TFields
->;
-
-export type CustomFormProps<TFields extends FieldValues> = {
-  queryKey: string;
+export type UseCustomFormProps<TFields extends FieldValues> = {
+  mutationKey: MutationKey;
   url: string;
   defaultValues: DefaultValues<TFields>;
 };

@@ -8,7 +8,7 @@ export const useExampleForm = (): UseCustomFormResult<
   ExampleResponse
 > =>
   useCustomForm<ExampleRequest, ExampleResponse>({
-    queryKey: 'Example',
+    mutationKey: ['Example'],
     url: '/api/example',
     defaultValues: {
       services: [],

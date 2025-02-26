@@ -5,8 +5,7 @@ import { FieldValues, useForm } from 'react-hook-form';
 import { AxiosApiResponse } from '@/types/api/axios';
 
 import {
-  CustomFormMutationResult,
-  CustomFormProps,
+  UseCustomFormProps,
   UseCustomFormResult,
 } from './use-custom-form.type';
 
@@ -17,19 +16,11 @@ const createApi =
   (request: TFields): Promise<AxiosApiResponse<TResponse>> =>
     axios.post(url, { data: request });
 
-const useCustomMutate = <TFields extends FieldValues, TResponse>(
-  queryKey: string,
-  url: string,
-): CustomFormMutationResult<TFields, TResponse> => {
-  const apiCall = createApi<TFields, TResponse>(url);
-  return useReCaptchaMutate<TFields, TResponse>([queryKey], apiCall);
-};
-
 export const useCustomForm = <TFields extends FieldValues, TResponse>({
-  queryKey,
+  mutationKey,
   url,
   defaultValues,
-}: CustomFormProps<TFields>): UseCustomFormResult<TFields, TResponse> => {
+}: UseCustomFormProps<TFields>): UseCustomFormResult<TFields, TResponse> => {
   const ref = useRef<HTMLFormElement>(null);
 
   const {
@@ -41,10 +32,13 @@ export const useCustomForm = <TFields extends FieldValues, TResponse>({
     defaultValues,
   });
 
-  const { data, mutate, isError, isSuccess, isPending } = useCustomMutate<
+  const { data, mutate, isError, isSuccess, isPending } = useReCaptchaMutate<
     TFields,
     TResponse
-  >(queryKey, url);
+  >({
+    mutationKey,
+    mutationFn: createApi<TFields, TResponse>(url),
+  });
 
   const onSubmit = (values: TFields) => {
     mutate(values);
