@@ -1,0 +1,11 @@
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 100%;
+}
+
+.label {
+  font: var(--font-dm-sans-b2-m);
+  font-size: 1rem !important;
+}

@@ -5,6 +5,7 @@ import { DM_Sans, Space_Grotesk } from 'next/font/google';
 
 import { ReactQueryContext } from '@/context/react-query-context';
 
+import { Footer } from '@/components/footer/footer';
 import { Header } from '@/components/header/header';
 
 import { classList } from '@/utils/class-list';
@@ -71,6 +72,7 @@ const RootLayout = ({ children }: CommonLayoutProps) => {
               socials={SOCIAL_URLs}
             />
             <main>{children}</main>
+            <Footer />
           </body>
         </html>
       </ReCaptchaProvider>
