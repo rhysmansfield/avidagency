@@ -26,6 +26,12 @@ export const Footer = () => {
           control={control}
           name="services"
           label="Required services"
+          rules={{
+            required: 'Please select at least one service',
+            validate: (value) => {
+              return value.length <= 2 || 'Please select at most two services';
+            },
+          }}
           error={fieldErrors.services}
           options={[
             {
