@@ -18,6 +18,6 @@ export type UseCustomFormResult<TFields extends FieldValues, TResponse> = {
   ref: RefObject<HTMLFormElement | null>;
   onSubmit: (e: BaseSyntheticEvent) => Promise<void>;
   control: Control<TFields>;
-  errors: FieldErrors<TFields>;
+  fieldErrors: FieldErrors<TFields>;
   apiError?: string;
 } & Pick<UseMutationResult, 'isSuccess' | 'isError' | 'isPending'>;

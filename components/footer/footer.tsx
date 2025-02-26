@@ -9,11 +9,11 @@ export const Footer = () => {
     data,
     ref,
     control,
-    errors,
-    apiError,
+    fieldErrors,
     onSubmit,
     isPending,
     isError,
+    apiError,
     isSuccess,
   } = useExampleForm();
 
@@ -26,7 +26,7 @@ export const Footer = () => {
           control={control}
           name="services"
           label="Required services"
-          error={errors.services}
+          error={fieldErrors.services}
           options={[
             {
               value: 'web-development',

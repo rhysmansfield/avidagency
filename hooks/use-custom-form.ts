@@ -26,7 +26,7 @@ export const useCustomForm = <TFields extends FieldValues, TResponse>({
   const {
     control,
     handleSubmit,
-    formState: { errors },
+    formState: { errors: fieldErrors },
     reset,
   } = useForm<TFields>({
     defaultValues,
@@ -63,7 +63,7 @@ export const useCustomForm = <TFields extends FieldValues, TResponse>({
     isPending,
     onSubmit: handleSubmit(onSubmit),
     control,
-    errors,
+    fieldErrors,
     apiError: apiError?.response?.data.message,
   };
 };
