@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useRef } from 'react';
 import { FieldValues, useForm } from 'react-hook-form';
 
-import { AxiosApiResponse } from '@/types/api/axios';
+import { AxiosApiResponse } from '@/types/api/axios.type';
 
 import {
   UseCustomFormProps,

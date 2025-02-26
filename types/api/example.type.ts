@@ -3,5 +3,5 @@ export type ExampleRequest = {
 };
 
 export type ExampleResponse = {
-  test: string;
+  services: string[];
 };

@@ -18,11 +18,14 @@ export const Footer = () => {
 
   return (
     <footer>
+      {data && <div>You submitted services: {data.services.join(',')}</div>}
+      {isError && <div>Something went wrong</div>}
       <form ref={ref} onSubmit={onSubmit} className="wrapper">
         <MultiSelectField
           control={control}
           name="services"
           label="Required services"
+          error={errors.services}
           options={[
             {
               value: 'web-development',
