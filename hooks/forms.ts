@@ -7,6 +7,6 @@ export const useExampleForm = () =>
     queryKey: 'Example',
     url: '/api/example',
     defaultValues: {
-      test: '',
+      services: [],
     },
   });

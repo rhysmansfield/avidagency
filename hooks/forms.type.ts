@@ -1,5 +1,5 @@
 export type ExampleRequest = {
-  test: string;
+  services: string[];
 };
 
 export type ExampleResponse = {
