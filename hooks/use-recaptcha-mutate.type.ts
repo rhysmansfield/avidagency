@@ -4,7 +4,7 @@ import {
   UseMutationResult,
 } from '@tanstack/react-query';
 
-import { AxiosApiResponse } from '@/types/api/axios.type';
+import { AxiosApiError, AxiosApiResponse } from '@/types/api/axios.type';
 
 export type UseRecaptchaMutateProps<TFields, TResponse> = {
   mutationKey: MutationKey;
@@ -18,6 +18,6 @@ export type UseRecaptchaMutateProps<TFields, TResponse> = {
 
 export type UseRecaptchaMutateResult<TFields, TResponse> = UseMutationResult<
   TResponse | undefined,
-  Error,
+  AxiosApiError,
   TFields
 >;

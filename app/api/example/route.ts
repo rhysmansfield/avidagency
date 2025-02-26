@@ -4,7 +4,9 @@ import { ExampleRequest, ExampleResponse } from '@/types/api/example.type';
 
 export const POST = async (
   request: NextRequest,
-): Promise<NextResponse<ExampleResponse> | NextResponse<{ error: string }>> => {
+): Promise<
+  NextResponse<ExampleResponse> | NextResponse<{ message: string }>
+> => {
   const json = await request.json();
   let { data }: { data: ExampleRequest } = json;
 
@@ -12,5 +14,5 @@ export const POST = async (
     return NextResponse.json({ services: data.services });
   }
 
-  return NextResponse.json({ error: 'NO_SERVICES' }, { status: 400 });
+  return NextResponse.json({ message: 'NO_SERVICES' }, { status: 400 });
 };

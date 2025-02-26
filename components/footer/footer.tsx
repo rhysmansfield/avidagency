@@ -10,6 +10,7 @@ export const Footer = () => {
     ref,
     control,
     errors,
+    apiError,
     onSubmit,
     isPending,
     isError,
@@ -19,7 +20,7 @@ export const Footer = () => {
   return (
     <footer>
       {data && <div>You submitted services: {data.services.join(',')}</div>}
-      {isError && <div>Something went wrong</div>}
+      {isError && <div>Something went wrong. {apiError}</div>}
       <form ref={ref} onSubmit={onSubmit} className="wrapper">
         <MultiSelectField
           control={control}

@@ -32,10 +32,14 @@ export const useCustomForm = <TFields extends FieldValues, TResponse>({
     defaultValues,
   });
 
-  const { data, mutate, isError, isSuccess, isPending } = useReCaptchaMutate<
-    TFields,
-    TResponse
-  >({
+  const {
+    data,
+    mutate,
+    isError,
+    error: apiError,
+    isSuccess,
+    isPending,
+  } = useReCaptchaMutate<TFields, TResponse>({
     mutationKey,
     mutationFn: createApi<TFields, TResponse>(url),
   });
@@ -60,5 +64,6 @@ export const useCustomForm = <TFields extends FieldValues, TResponse>({
     onSubmit: handleSubmit(onSubmit),
     control,
     errors,
+    apiError: apiError?.response?.data.message,
   };
 };

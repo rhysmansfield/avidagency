@@ -10,9 +10,13 @@ export type ApiResponse<TResponse> = Promise<
   | NextResponse<{ error: string & Record<string, boolean> }>
 >;
 
+export type AxiosApiError = AxiosError<{
+  message: string;
+}> | null;
+
 export type AxiosApiResponse<TResponse> = {
   data?: TResponse;
-  error: AxiosError | null;
+  error: AxiosApiError;
   headers: AxiosResponseHeaders | Partial<RawAxiosResponseHeaders>;
   isError: boolean;
 };
