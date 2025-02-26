@@ -2,7 +2,7 @@
 
 $spacing: max(
   var(--wrapper-padding),
-  calc((100vw - var(--wrapper-sizing) + var(--wrapper-padding) * 2) / 2)
+  calc((100vw - var(--wrapper-sizing)) / 2 + var(--wrapper-padding))
 );
 
 .root {
