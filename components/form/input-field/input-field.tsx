@@ -31,7 +31,7 @@ export const InputField = <TFields extends FieldValues>({
           <input
             {...field}
             type={type}
-            name={name}
+            id={name}
             className={styles.input}
             placeholder={placeholder}
             required={!!rules?.required}

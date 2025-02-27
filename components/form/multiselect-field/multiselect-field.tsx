@@ -37,7 +37,7 @@ export const MultiSelectField = <TFields extends FieldValues>({
               >
                 <input
                   type="checkbox"
-                  name={`${name}-${value}`}
+                  id={`${name}-${value}`}
                   value={value}
                   checked={selectedValues.includes(value)}
                   onChange={() =>
