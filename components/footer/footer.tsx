@@ -39,6 +39,7 @@ export const Footer = ({ formHeading }: FooterProps) => {
             <InputField
               control={control}
               name="email"
+              placeholder="Enter your email"
               className={styles['form__input']}
             />
             <Button

@@ -9,6 +9,7 @@ import styles from './input-field.module.scss';
 export const InputField = <TFields extends FieldValues>({
   name,
   label,
+  placeholder,
   control,
   rules,
   error,
@@ -23,7 +24,12 @@ export const InputField = <TFields extends FieldValues>({
         render={({ field }) => (
           <label className={classList(styles.root, className)}>
             {label && <div className={styles.label}>{label}</div>}
-            <input {...field} type="text" className={styles.input} />
+            <input
+              {...field}
+              type="text"
+              className={styles.input}
+              placeholder={placeholder}
+            />
           </label>
         )}
       />
