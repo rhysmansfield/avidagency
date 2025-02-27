@@ -1,55 +1,54 @@
 'use client';
 
-import { useExampleForm } from '@/hooks/forms';
+import { useNewsletterForm } from '@/hooks/forms';
 
-import { MultiSelectField } from '@/components/form/multiselect/multiselect-field';
+import { Icon } from '@/components/icon/icon';
 
-export const Footer = () => {
+import { classList } from '@/utils/class-list';
+
+import { FooterProps } from './footer.type';
+
+import styles from './footer.module.scss';
+
+import { Button } from '../button/button';
+
+export const Footer = ({ formHeading }: FooterProps) => {
   const {
-    data,
     ref,
     control,
-    fieldErrors,
     onSubmit,
+    fieldErrors,
+    data,
+    apiError,
     isPending,
     isError,
-    apiError,
     isSuccess,
-  } = useExampleForm();
+  } = useNewsletterForm();
 
   return (
-    <footer>
-      {isError && <div>Something went wrong: {apiError}</div>}
-      {data && <div>You submitted services: {data.services.join(',')}</div>}
-      <form ref={ref} onSubmit={onSubmit} className="wrapper">
-        <MultiSelectField
-          control={control}
-          name="services"
-          label="Required services"
-          rules={{
-            required: 'Please select at least one service',
-            validate: (value) => {
-              return value.length <= 2 || 'Please select at most two services';
-            },
-          }}
-          error={fieldErrors.services}
-          options={[
-            {
-              value: 'web-development',
-              label: 'Web Development',
-            },
-            {
-              value: 'mobile-development',
-              label: 'Mobile Development',
-            },
-            {
-              value: 'design',
-              label: 'Design',
-            },
-          ]}
-        />
-        <button>Submit</button>
-      </form>
+    <footer className={styles.root}>
+      <div className={classList('wrapper', styles.wrapper)}>
+        <div className={styles['col--left']}>
+          <Icon name="logo" className={styles.logo} />
+          <p className={styles['form__heading']}>{formHeading}</p>
+          <form ref={ref} onSubmit={onSubmit}>
+            <Button
+              theme="night"
+              appearance="button"
+              type="submit"
+              className={styles['form__button']}
+            >
+              Subscribe
+            </Button>
+          </form>
+        </div>
+
+        <div className={styles['col--right']}>Right</div>
+
+        <div className={styles['col--bottom']}>
+          &copy; Avid Agency LTD. All rights reserverd.
+        </div>
+      </div>
     </footer>
   );
 };

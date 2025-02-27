@@ -72,7 +72,7 @@ const RootLayout = ({ children }: CommonLayoutProps) => {
               socials={SOCIAL_URLs}
             />
             <main>{children}</main>
-            <Footer />
+            <Footer formHeading="Join our newsletter to stay up to date on features and releases." />
           </body>
         </html>
       </ReCaptchaProvider>
