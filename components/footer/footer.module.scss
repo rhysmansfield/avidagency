@@ -31,6 +31,10 @@
     margin-bottom: 2.5rem;
   }
 
+  &__input {
+    color: var(--c-brand-night);
+  }
+
   &__disclaimer {
     font: var(--font-dm-sans-b4);
     color: var(--c-grey-light-80);

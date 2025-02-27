@@ -9,7 +9,7 @@ import {
 
 export type FieldProps<TFields extends FieldValues> = {
   name: Path<TFields>;
-  label: string;
+  label?: string;
   control: Control<TFields>;
   rules?: UseControllerProps<TFields>['rules'];
   error?: Merge<FieldError, (FieldError | undefined)[]>;

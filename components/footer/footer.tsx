@@ -4,6 +4,8 @@ import Link from 'next/link';
 
 import { useNewsletterForm } from '@/hooks/forms';
 
+import { Button } from '@/components/button/button';
+import { InputField } from '@/components/form/input-field/input-field';
 import { Icon } from '@/components/icon/icon';
 
 import { classList } from '@/utils/class-list';
@@ -13,8 +15,6 @@ import { URLs } from '@/data/urls';
 import { FooterProps } from './footer.type';
 
 import styles from './footer.module.scss';
-
-import { Button } from '../button/button';
 
 export const Footer = ({ formHeading }: FooterProps) => {
   const {
@@ -36,6 +36,11 @@ export const Footer = ({ formHeading }: FooterProps) => {
           <Icon name="logo" className={styles.logo} />
           <p className={styles['form__heading']}>{formHeading}</p>
           <form ref={ref} onSubmit={onSubmit} className={styles.form}>
+            <InputField
+              control={control}
+              name="email"
+              className={styles['form__input']}
+            />
             <Button
               theme="night"
               appearance="button"
