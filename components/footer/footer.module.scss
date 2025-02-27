@@ -10,6 +10,11 @@
   grid-template-rows: repeat(3, auto);
   gap: 4rem;
   padding: 4rem var(--wrapper-padding);
+
+  @include min-width(md) {
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+  }
 }
 
 .col {
@@ -17,6 +22,10 @@
     font: var(--font-dm-sans-b2-m);
     border-top: 1px solid var(--c-brand-day);
     padding-top: 1.5rem;
+
+    @include min-width(md) {
+      grid-column: 1 / -1;
+    }
   }
 }
 
