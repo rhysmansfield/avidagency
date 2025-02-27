@@ -22,7 +22,7 @@ export const MultiSelectField = <TFields extends FieldValues>({
 
   return (
     <div role="group" className={classList(styles.root, className)}>
-      <div className={styles.label}>{label}</div>
+      {label && <div className={styles.label}>{label}</div>}
       <Controller
         control={control}
         name={name}
