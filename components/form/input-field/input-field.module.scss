@@ -1,6 +1,7 @@
 @use '@/components/form/field.module' as *;
 
 .input {
+  width: 100%;
   font: var(--font-dm-sans-b2);
   font-size: 1rem !important;
   padding: 0.75rem 1rem;

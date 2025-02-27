@@ -8,6 +8,7 @@ import styles from './input-field.module.scss';
 
 export const InputField = <TFields extends FieldValues>({
   name,
+  type = 'text',
   label,
   placeholder,
   control,
@@ -16,17 +17,17 @@ export const InputField = <TFields extends FieldValues>({
   className,
 }: InputFieldProps<TFields>) => {
   return (
-    <>
+    <div className={styles.root}>
       <Controller
         control={control}
         name={name}
         rules={rules}
         render={({ field }) => (
-          <label className={classList(styles.root, className)}>
+          <label className={classList(styles['input__wrapper'], className)}>
             {label && <div className={styles.label}>{label}</div>}
             <input
               {...field}
-              type="text"
+              type={type}
               className={styles.input}
               placeholder={placeholder}
             />
@@ -34,6 +35,6 @@ export const InputField = <TFields extends FieldValues>({
         )}
       />
       {error && <div className={styles.error}>{error.message}</div>}
-    </>
+    </div>
   );
 };

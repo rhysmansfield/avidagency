@@ -9,6 +9,7 @@ import { InputField } from '@/components/form/input-field/input-field';
 import { Icon } from '@/components/icon/icon';
 
 import { classList } from '@/utils/class-list';
+import { REGEX_EMAIL_VALIDATION } from '@/utils/patterns';
 
 import { URLs } from '@/data/urls';
 
@@ -38,8 +39,17 @@ export const Footer = ({ formHeading }: FooterProps) => {
           <form ref={ref} onSubmit={onSubmit} className={styles.form}>
             <InputField
               control={control}
+              type="email"
               name="email"
               placeholder="Enter your email"
+              rules={{
+                required: 'Please enter a valid email address',
+                pattern: {
+                  value: REGEX_EMAIL_VALIDATION,
+                  message: 'Please enter a valid email address',
+                },
+              }}
+              error={fieldErrors.email}
               className={styles['form__input']}
             />
             <Button
