@@ -1,3 +1,5 @@
+@use '@/styles/mixins/breakpoints' as *;
+
 .root {
   background-color: var(--c-brand-azul);
   color: var(--c-brand-day);
@@ -29,6 +31,11 @@
   gap: 1rem;
   margin-bottom: 1rem;
 
+  @include min-width(md) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
   &__heading {
     font: var(--font-dm-sans-b2);
     margin-bottom: 2.5rem;
@@ -51,4 +58,9 @@
 button.form__button {
   font-size: 1rem !important;
   width: 100%;
+
+  @include min-width(md) {
+    width: auto;
+    margin-top: 4px;
+  }
 }
