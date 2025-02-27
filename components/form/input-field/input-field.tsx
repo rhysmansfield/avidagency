@@ -17,19 +17,21 @@ export const InputField = <TFields extends FieldValues>({
   className,
 }: InputFieldProps<TFields>) => {
   return (
-    <div className={styles.root}>
+    <div className={classList(styles.root, className)}>
       <Controller
         control={control}
         name={name}
         rules={rules}
         render={({ field }) => (
-          <label className={classList(styles['input__wrapper'], className)}>
+          <label htmlFor={name} className={styles['input__wrapper']}>
             {label && <div className={styles.label}>{label}</div>}
             <input
               {...field}
               type={type}
+              name={name}
               className={styles.input}
               placeholder={placeholder}
+              required={!!rules?.required}
             />
           </label>
         )}
