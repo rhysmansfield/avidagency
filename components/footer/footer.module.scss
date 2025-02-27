@@ -8,16 +8,37 @@
 .wrapper {
   display: grid;
   grid-template-rows: repeat(3, auto);
-  gap: 4rem;
+  row-gap: 4rem;
   padding: 4rem var(--wrapper-padding);
 
   @include min-width(md) {
-    grid-template-columns: 1fr auto;
-    gap: 4rem;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 4rem;
+    row-gap: 8rem;
+    padding: 8rem var(--wrapper-padding);
+  }
+
+  @include min-width(lg) {
+    column-gap: 8rem;
   }
 }
 
 .col {
+  &--right {
+    display: flex;
+    gap: 5rem;
+
+    @include min-width(md) {
+      justify-content: flex-end;
+      gap: 4rem;
+    }
+
+    @include min-width(lg) {
+      gap: 8rem;
+    }
+  }
+
   &--bottom {
     font: var(--font-dm-sans-b2-m);
     border-top: 1px solid var(--c-brand-day);
@@ -47,7 +68,11 @@
 
   &__heading {
     font: var(--font-dm-sans-b2);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+
+    @include min-width(md) {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__input {
@@ -71,5 +96,24 @@ button.form__button {
   @include min-width(md) {
     width: auto;
     margin-top: 4px;
+  }
+}
+
+.menu {
+  &__title {
+    font: var(--font-space-grotesk-s4);
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--c-grey-light-80);
+  }
+
+  &__link {
+    padding: 0.375rem;
+    margin: -0.375rem;
   }
 }

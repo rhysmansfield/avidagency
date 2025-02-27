@@ -17,7 +17,7 @@ import { FooterProps } from './footer.type';
 
 import styles from './footer.module.scss';
 
-export const Footer = ({ formHeading }: FooterProps) => {
+export const Footer = ({ formHeading, menus }: FooterProps) => {
   const {
     ref,
     control,
@@ -70,7 +70,29 @@ export const Footer = ({ formHeading }: FooterProps) => {
           </p>
         </div>
 
-        <div className={styles['col--right']}>Right</div>
+        <div className={styles['col--right']}>
+          {menus.map(({ title, items }) => (
+            <div key={title} className={styles.menu}>
+              <p className={styles['menu__title']}>{title}</p>
+              <ul className={styles['menu__list']}>
+                {items.map(({ label, href, external }) => (
+                  <li key={label}>
+                    <Link
+                      href={href}
+                      target={external ? '_blank' : undefined}
+                      className={classList(
+                        'underline__wrapper',
+                        styles['menu__link'],
+                      )}
+                    >
+                      <span className="underline__text">{label}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
 
         <div className={styles['col--bottom']}>
           &copy; Avid Agency LTD. All rights reserverd.

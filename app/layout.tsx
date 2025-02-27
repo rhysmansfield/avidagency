@@ -72,7 +72,36 @@ const RootLayout = ({ children }: CommonLayoutProps) => {
               socials={SOCIAL_URLs}
             />
             <main>{children}</main>
-            <Footer formHeading="Join our newsletter to stay up to date on features and releases." />
+            <Footer
+              formHeading="Join our newsletter to stay up to date on features and releases."
+              menus={[
+                {
+                  title: 'Sitemap',
+                  items: [
+                    {
+                      label: 'Home',
+                      href: URLs.HOME,
+                    },
+                    {
+                      label: 'Services',
+                      href: URLs.SERVICES,
+                    },
+                    {
+                      label: 'Projects',
+                      href: URLs.PROJECTS,
+                    },
+                    {
+                      label: 'Contact',
+                      href: URLs.CONTACT,
+                    },
+                  ],
+                },
+                {
+                  title: 'Follow us',
+                  items: SOCIAL_URLs,
+                },
+              ]}
+            />
           </body>
         </html>
       </ReCaptchaProvider>
