@@ -29,8 +29,8 @@ $spacing: max(
   scroll-snap-type: x mandatory;
   scroll-padding: 0 $spacing;
   scrollbar-width: none;
-  animation: bounce calc(var(--transition-duration) * 2)
-    var(--transition-timing) 1 forwards;
+  animation: bounce calc(var(--transition-duration) * 3)
+    var(--transition-timing) 1 forwards calc(var(--transition-duration) * 2);
 
   &::-webkit-scrollbar {
     display: none;
