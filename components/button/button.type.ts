@@ -9,6 +9,7 @@ type SharedButtonProps = {
 
 type ButtonLinkProps = {
   appearance?: 'link';
+  external?: boolean;
 } & ExcludeProps<
   ComponentProps<'button'>,
   'children' | 'onClick' | 'className'
@@ -17,6 +18,7 @@ type ButtonLinkProps = {
 
 type ButtonActionProps = {
   appearance?: 'button';
+  external?: never;
 } & ComponentProps<'button'> &
   ExcludeProps<
     ComponentProps<typeof Link>,

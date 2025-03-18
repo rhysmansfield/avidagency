@@ -12,6 +12,7 @@ export const Button = ({
   theme,
   appearance = 'link',
   children,
+  external,
   ...props
 }: ButtonProps) => {
   const commonProps: Omit<ButtonProps, 'theme' | 'appearance' | 'children'> = {
@@ -27,7 +28,11 @@ export const Button = ({
 
   if (appearance === 'link') {
     return (
-      <Link {...commonProps} href={props.href!}>
+      <Link
+        {...commonProps}
+        href={props.href!}
+        target={external ? '_blank' : undefined}
+      >
         {children}
         {icon}
       </Link>
