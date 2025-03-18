@@ -66,7 +66,7 @@ export const Footer = ({ formHeading, menus }: FooterProps) => {
               </Button>
             </form>
             <p className={styles['form__disclaimer']}>
-              By subscribing you agree to with our{' '}
+              By subscribing you agree to our{' '}
               <Link href={URLs.PRIVACY_POLICY} target="_blank">
                 privacy policy
               </Link>{' '}
