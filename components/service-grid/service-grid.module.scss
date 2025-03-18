@@ -42,9 +42,14 @@
   align-items: flex-start;
   padding: 1.5rem;
   border-radius: 1rem;
+  transition: scale var(--transition);
 
   @include min-width(md) {
     padding: 2rem;
+  }
+
+  &:active {
+    scale: 0.97;
   }
 
   &:first-of-type {
