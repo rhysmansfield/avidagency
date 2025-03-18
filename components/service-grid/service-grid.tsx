@@ -14,7 +14,7 @@ export const ServiceGrid = ({ items }: ServiceGridProps) => (
         We offer a range of tailored services to elevate your brand's online
         presence. Everything from website development to strategic marketing.
       </p>
-      <Button theme="verde" href="/services">
+      <Button theme="day-outline" href="/services">
         View all services
       </Button>
     </div>

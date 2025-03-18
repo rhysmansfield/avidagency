@@ -53,6 +53,18 @@
         color: var(--c-brand-night);
       }
     }
+
+    &-day-outline {
+      background-color: transparent;
+      border-color: var(--c-brand-day);
+      color: var(--c-brand-day);
+
+      &:hover {
+        background-color: var(--c-brand-day);
+        border-color: var(--c-brand-day);
+        color: var(--c-brand-night);
+      }
+    }
   }
 }
 
