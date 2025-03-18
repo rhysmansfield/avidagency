@@ -1,0 +1,33 @@
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 0.5rem;
+  margin: 5rem auto;
+
+  @include min-width(lg) {
+    margin: 10rem auto;
+  }
+}
+
+.intro {
+  padding-bottom: 3rem;
+
+  &__title {
+    font: var(--font-dm-sans-s1);
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    font: var(--font-dm-sans-b2);
+    margin-bottom: 2rem;
+  }
+}
+
+.item {
+  padding: 1.5rem;
+  background-color: var(--c-brand-verde);
+  color: var(--c-brand-night);
+  border-radius: 1rem;
+}

@@ -14,7 +14,6 @@ export const Hero = ({ title, text, cta }: HeroProps) => (
       {cta && (
         <Button
           theme={cta.theme}
-          appearance="link"
           href={cta.href}
           target={cta.external ? '_blank' : undefined}
           className={styles.cta}
