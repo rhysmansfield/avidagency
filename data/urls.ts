@@ -26,7 +26,7 @@ export const SOCIAL_URLs: SocialUrls = [
     external: true,
   },
   {
-    label: 'Tiktok',
+    label: 'TikTok',
     href: 'https://www.tiktok.com/@avidagencyuk',
     icon: 'tiktok',
     external: true,

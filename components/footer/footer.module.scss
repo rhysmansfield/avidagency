@@ -20,12 +20,9 @@
   }
 
   @include min-width(lg) {
+    column-gap: 8rem;
     row-gap: 8rem;
     padding: 8rem var(--wrapper-padding);
-  }
-
-  @include min-width(lg) {
-    column-gap: 8rem;
   }
 }
 
@@ -73,10 +70,25 @@
 
   &__heading {
     font: var(--font-dm-sans-b2);
-    margin-bottom: 2rem;
+  }
+
+  &__wrapper {
+    margin-top: 2rem;
 
     @include min-width(md) {
-      margin-bottom: 1.5rem;
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__error,
+  &__success {
+    font: var(--font-dm-sans-b2);
+    margin-top: -1rem;
+    margin-bottom: 0.75rem;
+
+    @include min-width(md) {
+      margin-top: -0.5rem;
+      margin-bottom: 0.5rem;
     }
   }
 

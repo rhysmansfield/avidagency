@@ -18,17 +18,8 @@ import { FooterProps } from './footer.type';
 import styles from './footer.module.scss';
 
 export const Footer = ({ formHeading, menus }: FooterProps) => {
-  const {
-    ref,
-    control,
-    onSubmit,
-    fieldErrors,
-    data,
-    apiError,
-    isPending,
-    isError,
-    isSuccess,
-  } = useNewsletterForm();
+  const { ref, control, onSubmit, fieldErrors, isPending, isError, isSuccess } =
+    useNewsletterForm();
 
   return (
     <footer className={styles.root}>
@@ -36,38 +27,52 @@ export const Footer = ({ formHeading, menus }: FooterProps) => {
         <div className={styles['col--left']}>
           <Icon name="logo" className={styles.logo} />
           <p className={styles['form__heading']}>{formHeading}</p>
-          <form ref={ref} onSubmit={onSubmit} className={styles.form}>
-            <InputField
-              control={control}
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              rules={{
-                required: 'Please enter a valid email address',
-                pattern: {
-                  value: REGEX_EMAIL_VALIDATION,
-                  message: 'Please enter a valid email address',
-                },
-              }}
-              error={fieldErrors.email}
-              className={styles['form__input']}
-            />
-            <Button
-              theme="night"
-              appearance="button"
-              type="submit"
-              className={styles['form__button']}
-            >
-              Subscribe
-            </Button>
-          </form>
-          <p className={styles['form__disclaimer']}>
-            By subscribing you agree to with our{' '}
-            <Link href={URLs.PRIVACY_POLICY} target="_blank">
-              privacy policy
-            </Link>{' '}
-            and provide consent to receive updates from us.
-          </p>
+
+          <div className={styles['form__wrapper']}>
+            {isError && (
+              <p className={styles['form__error']}>
+                Something went wrong. Please try again.
+              </p>
+            )}
+            {isSuccess && (
+              <p className={styles['form__success']}>
+                You have successfully subscribed to our newsletter.
+              </p>
+            )}
+
+            <form ref={ref} onSubmit={onSubmit} className={styles.form}>
+              <InputField
+                control={control}
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                rules={{
+                  required: 'Please enter a valid email address',
+                  pattern: {
+                    value: REGEX_EMAIL_VALIDATION,
+                    message: 'Please enter a valid email address',
+                  },
+                }}
+                error={fieldErrors.email}
+                className={styles['form__input']}
+              />
+              <Button
+                theme="night"
+                appearance="button"
+                type="submit"
+                className={styles['form__button']}
+              >
+                Subscribe
+              </Button>
+            </form>
+            <p className={styles['form__disclaimer']}>
+              By subscribing you agree to with our{' '}
+              <Link href={URLs.PRIVACY_POLICY} target="_blank">
+                privacy policy
+              </Link>{' '}
+              and provide consent to receive updates from us.
+            </p>
+          </div>
         </div>
 
         <div className={styles['col--right']}>
