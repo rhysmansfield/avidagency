@@ -9,5 +9,5 @@ export type ServiceGridProps = {
   cta: CommonLink;
   title: string;
   text: string;
-  items: Service[];
+  items: [Service, Service, Service, Service, Service];
 };
