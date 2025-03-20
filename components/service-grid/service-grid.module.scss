@@ -32,7 +32,11 @@
 
   &__text {
     font: var(--font-dm-sans-b2);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+
+    @include min-width(md) {
+      margin-bottom: 2rem;
+    }
   }
 }
 
