@@ -6,7 +6,7 @@
   overflow-x: clip;
 
   @include min-width(sm) {
-    margin: 10rem auto;
+    margin: 8rem auto;
   }
 
   &:before {
@@ -28,7 +28,7 @@
     pointer-events: none;
 
     @include min-width(sm) {
-      width: 60rem;
+      width: 50rem;
     }
 
     @include min-width(md) {
@@ -53,7 +53,7 @@
     );
 
     @include min-width(sm) {
-      max-width: 46rem;
+      max-width: 36rem;
       margin: 0 auto;
     }
   }
