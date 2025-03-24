@@ -10,7 +10,7 @@ import { Header } from '@/components/header/header';
 
 import { classList } from '@/utils/class-list';
 
-import { SOCIAL_URLs, URLs } from '@/data/urls';
+import { SOCIAL_URLS, URLS } from '@/data/urls';
 
 import { CommonLayoutProps } from '@/types/common.type';
 
@@ -64,14 +64,14 @@ const RootLayout = ({ children }: CommonLayoutProps) => {
           <body className={dmSans.className}>
             <Header
               items={[
-                { label: 'Services', href: URLs.SERVICES },
-                { label: 'Projects', href: URLs.PROJECTS },
+                { label: 'Services', href: URLS.SERVICES },
+                { label: 'Projects', href: URLS.PROJECTS },
               ]}
               cta={{
                 label: "Let's talk",
-                href: URLs.CONTACT,
+                href: URLS.CONTACT,
               }}
-              socials={SOCIAL_URLs}
+              socials={SOCIAL_URLS}
             />
             <main>{children}</main>
             <Footer
@@ -82,25 +82,25 @@ const RootLayout = ({ children }: CommonLayoutProps) => {
                   items: [
                     {
                       label: 'Home',
-                      href: URLs.HOME,
+                      href: URLS.HOME,
                     },
                     {
                       label: 'Services',
-                      href: URLs.SERVICES,
+                      href: URLS.SERVICES,
                     },
                     {
                       label: 'Projects',
-                      href: URLs.PROJECTS,
+                      href: URLS.PROJECTS,
                     },
                     {
                       label: 'Contact',
-                      href: URLs.CONTACT,
+                      href: URLS.CONTACT,
                     },
                   ],
                 },
                 {
                   title: 'Follow us',
-                  items: SOCIAL_URLs,
+                  items: SOCIAL_URLS,
                 },
               ]}
             />

@@ -4,7 +4,7 @@ import { LogoSwiper } from '@/components/logo-swiper/logo-swiper';
 import { RadialImage } from '@/components/radial-image/radial-image';
 import { ServiceGrid } from '@/components/service-grid/service-grid';
 
-import { URLs } from '@/data/urls';
+import { URLS } from '@/data/urls';
 
 const Home = () => (
   <>
@@ -12,7 +12,7 @@ const Home = () => (
       title="Ready to make an Avid statement?"
       text="Avid Agency is a trusted ecommerce and Shopify agency, providing bespoke Shopify development and marketing to ensure nothing but consistent, quality results. Perfect for scaling."
       cta={{
-        href: URLs.CONTACT,
+        href: URLS.CONTACT,
         label: "Let's work together",
         theme: 'verde',
       }}
@@ -48,7 +48,7 @@ const Home = () => (
 
     <ServiceGrid
       cta={{
-        href: URLs.SERVICES,
+        href: URLS.SERVICES,
         label: 'View all services',
       }}
       title="Our services"

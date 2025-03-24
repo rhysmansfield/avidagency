@@ -10,7 +10,7 @@ import { Icon } from '@/components/icon/icon';
 
 import { classList } from '@/utils/class-list';
 
-import { URLs } from '@/data/urls';
+import { URLS } from '@/data/urls';
 
 import { HeaderProps } from './header.type';
 
@@ -24,7 +24,7 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
     <header className={classList('wrapper', styles.root)}>
       <div className={styles.brand}>
         <Link
-          href={URLs.HOME}
+          href={URLS.HOME}
           onClick={closeMobileMenu}
           className={styles['logo__wrapper']}
         >

@@ -11,7 +11,7 @@ import { Icon } from '@/components/icon/icon';
 import { classList } from '@/utils/class-list';
 import { REGEX_EMAIL_VALIDATION } from '@/utils/patterns';
 
-import { URLs } from '@/data/urls';
+import { URLS } from '@/data/urls';
 
 import { FooterProps } from './footer.type';
 
@@ -67,7 +67,7 @@ export const Footer = ({ formHeading, menus }: FooterProps) => {
             </form>
             <p className={styles['form__disclaimer']}>
               By subscribing you agree to our{' '}
-              <Link href={URLs.PRIVACY_POLICY} target="_blank">
+              <Link href={URLS.PRIVACY_POLICY} target="_blank">
                 privacy policy
               </Link>{' '}
               and provide consent to receive updates from us.

@@ -1,6 +1,6 @@
 import { ApiUrls, ServiceUrls, SocialUrls, Urls } from './urls.type';
 
-export const URLs: Urls = {
+export const URLS: Urls = {
   HOME: '/',
   SERVICES: '/services',
   PROJECTS: '/projects',
@@ -8,11 +8,11 @@ export const URLs: Urls = {
   PRIVACY_POLICY: '/privacy-policy',
 };
 
-// export const API_URLs: ApiUrls = {
+// export const API_URLS: ApiUrls = {
 //   CONTACT: '/api/contact',
 // };
 
-export const SOCIAL_URLs: SocialUrls = [
+export const SOCIAL_URLS: SocialUrls = [
   {
     label: 'Facebook',
     href: 'https://www.facebook.com/avidagencyuk',
