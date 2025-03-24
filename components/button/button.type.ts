@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { ComponentProps } from 'react';
 
-import { ExcludeProps } from '@/types/common.type';
+import { CommonTheme, ExcludeProps } from '@/types/common.type';
 
 type SharedButtonProps = {
-  theme: 'wink' | 'verde' | 'night' | 'day-outline';
+  theme: CommonTheme | 'day-outline';
 };
 
 type ButtonLinkProps = {
