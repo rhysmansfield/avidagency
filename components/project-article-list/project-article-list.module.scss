@@ -1,0 +1,36 @@
+@use '@/styles/mixins/breakpoints' as *;
+
+.root {
+  margin: 5rem auto;
+
+  @include min-width(md) {
+    margin: 10rem auto;
+  }
+}
+
+.title {
+  font: var(--font-dm-sans-s1);
+  text-align: center;
+  margin-bottom: 3rem;
+
+  @include min-width(md) {
+    margin-bottom: 5rem;
+  }
+}
+
+.items {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr;
+}
+
+.cta__wrapper {
+  display: grid;
+  place-content: center;
+  aspect-ratio: 1;
+  border-radius: 1.5rem;
+
+  &.theme-wink {
+    background-color: var(--c-accent-wink);
+  }
+}

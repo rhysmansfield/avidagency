@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Project } from '@/data/projects.type';
+import { URLS } from '@/data/urls';
 
 import { ProjectArticleProps } from './project-article.type';
 
@@ -10,7 +11,7 @@ import styles from './project-article.module.scss';
 export const ProjectArticle = ({
   project: { url, image, title, excerpt, tags },
 }: ProjectArticleProps) => (
-  <Link href={url} className={styles.root}>
+  <Link href={`${URLS.PROJECTS}${url}`} className={styles.root}>
     <article className={styles.article}>
       <Image
         unoptimized
