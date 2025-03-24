@@ -42,12 +42,14 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   weight: ['500', '700'],
   variable: '--font-heading',
+  display: 'swap',
 });
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
   variable: '--font-body',
+  display: 'swap',
 });
 
 const RootLayout = ({ children }: CommonLayoutProps) => {

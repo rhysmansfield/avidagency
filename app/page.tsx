@@ -55,12 +55,12 @@ const Home = () => (
       text="We offer a range of tailored services to elevate your brand's online presence. Everything from website development to strategic marketing."
       items={[
         {
-          title: 'UX/UI Design',
-          text: 'We create elevated user experience and interface designs to increase user engagement as well as brand alignment.',
-        },
-        {
           title: 'Web Development',
           text: "We craft bespoke websites tailored to your brand's needs, ensuring seamless functionality and optimised conversions.",
+        },
+        {
+          title: 'Ecommerce',
+          text: 'We meticulously craft every e-commerce solution to suit your requirements. Elevating your online presence and driving growth for your business.',
         },
         {
           title: 'Paid Ads',
