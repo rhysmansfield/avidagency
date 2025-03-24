@@ -1,9 +1,12 @@
 import { Hero } from '@/components/hero/hero';
 import { ImpactText } from '@/components/impact-text/impact-text';
 import { LogoSwiper } from '@/components/logo-swiper/logo-swiper';
+import { ProjectArticleList } from '@/components/project-article-list/project-article-list';
+import { ProjectArticle } from '@/components/project-article/project-article';
 import { RadialImage } from '@/components/radial-image/radial-image';
 import { ServiceGrid } from '@/components/service-grid/service-grid';
 
+import { PROJECTS } from '@/data/projects';
 import { URLS } from '@/data/urls';
 
 const Home = () => (
@@ -74,6 +77,17 @@ const Home = () => (
           title: 'SEO',
           text: 'We enhance your online visibility across search engine results pages, attracting more organic traffic and potential customers.',
         },
+      ]}
+    />
+
+    <ProjectArticleList
+      title="Recent projects"
+      items={[
+        PROJECTS[0],
+        PROJECTS[0],
+        PROJECTS[0],
+        PROJECTS[0],
+        { theme: 'verde', href: URLS.PROJECTS, label: 'View all projects' },
       ]}
     />
   </>
