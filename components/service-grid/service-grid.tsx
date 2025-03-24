@@ -33,7 +33,7 @@ export const ServiceGrid = ({ cta, title, text, items }: ServiceGridProps) => (
       >
         <div className={styles['item__header']}>
           <Icon name="arrow-right" className={styles['item__icon']} />
-          <h2 className={styles['item__title']}>{title}</h2>
+          <h3 className={styles['item__title']}>{title}</h3>
         </div>
         <p className={styles['item__text']}>{text}</p>
         <span className={classList('underline__text', styles['item__cta'])}>
