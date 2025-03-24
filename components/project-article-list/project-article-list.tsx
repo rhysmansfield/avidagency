@@ -1,3 +1,6 @@
+import { Button } from '@/components/button/button';
+import { ProjectArticle } from '@/components/project-article/project-article';
+
 import { classList } from '@/utils/class-list';
 
 import { Project } from '@/data/projects.type';
@@ -8,9 +11,6 @@ import {
 } from './project-article-list.type';
 
 import styles from './project-article-list.module.scss';
-
-import { Button } from '../button/button';
-import { ProjectArticle } from '../project-article/project-article';
 
 const isProject = (item: ProjectArticleItem): item is Project => {
   return 'url' in item;

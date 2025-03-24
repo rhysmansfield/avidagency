@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { Icon } from '@/components/icon/icon';
+
 import { URLS } from '@/data/urls';
 
 import { ProjectArticleProps } from './project-article.type';
@@ -32,7 +34,11 @@ export const ProjectArticle = ({
         </div>
         <div className={styles.content}>
           <h3 className={styles.title}>{title}</h3>
-          <p className={styles.excerpt}>{excerpt}</p>
+          <div className={styles['excerpt__wrapper']}>
+            <Icon name="arrow-right" className={styles.icon} />
+            <p className={styles.excerpt}>{excerpt}</p>
+            <p className={styles['view-more']}>View project</p>
+          </div>
         </div>
       </div>
     </article>

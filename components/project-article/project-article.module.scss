@@ -5,11 +5,38 @@
   border: 2px solid var(--c-grey-light-24);
   border-radius: 1.5rem;
   overflow: hidden;
-
   aspect-ratio: 1;
+  transition:
+    scale var(--transition),
+    border-color var(--transition);
 
   @include min-width(md) {
     aspect-ratio: 632/400;
+  }
+
+  &:active {
+    scale: 0.98;
+  }
+
+  &:hover {
+    border-color: var(--c-grey-light-80);
+
+    .excerpt {
+      display: none;
+    }
+
+    .icon {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .view-more {
+      width: auto;
+      height: auto;
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0.5rem);
+    }
   }
 }
 
@@ -79,4 +106,25 @@
 .excerpt {
   font: var(--font-dm-sans-b2);
   color: var(--c-grey-light-80);
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.icon {
+  width: 0rem;
+  height: 0rem;
+  transition: width var(--transition);
+}
+
+.view-more {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  font: var(--font-dm-sans-b2-m);
+  color: var(--c-brand-day);
+  transition: transform var(--transition);
 }

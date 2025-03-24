@@ -6,7 +6,7 @@ export const PROJECTS: Project[] = [
     title: 'Project Name',
     excerpt: 'Client Name',
     description: 'Test',
-    tags: ['Web Design', 'Web Development', 'SEO'],
+    tags: ['PPC', 'Paid Social'],
     image: {
       src: 'https://i.imgur.com/BBTRwm9.jpeg',
       alt: 'Project Name',
