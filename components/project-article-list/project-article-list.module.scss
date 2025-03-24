@@ -26,11 +26,11 @@
   @include min-width(md) {
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
-  }
 
-  > :first-child {
-    aspect-ratio: 1280/640;
-    grid-column: 1 / -1;
+    > :first-child {
+      aspect-ratio: 1280/640;
+      grid-column: 1 / -1;
+    }
   }
 }
 
