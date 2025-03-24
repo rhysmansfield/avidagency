@@ -20,7 +20,7 @@ export const ProjectArticleList = ({
   title,
   items,
 }: ProjectArticleListProps) => (
-  <section className="wrapper">
+  <section className={classList('wrapper', styles.root)}>
     <h2 className={styles.title}>{title}</h2>
     <div className={styles.items}>
       {items.map((item) =>

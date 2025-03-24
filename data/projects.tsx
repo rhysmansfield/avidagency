@@ -8,7 +8,7 @@ export const PROJECTS: Project[] = [
     description: 'Test',
     tags: ['Web Design', 'Web Development', 'SEO'],
     image: {
-      src: 'https://placehold.co/1280x640/FFF/000',
+      src: 'https://i.imgur.com/BBTRwm9.jpeg',
       alt: 'Project Name',
     },
     content: <p>Test</p>,
