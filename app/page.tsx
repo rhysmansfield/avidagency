@@ -81,7 +81,7 @@ const Home = () => (
     />
 
     <ProjectArticleList
-      title="Recent projects"
+      title="Some of our recent Projects"
       items={[
         PROJECTS[0],
         PROJECTS[0],

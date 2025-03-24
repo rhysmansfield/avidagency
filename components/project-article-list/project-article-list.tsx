@@ -25,9 +25,10 @@ export const ProjectArticleList = ({
     <div className={styles.items}>
       {items.map((item) =>
         isProject(item) ? (
-          <ProjectArticle project={item} />
+          <ProjectArticle key={item.title} project={item} />
         ) : (
           <div
+            key={item.label}
             className={classList(
               styles['cta__wrapper'],
               styles[`theme-${item.theme}`],
