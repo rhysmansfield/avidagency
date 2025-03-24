@@ -68,12 +68,16 @@
   );
 
   @include min-width(md) {
-    padding: 24px;
+    padding: 1.25rem;
     background: radial-gradient(
       circle,
       rgba(0, 0, 0, 0) 20%,
       var(--c-grey-dark-48) 100%
     );
+  }
+
+  @include min-width(lg) {
+    padding: 1.5rem;
   }
 }
 
