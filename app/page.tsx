@@ -4,6 +4,7 @@ import { LogoSwiper } from '@/components/logo-swiper/logo-swiper';
 import { ProjectArticleList } from '@/components/project-article-list/project-article-list';
 import { ProjectArticle } from '@/components/project-article/project-article';
 import { RadialImage } from '@/components/radial-image/radial-image';
+import { ResultShowcase } from '@/components/result-showcase/result-showcase';
 import { ServiceGrid } from '@/components/service-grid/service-grid';
 
 import { PROJECTS } from '@/data/projects';
@@ -83,7 +84,7 @@ const Home = () => (
     />
 
     <ProjectArticleList
-      title="Some of our recent Projects"
+      title="Some of our recent projects"
       items={[
         {
           ...PROJECTS[0],
@@ -105,6 +106,28 @@ const Home = () => (
           theme: 'wink',
           href: URLS.PROJECTS,
           label: 'View all projects',
+        },
+      ]}
+    />
+
+    <ResultShowcase
+      title="Why our clients choose us"
+      text="Explore some of our exceptional client results and discover why brands seeking success choose us."
+      items={[
+        {
+          title: 'Title 1',
+          text: 'Text 1',
+          result: '+50%',
+        },
+        {
+          title: 'Title 2',
+          text: 'Text 2',
+          result: '+100%',
+        },
+        {
+          title: 'Title 3',
+          text: 'Text 3',
+          result: '+75%',
         },
       ]}
     />

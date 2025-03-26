@@ -9,7 +9,7 @@ import styles from './hero.module.scss';
 export const Hero = ({ title, text, cta }: HeroProps) => (
   <section className={classList('wrapper', styles.root)}>
     <h1 className={styles.title}>{title}</h1>
-    <div className={styles.content}>
+    <div>
       <p className={styles.text}>{text}</p>
       {cta && (
         <Button
