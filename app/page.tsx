@@ -85,10 +85,22 @@ const Home = () => (
     <ProjectArticleList
       title="Some of our recent Projects"
       items={[
-        PROJECTS[0],
-        PROJECTS[0],
-        PROJECTS[0],
-        PROJECTS[0],
+        {
+          ...PROJECTS[0],
+          title: 'Project Name 1',
+        },
+        {
+          ...PROJECTS[0],
+          title: 'Project Name 2',
+        },
+        {
+          ...PROJECTS[0],
+          title: 'Project Name 3',
+        },
+        {
+          ...PROJECTS[0],
+          title: 'Project Name 4',
+        },
         {
           theme: 'wink',
           href: URLS.PROJECTS,
