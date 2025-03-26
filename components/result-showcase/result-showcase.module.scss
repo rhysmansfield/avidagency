@@ -42,6 +42,22 @@
     padding: 1rem;
   }
 
+  &:hover {
+    .item__excerpt {
+      display: none;
+    }
+
+    .item__icon {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5rem;
+    }
+
+    .item__view-more {
+      display: block;
+    }
+  }
+
   &__title {
     font: var(--font-dm-sans-b1-m);
     margin-bottom: 0.25rem;
@@ -51,8 +67,27 @@
     }
   }
 
-  &__text {
+  &__excerpt {
     font: var(--font-dm-sans-b2);
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    width: 0rem;
+    height: 0rem;
+    margin-right: 0;
+    transition:
+      width var(--transition),
+      margin-right var(--transition);
+  }
+
+  &__view-more {
+    display: none;
+    font: var(--font-dm-sans-b2-m);
   }
 
   &__percentage {

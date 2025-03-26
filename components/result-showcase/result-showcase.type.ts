@@ -1,4 +1,5 @@
 type ResultShowcaseItem = {
+  url: string;
   title: string;
   text: string;
   result: string;

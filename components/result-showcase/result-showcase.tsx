@@ -1,3 +1,7 @@
+import Link from 'next/link';
+
+import { Icon } from '@/components/icon/icon';
+
 import { classList } from '@/utils/class-list';
 
 import { ResultShowcaseProps } from './result-showcase.type';
@@ -13,14 +17,18 @@ export const ResultShowcase = ({ title, text, items }: ResultShowcaseProps) => (
       </div>
 
       <div>
-        {items.map(({ title, text, result }) => (
-          <div key={title} className={styles.item}>
+        {items.map(({ url, title, text, result }) => (
+          <Link href={url} key={title} className={styles.item}>
             <div>
               <h3 className={styles['item__title']}>{title}</h3>
-              <p className={styles['item__text']}>{text}</p>
+              <div className={styles['item__excerpt-wrapper']}>
+                <Icon name="arrow-right" className={styles['item__icon']} />
+                <p className={styles['item__excerpt']}>{text}</p>
+                <p className={styles['item__view-more']}>View project</p>
+              </div>
             </div>
             <p className={styles['item__percentage']}>{result}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
