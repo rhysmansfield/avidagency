@@ -18,6 +18,54 @@
   }
 
   &.theme {
+    &-day {
+      background-color: var(--c-brand-day);
+      border-color: var(--c-brand-day);
+      color: var(--c-brand-night);
+
+      &:hover {
+        background-color: var(--c-brand-night);
+        border-color: var(--c-brand-night);
+        color: var(--c-brand-day);
+      }
+
+      &-outline {
+        background-color: transparent;
+        border-color: var(--c-brand-day);
+        color: var(--c-brand-day);
+
+        &:hover {
+          background-color: var(--c-brand-day);
+          border-color: var(--c-brand-day);
+          color: var(--c-brand-night);
+        }
+      }
+    }
+
+    &-night {
+      background-color: var(--c-brand-night);
+      border-color: var(--c-brand-night);
+      color: var(--c-brand-day);
+
+      &:hover {
+        background-color: var(--c-brand-day);
+        border-color: var(--c-brand-day);
+        color: var(--c-brand-night);
+      }
+
+      &-outline {
+        background-color: transparent;
+        border-color: var(--c-brand-night);
+        color: var(--c-brand-night);
+
+        &:hover {
+          background-color: var(--c-brand-night);
+          border-color: var(--c-brand-night);
+          color: var(--c-brand-day);
+        }
+      }
+    }
+
     &-wink {
       background-color: var(--c-brand-wink);
       border-color: var(--c-brand-wink);
@@ -39,30 +87,6 @@
         background-color: var(--c-accent-verde);
         border-color: var(--c-accent-verde);
         color: var(--c-brand-verde);
-      }
-    }
-
-    &-night {
-      background-color: var(--c-brand-night);
-      border-color: var(--c-brand-night);
-      color: var(--c-brand-day);
-
-      &:hover {
-        background-color: var(--c-brand-day);
-        border-color: var(--c-brand-day);
-        color: var(--c-brand-night);
-      }
-    }
-
-    &-day-outline {
-      background-color: transparent;
-      border-color: var(--c-brand-day);
-      color: var(--c-brand-day);
-
-      &:hover {
-        background-color: var(--c-brand-day);
-        border-color: var(--c-brand-day);
-        color: var(--c-brand-night);
       }
     }
   }

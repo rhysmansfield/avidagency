@@ -9,7 +9,9 @@ export type ExcludeProps<T, Ignore = never> = {
 
 export type CommonTheme =
   | 'night'
+  | 'night-outline'
   | 'day'
+  | 'day-outline'
   | 'verde'
   | 'azul'
   | 'wink'

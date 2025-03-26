@@ -7,7 +7,12 @@
   --header-height: 5.5rem;
 
   --c-brand-night: #1c1e20;
+  --c-brand-night-24: rgba(28, 30, 32, 0.24);
+  --c-brand-night-48: rgba(28, 30, 32, 0.48);
+  --c-brand-night-64: rgba(28, 30, 32, 0.64);
   --c-brand-day: #f8f8f8;
+  --c-brand-day-24: rgba(248, 248, 248, 0.24);
+  --c-brand-day-80: rgba(248, 248, 248, 0.8);
   --c-brand-verde: #c3ff47;
   --c-brand-azul: #1b9fff;
   --c-brand-wink: #f54891;
@@ -18,13 +23,6 @@
 
   --c-black: #000;
   --c-white: #fff;
-
-  --c-grey-light-24: rgba(248, 248, 248, 0.24);
-  --c-grey-light-80: rgba(248, 248, 248, 0.8);
-
-  --c-grey-dark-24: rgba(28, 30, 32, 0.24);
-  --c-grey-dark-48: rgba(28, 30, 32, 0.48);
-  --c-grey-dark-64: rgba(28, 30, 32, 0.64);
 
   --transition-duration: 0.3s;
   --transition-timing: cubic-bezier(0.5, 0.25, 0, 1);

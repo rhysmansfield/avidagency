@@ -4,7 +4,7 @@ import { ComponentProps } from 'react';
 import { CommonTheme, ExcludeProps } from '@/types/common.type';
 
 type SharedButtonProps = {
-  theme: CommonTheme | 'day-outline';
+  theme: CommonTheme;
 };
 
 type ButtonLinkProps = {

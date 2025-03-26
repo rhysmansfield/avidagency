@@ -87,7 +87,11 @@ const Home = () => (
         PROJECTS[0],
         PROJECTS[0],
         PROJECTS[0],
-        { theme: 'wink', href: URLS.PROJECTS, label: 'View all projects' },
+        {
+          theme: 'night-outline',
+          href: URLS.PROJECTS,
+          label: 'View all projects',
+        },
       ]}
     />
   </>

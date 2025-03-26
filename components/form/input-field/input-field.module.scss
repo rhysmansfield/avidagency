@@ -6,11 +6,11 @@
   font-size: 1rem !important;
   color: var(--c-brand-night);
   padding: 0.75rem 1rem;
-  border: 1px solid var(--c-grey-dark-24);
+  border: 1px solid var(--c-brand-night-24);
   outline-offset: 3px;
   border-radius: 0.5rem;
 
   &::placeholder {
-    color: var(--c-grey-dark-64);
+    color: var(--c-brand-night-48);
   }
 }

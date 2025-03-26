@@ -40,8 +40,20 @@
   aspect-ratio: 1;
   border-radius: 1.5rem;
 
-  &.theme-wink {
-    background-color: var(--c-accent-wink);
+  &.theme {
+    &-day,
+    &-day-outline {
+      background-color: var(--c-brand-day-24);
+    }
+
+    &-night,
+    &-night-outline {
+      background-color: var(--c-brand-day);
+    }
+
+    &-wink {
+      background-color: var(--c-accent-wink);
+    }
   }
 
   @include min-width(md) {
