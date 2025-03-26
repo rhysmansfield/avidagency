@@ -2,11 +2,56 @@
 
 .root {
   padding: 5rem 0;
-  background-color: var(--c-brand-verde);
-  color: var(--c-brand-night);
 
   @include min-width(md) {
     padding: 10rem 0;
+  }
+
+  &.theme {
+    &-day {
+      background-color: var(--c-brand-day);
+      color: var(--c-brand-night);
+
+      .item {
+        border-color: var(--c-brand-night-24);
+      }
+    }
+
+    &-night {
+      background-color: var(--c-black);
+      color: var(--c-brand-day);
+
+      .item {
+        border-color: var(--c-brand-day-24);
+      }
+    }
+
+    &-verde {
+      background-color: var(--c-brand-verde);
+      color: var(--c-brand-verde-accent);
+
+      .item {
+        border-color: var(--c-brand-night-24);
+      }
+    }
+
+    &-azul {
+      background-color: var(--c-brand-azul);
+      color: var(--c-brand-day);
+
+      .item {
+        border-color: var(--c-brand-day-48);
+      }
+    }
+
+    &-wink {
+      background-color: var(--c-brand-wink);
+      color: var(--c-brand-day);
+
+      .item {
+        border-color: var(--c-brand-day-48);
+      }
+    }
   }
 }
 
@@ -35,14 +80,15 @@
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 2.5rem;
-  border-bottom: 1px solid var(--c-brand-night-24);
+  border-bottom: 1px solid transparent;
   padding: 0.625rem 0.5rem;
 
   @include min-width(md) {
     padding: 1rem;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     .item__excerpt {
       display: none;
     }

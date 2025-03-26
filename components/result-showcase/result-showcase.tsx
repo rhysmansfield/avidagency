@@ -8,8 +8,13 @@ import { ResultShowcaseProps } from './result-showcase.type';
 
 import styles from './result-showcase.module.scss';
 
-export const ResultShowcase = ({ title, text, items }: ResultShowcaseProps) => (
-  <section className={styles.root}>
+export const ResultShowcase = ({
+  theme,
+  title,
+  text,
+  items,
+}: ResultShowcaseProps) => (
+  <section className={classList(styles.root, styles[`theme-${theme}`])}>
     <div className={classList('wrapper', styles.wrapper)}>
       <div>
         <h2 className={styles.title}>{title}</h2>
