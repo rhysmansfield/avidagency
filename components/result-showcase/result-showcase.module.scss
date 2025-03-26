@@ -4,6 +4,10 @@
   padding: 5rem 0;
 
   @include min-width(md) {
+    padding: 7.5rem 0;
+  }
+
+  @include min-width(lg) {
     padding: 10rem 0;
   }
 
