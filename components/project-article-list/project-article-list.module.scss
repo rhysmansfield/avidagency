@@ -30,6 +30,10 @@
     > :first-child {
       aspect-ratio: 1280/640;
       grid-column: 1 / -1;
+
+      &:active {
+        scale: 0.97;
+      }
     }
   }
 }
