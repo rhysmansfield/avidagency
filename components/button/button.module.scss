@@ -17,15 +17,22 @@
     scale: 0.95;
   }
 
+  &:focus-visible {
+    outline: 2px solid transparent;
+    outline-offset: 0.125rem;
+  }
+
   &.theme {
     &-day {
       background-color: var(--c-brand-day);
       border-color: var(--c-brand-day);
       color: var(--c-brand-night);
+      outline-color: var(--c-black);
 
-      &:hover {
-        background-color: var(--c-brand-night);
-        border-color: var(--c-brand-night);
+      &:hover,
+      &:focus-visible {
+        background-color: var(--c-black);
+        border-color: var(--c-black);
         color: var(--c-brand-day);
       }
 
@@ -33,8 +40,10 @@
         background-color: transparent;
         border-color: var(--c-brand-day);
         color: var(--c-brand-day);
+        outline-color: var(--c-brand-day);
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
           background-color: var(--c-brand-day);
           border-color: var(--c-brand-day);
           color: var(--c-brand-night);
@@ -43,11 +52,13 @@
     }
 
     &-night {
-      background-color: var(--c-brand-night);
-      border-color: var(--c-brand-night);
+      background-color: var(--c-black);
+      border-color: var(--c-black);
       color: var(--c-brand-day);
+      outline-color: var(--c-brand-day);
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
         background-color: var(--c-brand-day);
         border-color: var(--c-brand-day);
         color: var(--c-brand-night);
@@ -55,12 +66,14 @@
 
       &-outline {
         background-color: transparent;
-        border-color: var(--c-brand-night);
-        color: var(--c-brand-night);
+        border-color: var(--c-black);
+        color: var(--c-black);
+        outline-color: var(--c-brand-day);
 
-        &:hover {
-          background-color: var(--c-brand-night);
-          border-color: var(--c-brand-night);
+        &:hover,
+        &:focus-visible {
+          background-color: var(--c-black);
+          border-color: var(--c-black);
           color: var(--c-brand-day);
         }
       }
@@ -70,8 +83,10 @@
       background-color: var(--c-brand-verde);
       border-color: var(--c-brand-verde);
       color: var(--c-brand-night);
+      outline-color: var(--c-brand-verde);
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
         background-color: var(--c-brand-verde-accent);
         border-color: var(--c-brand-verde-accent);
         color: var(--c-brand-verde);
@@ -81,8 +96,10 @@
         background-color: var(--c-brand-verde-accent);
         border-color: var(--c-brand-verde-accent);
         color: var(--c-brand-verde);
+        outline-color: var(--c-brand-verde);
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
           background-color: var(--c-brand-verde);
           border-color: var(--c-brand-verde);
           color: var(--c-brand-night);
@@ -94,8 +111,10 @@
       background-color: var(--c-brand-azul);
       border-color: var(--c-brand-azul);
       color: var(--c-brand-day);
+      outline-color: var(--c-brand-azul);
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
         background-color: var(--c-brand-azul-accent);
         border-color: var(--c-brand-azul-accent);
         color: var(--c-brand-azul);
@@ -105,8 +124,10 @@
         background-color: var(--c-brand-azul-accent);
         border-color: var(--c-brand-azul-accent);
         color: var(--c-brand-azul);
+        outline-color: var(--c-brand-azul);
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
           background-color: var(--c-brand-azul);
           border-color: var(--c-brand-azul);
           color: var(--c-brand-day);
@@ -118,8 +139,10 @@
       background-color: var(--c-brand-wink);
       border-color: var(--c-brand-wink);
       color: var(--c-brand-day);
+      outline-color: var(--c-brand-wink);
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
         background-color: var(--c-brand-wink-accent);
         border-color: var(--c-brand-wink-accent);
         color: var(--c-brand-wink);
@@ -129,8 +152,10 @@
         background-color: var(--c-brand-wink-accent);
         border-color: var(--c-brand-wink-accent);
         color: var(--c-brand-wink);
+        outline-color: var(--c-brand-wink);
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
           background-color: var(--c-brand-wink);
           border-color: var(--c-brand-wink);
           color: var(--c-brand-day);
