@@ -15,9 +15,9 @@ export type CommonTheme =
   | 'verde'
   | 'azul'
   | 'wink'
-  | 'accent-verde'
-  | 'accent-azul'
-  | 'accent-wink';
+  | 'verde-accent'
+  | 'azul-accent'
+  | 'wink-accent';
 
 export type CommonLink = {
   label: string;

@@ -51,8 +51,16 @@
       background-color: var(--c-brand-day);
     }
 
+    &-verde {
+      background-color: var(--c-brand-verde-accent);
+    }
+
+    &-azul {
+      background-color: var(--c-brand-azul-accent);
+    }
+
     &-wink {
-      background-color: var(--c-accent-wink);
+      background-color: var(--c-brand-wink-accent);
     }
   }
 

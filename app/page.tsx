@@ -9,6 +9,8 @@ import { ServiceGrid } from '@/components/service-grid/service-grid';
 import { PROJECTS } from '@/data/projects';
 import { URLS } from '@/data/urls';
 
+import { CommonButton } from '@/types/common.type';
+
 const Home = () => (
   <>
     <Hero
@@ -88,7 +90,7 @@ const Home = () => (
         PROJECTS[0],
         PROJECTS[0],
         {
-          theme: 'night-outline',
+          theme: 'wink',
           href: URLS.PROJECTS,
           label: 'View all projects',
         },

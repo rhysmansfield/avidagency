@@ -66,27 +66,75 @@
       }
     }
 
-    &-wink {
-      background-color: var(--c-brand-wink);
-      border-color: var(--c-brand-wink);
-      color: var(--c-brand-day);
-
-      &:hover {
-        background-color: var(--c-accent-wink);
-        border-color: var(--c-accent-wink);
-        color: var(--c-brand-wink);
-      }
-    }
-
     &-verde {
       background-color: var(--c-brand-verde);
       border-color: var(--c-brand-verde);
       color: var(--c-brand-night);
 
       &:hover {
-        background-color: var(--c-accent-verde);
-        border-color: var(--c-accent-verde);
+        background-color: var(--c-brand-verde-accent);
+        border-color: var(--c-brand-verde-accent);
         color: var(--c-brand-verde);
+      }
+
+      &-accent {
+        background-color: var(--c-brand-verde-accent);
+        border-color: var(--c-brand-verde-accent);
+        color: var(--c-brand-verde);
+
+        &:hover {
+          background-color: var(--c-brand-verde);
+          border-color: var(--c-brand-verde);
+          color: var(--c-brand-night);
+        }
+      }
+    }
+
+    &-azul {
+      background-color: var(--c-brand-azul);
+      border-color: var(--c-brand-azul);
+      color: var(--c-brand-day);
+
+      &:hover {
+        background-color: var(--c-brand-azul-accent);
+        border-color: var(--c-brand-azul-accent);
+        color: var(--c-brand-azul);
+      }
+
+      &-accent {
+        background-color: var(--c-brand-azul-accent);
+        border-color: var(--c-brand-azul-accent);
+        color: var(--c-brand-azul);
+
+        &:hover {
+          background-color: var(--c-brand-azul);
+          border-color: var(--c-brand-azul);
+          color: var(--c-brand-day);
+        }
+      }
+    }
+
+    &-wink {
+      background-color: var(--c-brand-wink);
+      border-color: var(--c-brand-wink);
+      color: var(--c-brand-day);
+
+      &:hover {
+        background-color: var(--c-brand-wink-accent);
+        border-color: var(--c-brand-wink-accent);
+        color: var(--c-brand-wink);
+      }
+
+      &-accent {
+        background-color: var(--c-brand-wink-accent);
+        border-color: var(--c-brand-wink-accent);
+        color: var(--c-brand-wink);
+
+        &:hover {
+          background-color: var(--c-brand-wink);
+          border-color: var(--c-brand-wink);
+          color: var(--c-brand-day);
+        }
       }
     }
   }
