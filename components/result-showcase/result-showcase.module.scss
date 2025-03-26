@@ -14,6 +14,7 @@
 
       .item {
         border-color: var(--c-brand-night-24);
+        outline-color: var(--c-brand-night);
       }
     }
 
@@ -23,6 +24,7 @@
 
       .item {
         border-color: var(--c-brand-day-24);
+        outline-color: var(--c-brand-day);
       }
     }
 
@@ -32,6 +34,7 @@
 
       .item {
         border-color: var(--c-brand-night-24);
+        outline-color: var(--c-brand-verde-accent);
       }
     }
 
@@ -41,6 +44,7 @@
 
       .item {
         border-color: var(--c-brand-day-48);
+        outline-color: var(--c-brand-day);
       }
     }
 
@@ -50,6 +54,7 @@
 
       .item {
         border-color: var(--c-brand-day-48);
+        outline-color: var(--c-brand-day);
       }
     }
   }
@@ -102,6 +107,12 @@
     .item__view-more {
       display: block;
     }
+  }
+
+  &:focus-visible {
+    outline: 0.125rem solid transparent;
+    border-radius: 0.25rem;
+    border-bottom-color: transparent !important;
   }
 
   &__title {
