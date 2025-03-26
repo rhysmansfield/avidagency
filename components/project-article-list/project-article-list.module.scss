@@ -34,37 +34,46 @@
   }
 }
 
-.cta__wrapper {
-  display: grid;
-  place-content: center;
-  aspect-ratio: 1;
-  border-radius: 1.5rem;
+.cta {
+  pointer-events: none;
 
-  &.theme {
-    &-day,
-    &-day-outline {
-      background-color: var(--c-brand-day-24);
+  &__wrapper {
+    display: grid;
+    place-content: center;
+    aspect-ratio: 1;
+    border-radius: 1.5rem;
+    transition: scale var(--transition);
+
+    &:active {
+      scale: 0.96;
     }
 
-    &-night,
-    &-night-outline {
-      background-color: var(--c-brand-day);
+    &.theme {
+      &-day,
+      &-day-outline {
+        background-color: var(--c-brand-day-24);
+      }
+
+      &-night,
+      &-night-outline {
+        background-color: var(--c-brand-day);
+      }
+
+      &-verde {
+        background-color: var(--c-brand-verde-accent);
+      }
+
+      &-azul {
+        background-color: var(--c-brand-azul-accent);
+      }
+
+      &-wink {
+        background-color: var(--c-brand-wink-accent);
+      }
     }
 
-    &-verde {
-      background-color: var(--c-brand-verde-accent);
+    @include min-width(md) {
+      aspect-ratio: 632/400;
     }
-
-    &-azul {
-      background-color: var(--c-brand-azul-accent);
-    }
-
-    &-wink {
-      background-color: var(--c-brand-wink-accent);
-    }
-  }
-
-  @include min-width(md) {
-    aspect-ratio: 632/400;
   }
 }

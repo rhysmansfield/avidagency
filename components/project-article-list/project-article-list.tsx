@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { Button } from '@/components/button/button';
 import { ProjectArticle } from '@/components/project-article/project-article';
 
@@ -27,21 +29,23 @@ export const ProjectArticleList = ({
         isProject(item) ? (
           <ProjectArticle key={item.title} project={item} />
         ) : (
-          <div
+          <Link
             key={item.label}
+            href={item.href}
+            target={item.external ? '_blank' : undefined}
             className={classList(
               styles['cta__wrapper'],
               styles[`theme-${item.theme}`],
             )}
           >
             <Button
+              appearance="button"
               theme={item.theme}
-              href={item.href}
-              target={item.external ? '_blank' : undefined}
+              className={styles.cta}
             >
               {item.label}
             </Button>
-          </div>
+          </Link>
         ),
       )}
     </div>
