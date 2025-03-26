@@ -25,7 +25,10 @@ export const Footer = ({ formHeading, menus }: FooterProps) => {
     <footer className={styles.root}>
       <div className={classList('wrapper', styles.wrapper)}>
         <div className={styles['col--left']}>
-          <Icon name="logo" className={styles.logo} />
+          <Link href="/" className={styles['logo__wrapper']}>
+            <Icon name="logo" className={styles.logo} />
+          </Link>
+
           <p className={styles['form__heading']}>{formHeading}</p>
 
           <div className={styles['form__wrapper']}>
