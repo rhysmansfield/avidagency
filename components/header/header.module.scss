@@ -108,6 +108,7 @@ a.desktop-nav__cta {
   &__animated {
     opacity: 0;
     transform: translateY(1.25rem);
+    will-change: opacity, transform;
   }
 
   &--open &__animated {
