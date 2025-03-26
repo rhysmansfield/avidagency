@@ -34,46 +34,37 @@
   }
 }
 
-.cta {
-  pointer-events: none;
+.cta__wrapper {
+  display: grid;
+  place-content: center;
+  aspect-ratio: 1;
+  border-radius: 1.5rem;
 
-  &__wrapper {
-    display: grid;
-    place-content: center;
-    aspect-ratio: 1;
-    border-radius: 1.5rem;
-    transition: scale var(--transition);
-
-    &:active {
-      scale: 0.96;
+  &.theme {
+    &-day,
+    &-day-outline {
+      background-color: var(--c-brand-day-24);
     }
 
-    &.theme {
-      &-day,
-      &-day-outline {
-        background-color: var(--c-brand-day-24);
-      }
-
-      &-night,
-      &-night-outline {
-        background-color: var(--c-brand-day);
-      }
-
-      &-verde {
-        background-color: var(--c-brand-verde-accent);
-      }
-
-      &-azul {
-        background-color: var(--c-brand-azul-accent);
-      }
-
-      &-wink {
-        background-color: var(--c-brand-wink-accent);
-      }
+    &-night,
+    &-night-outline {
+      background-color: var(--c-brand-day);
     }
 
-    @include min-width(md) {
-      aspect-ratio: 632/400;
+    &-verde {
+      background-color: var(--c-brand-verde-accent);
     }
+
+    &-azul {
+      background-color: var(--c-brand-azul-accent);
+    }
+
+    &-wink {
+      background-color: var(--c-brand-wink-accent);
+    }
+  }
+
+  @include min-width(md) {
+    aspect-ratio: 632/400;
   }
 }
