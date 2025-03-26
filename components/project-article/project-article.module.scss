@@ -18,7 +18,8 @@
     scale: 0.96;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     border-color: var(--c-brand-day-80);
 
     .excerpt {

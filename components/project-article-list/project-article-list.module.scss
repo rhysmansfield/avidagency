@@ -48,27 +48,37 @@
       scale: 0.96;
     }
 
+    &:focus-visible {
+      outline: 2px solid transparent;
+    }
+
     &.theme {
       &-day,
       &-day-outline {
         background-color: var(--c-brand-day-24);
+        outline-color: var(--c-brand-day);
       }
 
       &-night,
       &-night-outline {
         background-color: var(--c-brand-day);
+        outline-offset: 0.25rem;
+        outline-color: var(--c-brand-day);
       }
 
       &-verde {
         background-color: var(--c-brand-verde-accent);
+        outline-color: var(--c-brand-verde);
       }
 
       &-azul {
         background-color: var(--c-brand-azul-accent);
+        outline-color: var(--c-brand-azul);
       }
 
       &-wink {
         background-color: var(--c-brand-wink-accent);
+        outline-color: var(--c-brand-wink);
       }
     }
 
