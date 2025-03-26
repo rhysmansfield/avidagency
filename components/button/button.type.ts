@@ -22,7 +22,7 @@ type ButtonActionProps = {
 } & ComponentProps<'button'> &
   ExcludeProps<
     ComponentProps<typeof Link>,
-    'children' | 'onClick' | 'className' | 'tabIndex'
+    'children' | 'onClick' | 'className' | 'type' | 'tabIndex'
   >;
 
 export type ButtonProps = SharedButtonProps &
