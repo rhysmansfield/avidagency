@@ -115,19 +115,29 @@ const Home = () => (
       text="Explore some of our exceptional client results and discover why brands seeking success choose us."
       items={[
         {
-          title: 'Title 1',
-          text: 'Text 1',
-          result: '+50%',
+          title: 'Boosted engagement',
+          text: 'Client name',
+          result: '+XX%',
         },
         {
-          title: 'Title 2',
-          text: 'Text 2',
-          result: '+100%',
+          title: 'Increase in organic traffic',
+          text: 'Client name',
+          result: '+XX%',
         },
         {
-          title: 'Title 3',
-          text: 'Text 3',
-          result: '+75%',
+          title: 'Increase in conversion',
+          text: 'Client name',
+          result: '+X.X%',
+        },
+        {
+          title: 'Lighthouse performance score',
+          text: 'Client name',
+          result: '+XXX%',
+        },
+        {
+          title: 'Returning customers',
+          text: 'Client name',
+          result: '+XX%',
         },
       ]}
     />
