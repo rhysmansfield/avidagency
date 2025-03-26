@@ -39,6 +39,7 @@ export const ProjectArticleList = ({
             )}
           >
             <Button
+              tabIndex={-1}
               appearance="button"
               theme={item.theme}
               className={styles.cta}

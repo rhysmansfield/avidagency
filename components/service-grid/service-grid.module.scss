@@ -56,29 +56,39 @@
     scale: 0.97;
   }
 
+  &:focus-visible {
+    outline: 2px solid transparent;
+    outline-offset: 0.25rem;
+  }
+
   &:first-of-type {
     background-color: var(--c-brand-verde);
     color: var(--c-brand-night);
+    outline-color: var(--c-brand-verde);
   }
 
   &:nth-of-type(2) {
     background-color: var(--c-brand-azul);
     color: var(--c-brand-day);
+    outline-color: var(--c-brand-azul);
   }
 
   &:nth-of-type(3) {
     background-color: var(--c-brand-wink);
     color: var(--c-brand-day);
+    outline-color: var(--c-brand-wink);
   }
 
   &:nth-of-type(4) {
     background-color: var(--c-black);
     color: var(--c-brand-day);
+    outline-color: var(--c-brand-day);
   }
 
   &:last-of-type {
     background-color: var(--c-white);
     color: var(--c-brand-night);
+    outline-color: var(--c-white);
   }
 
   &__header {

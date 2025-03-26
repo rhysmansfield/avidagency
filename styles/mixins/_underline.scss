@@ -16,8 +16,11 @@
     }
   }
 
-  &__wrapper:hover .underline__text:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+  &__wrapper:hover,
+  &__wrapper:focus-within {
+    .underline__text:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
   }
 }
