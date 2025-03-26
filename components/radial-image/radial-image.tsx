@@ -11,6 +11,7 @@ export const RadialImage = ({ image }: RadialImageProps) => (
     <div className={styles['image__wrapper']}>
       <Image
         unoptimized
+        priority
         {...image}
         width={2287}
         height={2426}
