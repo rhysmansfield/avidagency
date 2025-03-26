@@ -19,14 +19,14 @@
 
 .logo {
   width: 4rem;
+  transition: scale var(--transition);
 
   @include min-width(md) {
     width: 5rem;
-    transition: scale var(--transition);
+  }
 
-    &:hover {
-      scale: 1.1;
-    }
+  &:hover {
+    scale: 1.1;
   }
 
   &__wrapper {
