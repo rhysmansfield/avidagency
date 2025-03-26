@@ -52,13 +52,13 @@
     padding: 2rem;
   }
 
-  &:active {
-    scale: 0.97;
-  }
-
   &:focus-visible {
     outline: 2px solid transparent;
     outline-offset: 0.25rem;
+  }
+
+  &:active {
+    scale: 0.97;
   }
 
   &:first-of-type {

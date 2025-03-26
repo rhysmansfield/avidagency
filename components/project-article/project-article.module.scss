@@ -14,10 +14,6 @@
     aspect-ratio: 632/400;
   }
 
-  &:active {
-    scale: 0.96;
-  }
-
   &:hover,
   &:focus-visible {
     border-color: var(--c-brand-day-80);
@@ -35,6 +31,10 @@
     .view-more {
       display: block;
     }
+  }
+
+  &:active {
+    scale: 0.96;
   }
 }
 

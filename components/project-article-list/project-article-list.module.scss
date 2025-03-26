@@ -44,12 +44,12 @@
     border-radius: 1.5rem;
     transition: scale var(--transition);
 
-    &:active {
-      scale: 0.96;
-    }
-
     &:focus-visible {
       outline: 2px solid transparent;
+    }
+
+    &:active {
+      scale: 0.96;
     }
 
     &.theme {

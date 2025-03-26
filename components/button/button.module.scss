@@ -13,13 +13,13 @@
     border-color var(--transition),
     color var(--transition);
 
-  &:active {
-    scale: 0.95;
-  }
-
   &:focus-visible {
     outline: 2px solid transparent;
     outline-offset: 0.125rem;
+  }
+
+  &:active {
+    scale: 0.95;
   }
 
   &.theme {
