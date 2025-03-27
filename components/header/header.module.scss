@@ -18,6 +18,7 @@
 }
 
 .logo__wrapper {
+  display: block;
   outline-offset: 0.25rem;
   width: 4rem;
   transition: scale var(--transition);
