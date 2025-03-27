@@ -52,17 +52,14 @@
   }
 }
 
-.logo {
+.logo__wrapper {
   width: 4rem;
+  outline-offset: 0.25rem;
   margin-bottom: 1.5rem;
   transition: scale var(--transition);
 
   &:hover {
     scale: 1.1;
-  }
-
-  &__wrapper {
-    outline-offset: 0.25rem;
   }
 }
 

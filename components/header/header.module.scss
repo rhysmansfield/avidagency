@@ -17,7 +17,8 @@
   display: flex;
 }
 
-.logo {
+.logo__wrapper {
+  outline-offset: 0.25rem;
   width: 4rem;
   transition: scale var(--transition);
 
@@ -27,10 +28,6 @@
 
   &:hover {
     scale: 1.1;
-  }
-
-  &__wrapper {
-    outline-offset: 0.25rem;
   }
 }
 
