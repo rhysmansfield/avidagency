@@ -39,8 +39,6 @@
 }
 
 .cta {
-  pointer-events: none;
-
   &__wrapper {
     display: grid;
     place-content: center;
@@ -73,16 +71,28 @@
       &-verde {
         background-color: var(--c-brand-verde-accent);
         outline-color: var(--c-brand-verde);
+
+        button.cta {
+          border-color: var(--c-brand-verde);
+        }
       }
 
       &-azul {
         background-color: var(--c-brand-azul-accent);
         outline-color: var(--c-brand-azul);
+
+        button.cta {
+          border-color: var(--c-brand-azul);
+        }
       }
 
       &-wink {
         background-color: var(--c-brand-wink-accent);
         outline-color: var(--c-brand-wink);
+
+        button.cta {
+          border-color: var(--c-brand-wink);
+        }
       }
     }
 
