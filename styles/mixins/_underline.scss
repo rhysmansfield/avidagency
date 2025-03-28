@@ -16,8 +16,7 @@
     }
   }
 
-  &__wrapper:hover,
-  &__wrapper:focus-within {
+  &__wrapper:hover {
     .underline__text:after {
       transform: scaleX(1);
       transform-origin: bottom left;
