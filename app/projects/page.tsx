@@ -6,6 +6,14 @@ const Projects = () => (
       title="Bespoke projects, consistent results."
       text="We transform ordinary results into extraordinary outcomes, without adding strain to your business, with our comprehensive digital solutions. Say goodbye to fluctuations and hello to consistent, quality results."
     />
+    <div
+      className="wrapper"
+      style={{
+        height: '100vh',
+      }}
+    >
+      Page
+    </div>
   </>
 );
 
