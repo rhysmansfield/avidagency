@@ -1,6 +1,7 @@
 import { useCustomForm } from '@/hooks/use-custom-form';
 import { UseCustomFormResult } from '@/hooks/use-custom-form.type';
 
+import { ContactRequest, ContactResponse } from '@/types/api/contact.type';
 import {
   NewsletterRequest,
   NewsletterResponse,
@@ -15,5 +16,20 @@ export const useNewsletterForm = (): UseCustomFormResult<
     url: '/api/newsletter',
     defaultValues: {
       email: '',
+    },
+  });
+
+export const useContactForm = (): UseCustomFormResult<
+  ContactRequest,
+  ContactResponse
+> =>
+  useCustomForm<ContactRequest, ContactResponse>({
+    mutationKey: ['Contact'],
+    url: '/api/contact',
+    defaultValues: {
+      name: '',
+      email: '',
+      services: [],
+      message: '',
     },
   });

@@ -33,7 +33,10 @@ export const MultiSelectField = <TFields extends FieldValues>({
               <label
                 key={value}
                 htmlFor={`${name}-${value}`}
-                className={styles.option}
+                className={classList(
+                  styles.option,
+                  selectedValues.includes(value) && styles['option--active'],
+                )}
               >
                 <input
                   type="checkbox"
