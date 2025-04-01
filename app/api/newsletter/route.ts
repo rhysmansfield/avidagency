@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+import { createKlaviyoCustomer } from '@/utils/create-klaviyo-customer';
 import { loggedResponse } from '@/utils/logged-response';
 import { validateRecaptcha } from '@/utils/validate-recaptcha';
 
@@ -13,22 +14,21 @@ export const POST = async (
   request: NextRequest,
 ): ApiResponse<NewsletterResponse> => {
   const { data }: ApiRequest<NewsletterRequest> = await request.json();
-  const { email } = data;
+  const { recaptcha, email } = data;
 
   const recaptchaError = await validateRecaptcha<
     NewsletterRequest,
     NewsletterResponse
-  >('api/newsletter', data);
+  >('api/newsletter', recaptcha);
 
   if (recaptchaError) return recaptchaError;
 
-  if (!email) {
-    return loggedResponse({
-      source: 'api/example',
-      error: 'Email is required',
-      data,
-    });
-  }
+  const klaviyoError = await createKlaviyoCustomer<NewsletterResponse>(
+    'api/newsletter',
+    email,
+  );
+
+  if (klaviyoError) return klaviyoError;
 
   return NextResponse.json({ message: 'success' }, { status: 200 });
 };

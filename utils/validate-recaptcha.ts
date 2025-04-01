@@ -2,29 +2,27 @@ import axios from 'axios';
 
 import { loggedResponse } from '@/utils/logged-response';
 
-import { ApiRequest, ApiResponse } from '@/types/api/axios.type';
+import { ApiResponse } from '@/types/api/axios.type';
 
 export async function validateRecaptcha<TRequest, TResponse>(
   source: string,
-  data: ApiRequest<TRequest>['data'],
+  recaptcha: string,
 ): Promise<null | ApiResponse<TResponse>> {
-  const { recaptcha } = data;
-
   if (!recaptcha) {
-    return loggedResponse<TRequest>({
+    return loggedResponse({
       source,
       error: 'Recaptcha is required',
-      data,
+      data: {
+        recaptcha,
+      },
     });
   }
 
-  const {
-    data: { success: isValid },
-  } = await axios.post(
+  const { data } = await axios.post(
     `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_PRIVATE_KEY}&response=${recaptcha}`,
   );
 
-  if (!isValid) {
+  if (!data.success) {
     return loggedResponse({
       source,
       error: 'Recaptcha is invalid',

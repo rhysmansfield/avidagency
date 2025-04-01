@@ -2,12 +2,12 @@ import { NextResponse } from 'next/server';
 
 export const loggedResponse = <TResponse>({
   source,
-  data,
   error,
+  data,
 }: {
   source: string;
   error: string;
-  data: TResponse;
+  data?: TResponse;
 }) => {
   console.error({
     source,
