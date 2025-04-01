@@ -20,8 +20,7 @@ export const ProjectArticle = ({
     <article className={styles.article}>
       <Image
         unoptimized
-        src={image.src}
-        alt={image.alt}
+        {...image}
         width={1280}
         height={640}
         className={styles.image}
