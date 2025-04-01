@@ -1,19 +1,36 @@
 import axios from 'axios';
 
-export const validateRecaptcha = async (token: string): Promise<boolean> => {
-  const response = await axios.post(
-    `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_PRIVATE_KEY}&response=${token}`,
-  );
+import { loggedResponse } from '@/utils/logged-response';
+
+import { ApiRequest, ApiResponse } from '@/types/api/axios.type';
+
+export async function validateRecaptcha<TRequest, TResponse>(
+  source: string,
+  data: ApiRequest<TRequest>['data'],
+): Promise<null | ApiResponse<TResponse>> {
+  const { recaptcha } = data;
+
+  if (!recaptcha) {
+    return loggedResponse<TRequest>({
+      source,
+      error: 'Recaptcha is required',
+      data,
+    });
+  }
 
   const {
     data: { success: isValid },
-  } = response;
+  } = await axios.post(
+    `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_PRIVATE_KEY}&response=${recaptcha}`,
+  );
 
-  if (!isValid)
-    console.error({
-      source: 'utils/validate-recaptcha',
+  if (!isValid) {
+    return loggedResponse({
+      source,
       error: 'Recaptcha is invalid',
-      data: response.data,
+      data,
     });
-  return response.data.success;
-};
+  }
+
+  return null;
+}

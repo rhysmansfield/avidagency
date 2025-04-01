@@ -5,8 +5,8 @@ import {
 } from 'axios';
 import { NextResponse } from 'next/server';
 
-export type ApiRequest<TResponse> = {
-  data: TResponse & { recaptcha: string };
+export type ApiRequest<TRequest> = {
+  data: TRequest & { recaptcha: string };
 };
 
 export type ApiResponse<TResponse> = Promise<
