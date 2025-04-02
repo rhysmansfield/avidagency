@@ -30,14 +30,7 @@ export const MultiSelectField = <TFields extends FieldValues>({
         render={({ field: { onChange, value: selectedValues } }) => (
           <div className={styles['option__wrapper']}>
             {options.map(({ value, label }) => (
-              <label
-                key={value}
-                htmlFor={`${name}-${value}`}
-                className={classList(
-                  styles.option,
-                  selectedValues.includes(value) && styles['option--active'],
-                )}
-              >
+              <div key={value}>
                 <input
                   type="checkbox"
                   id={`${name}-${value}`}
@@ -48,8 +41,16 @@ export const MultiSelectField = <TFields extends FieldValues>({
                   }
                   className={styles['option__checkbox']}
                 />
-                {label}
-              </label>
+                <label
+                  htmlFor={`${name}-${value}`}
+                  className={classList(
+                    styles.option,
+                    selectedValues.includes(value) && styles['option--active'],
+                  )}
+                >
+                  {label}
+                </label>
+              </div>
             ))}
           </div>
         )}

@@ -1,6 +1,7 @@
 @use '@/components/form/field.module' as *;
 
 .option {
+  display: inline-block;
   font: var(--font-dm-sans-b2);
   font-size: 1rem !important;
   background-color: var(--c-brand-day);
@@ -10,10 +11,6 @@
   cursor: pointer;
   transition: background-color var(--transition);
 
-  &--active {
-    background-color: var(--c-brand-verde);
-  }
-
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -22,5 +19,14 @@
 
   &__checkbox {
     appearance: none;
+
+    &:checked + .option {
+      background-color: var(--c-brand-verde);
+    }
+
+    &:focus-visible + .option {
+      outline: 2px solid var(--c-brand-night);
+      outline-offset: -4px;
+    }
   }
 }
