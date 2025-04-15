@@ -18,6 +18,8 @@
   }
 
   &__checkbox {
+    width: 0;
+    height: 0;
     appearance: none;
 
     &:checked + .option {
