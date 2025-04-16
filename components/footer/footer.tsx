@@ -31,7 +31,7 @@ export const Footer = ({ formHeading, menus }: FooterProps) => {
 
           <p className={styles['form__heading']}>{formHeading}</p>
 
-          <div className={styles['form__wrapper']}>
+          <div ref={ref} className={styles['form__wrapper']}>
             {isError && (
               <p className={styles['form__error']}>
                 Something went wrong. Please try again.
@@ -43,7 +43,7 @@ export const Footer = ({ formHeading, menus }: FooterProps) => {
               </p>
             )}
 
-            <form ref={ref} onSubmit={onSubmit} className={styles.form}>
+            <form onSubmit={onSubmit} className={styles.form}>
               <InputField
                 control={control}
                 type="email"
@@ -60,8 +60,9 @@ export const Footer = ({ formHeading, menus }: FooterProps) => {
                 className={styles['form__input']}
               />
               <Button
-                theme="night"
                 appearance="button"
+                theme="night"
+                isLoading={isPending}
                 type="submit"
                 className={styles['form__button']}
               >
