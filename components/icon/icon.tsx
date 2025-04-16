@@ -3,6 +3,7 @@ import { cloneElement } from 'react';
 import { InstagramSvg } from '@/components/icon//svgs/instagram';
 import { PetsSvg } from '@/components/icon//svgs/pets';
 import { TiktokSvg } from '@/components/icon//svgs/tiktok';
+import { AlertSvg } from '@/components/icon/svgs/alert';
 import { ArrowRightSvg } from '@/components/icon/svgs/arrow-right';
 import { CloseSvg } from '@/components/icon/svgs/close';
 import { FacebookSvg } from '@/components/icon/svgs/facebook';
@@ -14,6 +15,7 @@ import { MetaSvg } from '@/components/icon/svgs/meta';
 import { ShopifySvg } from '@/components/icon/svgs/shopify';
 import { ShopifyPartnersSvg } from '@/components/icon/svgs/shopify-partners';
 import { SparkLayerSvg } from '@/components/icon/svgs/sparklayer';
+import { TickSvg } from '@/components/icon/svgs/tick';
 
 import { IconComponents, IconProps } from './icon.type';
 
@@ -23,6 +25,8 @@ export const Icon = ({ name, ...props }: IconProps) => {
     shopify: <ShopifySvg />,
     menu: <MenuSvg />,
     close: <CloseSvg />,
+    tick: <TickSvg />,
+    alert: <AlertSvg />,
     'arrow-right': <ArrowRightSvg />,
     facebook: <FacebookSvg />,
     instagram: <InstagramSvg />,

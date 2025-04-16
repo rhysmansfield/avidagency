@@ -5,6 +5,8 @@ export type IconName =
   | 'shopify'
   | 'menu'
   | 'close'
+  | 'tick'
+  | 'alert'
   | 'arrow-right'
   | 'facebook'
   | 'instagram'

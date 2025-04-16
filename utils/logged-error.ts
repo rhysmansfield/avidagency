@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export const loggedResponse = <TResponse>({
+export const loggedError = <TResponse>({
   source,
   error,
   data,

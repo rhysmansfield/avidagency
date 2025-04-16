@@ -21,7 +21,7 @@ export const useCustomForm = <TFields extends FieldValues, TResponse>({
   url,
   defaultValues,
 }: UseCustomFormProps<TFields>): UseCustomFormResult<TFields, TResponse> => {
-  const ref = useRef<HTMLFormElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   const {
     control,

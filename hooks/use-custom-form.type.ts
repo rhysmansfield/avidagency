@@ -15,7 +15,7 @@ export type UseCustomFormProps<TFields extends FieldValues> = {
 
 export type UseCustomFormResult<TFields extends FieldValues, TResponse> = {
   data?: TResponse;
-  ref: RefObject<HTMLFormElement | null>;
+  ref: RefObject<HTMLDivElement | null>;
   onSubmit: (e: BaseSyntheticEvent) => Promise<void>;
   control: Control<TFields>;
   fieldErrors: FieldErrors<TFields>;

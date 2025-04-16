@@ -1,15 +1,15 @@
 import axios from 'axios';
 
-import { loggedResponse } from '@/utils/logged-response';
+import { loggedError } from '@/utils/logged-error';
 
 import { ApiResponse } from '@/types/api/axios.type';
 
-export async function validateRecaptcha<TRequest, TResponse>(
+export async function validateRecaptcha<TResponse>(
   source: string,
   recaptcha: string,
 ): Promise<null | ApiResponse<TResponse>> {
   if (!recaptcha) {
-    return loggedResponse({
+    return loggedError({
       source,
       error: 'Recaptcha is required',
       data: {
@@ -23,7 +23,7 @@ export async function validateRecaptcha<TRequest, TResponse>(
   );
 
   if (!data.success) {
-    return loggedResponse({
+    return loggedError({
       source,
       error: 'Recaptcha is invalid',
       data,

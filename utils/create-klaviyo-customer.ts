@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { loggedResponse } from '@/utils/logged-response';
+import { loggedError } from '@/utils/logged-error';
 
 import { ApiResponse } from '@/types/api/axios.type';
 
@@ -9,7 +9,7 @@ export async function createKlaviyoCustomer<TResponse>(
   email: string,
 ): Promise<null | ApiResponse<TResponse>> {
   if (!email) {
-    return loggedResponse({
+    return loggedError({
       source,
       error: 'Email is required',
     });
@@ -53,7 +53,7 @@ export async function createKlaviyoCustomer<TResponse>(
     );
 
     if (status !== 202) {
-      return loggedResponse({
+      return loggedError({
         source,
         error: 'Klaviyo API call failed - Fetch complete',
         data: {
@@ -62,7 +62,7 @@ export async function createKlaviyoCustomer<TResponse>(
       });
     }
   } catch (error) {
-    return loggedResponse({
+    return loggedError({
       source,
       error: 'Klaviyo API call failed - Fetch failed',
       data: (error as Error).message,
