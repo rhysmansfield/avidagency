@@ -9,6 +9,7 @@ type SharedButtonProps = {
 
 type ButtonLinkProps = {
   appearance?: 'link';
+  isLoading?: never;
   external?: boolean;
 } & ExcludeProps<
   ComponentProps<'button'>,
@@ -18,6 +19,7 @@ type ButtonLinkProps = {
 
 type ButtonActionProps = {
   appearance?: 'button';
+  isLoading?: boolean;
   external?: never;
 } & ComponentProps<'button'> &
   ExcludeProps<

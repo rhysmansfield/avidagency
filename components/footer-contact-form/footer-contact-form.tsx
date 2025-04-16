@@ -129,6 +129,7 @@ export const FooterContactForm = ({
           <div>
             <Button
               appearance="button"
+              isLoading={isPending}
               theme={theme}
               type="submit"
               className={styles.button}

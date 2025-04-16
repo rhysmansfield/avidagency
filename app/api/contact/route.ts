@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { set } from 'react-hook-form';
 
 import { createKlaviyoCustomer } from '@/utils/create-klaviyo-customer';
 import { loggedError } from '@/utils/logged-error';
@@ -19,6 +20,8 @@ export const POST = async (
   );
 
   if (recaptchaError) return recaptchaError;
+
+  await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return loggedError({
     source: 'api/contact',
