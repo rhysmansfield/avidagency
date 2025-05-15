@@ -52,12 +52,18 @@ export const ContactThankYou = ({
         >
           <Section
             style={{
-              padding: '24px 16px',
+              padding: '32px 16px',
+              background: 'linear-gradient(180deg, #1c1e20 0%, #1c1e20 100%)',
               backgroundColor: '#1c1e20',
               color: '#f8f8f8',
             }}
           >
-            <Row style={{ width: 'auto' }}>
+            <Row
+              style={{
+                width: 'auto',
+                margin: '0 auto',
+              }}
+            >
               <Column
                 style={{
                   paddingRight: '14px',
@@ -85,7 +91,23 @@ export const ContactThankYou = ({
                     lineHeight: '130%',
                   }}
                 >
-                  <Column>For everything</Column>
+                  <Column>
+                    <span
+                      style={{
+                        background: '#1c1e20',
+                        mixBlendMode: 'screen',
+                      }}
+                    >
+                      <span
+                        style={{
+                          background: '#1c1e20',
+                          mixBlendMode: 'difference',
+                        }}
+                      >
+                        For everything
+                      </span>
+                    </span>
+                  </Column>
                   <Column
                     style={{
                       paddingLeft: '8px',
