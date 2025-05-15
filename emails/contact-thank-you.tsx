@@ -153,7 +153,13 @@ export const ContactThankYou = ({
                   ))}
                 </p>
                 <p>
-                  <strong>Message:</strong> {message}
+                  <strong>Message:</strong>
+                  <br />
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: message.replace(/\n/g, '<br/>'),
+                    }}
+                  />
                 </p>
                 <p
                   style={{
