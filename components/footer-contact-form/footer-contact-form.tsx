@@ -62,7 +62,7 @@ export const FooterContactForm = ({
         {isError && (
           <p className={styles['form__error']}>
             <Icon name="alert" />
-            {apiError ?? 'Something went wrong. Please try again.'}
+            Something went wrong. Please try again.
           </p>
         )}
 
