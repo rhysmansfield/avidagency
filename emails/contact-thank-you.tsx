@@ -188,4 +188,14 @@ export const ContactThankYou = ({
   );
 };
 
+const PreviewProps: ContactThankYouProps = {
+  title: 'Thanks for getting in touch!',
+  name: 'John Doe',
+  email: 'john@doe.com',
+  services: ['Shopify', 'Web Design'],
+  message:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+};
+ContactThankYou.PreviewProps = PreviewProps;
+
 export default ContactThankYou;
