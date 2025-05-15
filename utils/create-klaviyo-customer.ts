@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { env } from 'process';
 
 import { loggedError } from '@/utils/logged-error';
 
@@ -17,7 +18,7 @@ export async function createKlaviyoCustomer<TResponse>(
 
   try {
     const { status } = await axios.post(
-      `https://a.klaviyo.com/client/subscriptions?company_id=${process.env.KLAVIYO_COMPANY_ID}`,
+      `https://a.klaviyo.com/client/subscriptions?company_id=${env.KLAVIYO_COMPANY_ID}`,
       {
         data: {
           type: 'subscription',
@@ -39,7 +40,7 @@ export async function createKlaviyoCustomer<TResponse>(
             },
           },
           relationships: {
-            list: { data: { type: 'list', id: process.env.KLAVIYO_LIST_ID } },
+            list: { data: { type: 'list', id: env.KLAVIYO_LIST_ID } },
           },
         },
       },

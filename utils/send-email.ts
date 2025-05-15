@@ -1,12 +1,13 @@
 import nodemailer from 'nodemailer';
+import { env } from 'process';
 
 export const sendEmail = async (data: EmailProps): Promise<boolean> => {
   try {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.SMTP_AUTH_USER,
-        pass: process.env.SMTP_AUTH_PASS,
+        user: env.SMTP_AUTH_USER,
+        pass: env.SMTP_AUTH_PASS,
       },
     });
 
@@ -14,9 +15,9 @@ export const sendEmail = async (data: EmailProps): Promise<boolean> => {
       ...data,
       from: {
         name: 'Avid Agency',
-        address: process.env.SMTP_AUTH_USER!,
+        address: env.SMTP_AUTH_USER!,
       },
-      bcc: process.env.SMTP_AUTH_USER!,
+      bcc: env.SMTP_AUTH_USER!,
     });
     return email.rejected.length === 0;
   } catch (error) {

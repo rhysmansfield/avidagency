@@ -1,3 +1,5 @@
+import { env } from 'process';
+
 import { FooterContactForm } from '@/components/footer-contact-form/footer-contact-form';
 import { Hero } from '@/components/hero/hero';
 import { ImpactText } from '@/components/impact-text/impact-text';
@@ -10,8 +12,6 @@ import { ServiceGrid } from '@/components/service-grid/service-grid';
 
 import { PROJECTS } from '@/data/projects';
 import { URLS } from '@/data/urls';
-
-import { CommonButton } from '@/types/common.type';
 
 const Home = () => (
   <>
@@ -39,7 +39,7 @@ const Home = () => (
 
     <RadialImage
       image={{
-        src: 'https://avidagency.s3.eu-north-1.amazonaws.com/homepage/hero-phone.webp',
+        src: `${env.S3_URL}/homepage/hero-phone.webp`,
         alt: 'Hand holding a phone showing The DFC Experience website',
       }}
     />

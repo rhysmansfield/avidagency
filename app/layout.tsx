@@ -2,6 +2,7 @@ import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { ReCaptchaProvider } from 'next-recaptcha-v3';
 import { DM_Sans, Space_Grotesk } from 'next/font/google';
+import { env } from 'process';
 
 import { ReactQueryContext } from '@/context/react-query-context';
 
@@ -55,7 +56,7 @@ const dmSans = DM_Sans({
 const RootLayout = ({ children }: CommonLayoutProps) => {
   return (
     <ReactQueryContext>
-      <ReCaptchaProvider reCaptchaKey={process.env.RECAPTCHA_PUBLIC_KEY}>
+      <ReCaptchaProvider reCaptchaKey={env.RECAPTCHA_PUBLIC_KEY}>
         <GoogleTagManager gtmId="GTM-PSPRMMW8" />
         <html
           lang="en"

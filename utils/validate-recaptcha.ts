@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { env } from 'process';
 
 import { loggedError } from '@/utils/logged-error';
 
@@ -19,7 +20,7 @@ export async function validateRecaptcha<TResponse>(
   }
 
   const { data } = await axios.post(
-    `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_PRIVATE_KEY}&response=${recaptcha}`,
+    `https://www.google.com/recaptcha/api/siteverify?secret=${env.RECAPTCHA_PRIVATE_KEY}&response=${recaptcha}`,
   );
 
   if (!data.success) {
