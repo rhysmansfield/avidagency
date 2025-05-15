@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "email-dev": "email dev",
+    "email-dev": "cp .env ./node_modules/react-email/dist/preview && email dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
