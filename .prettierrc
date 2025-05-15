@@ -9,6 +9,7 @@
     "^@/hooks/(.*)$",
     "^@/context/(.*)$",
     "^@/components/(.*)$",
+    "^@/emails/(.*)$",
     "^@/utils/(.*)$",
     "^@/data/(.*)$",
     "^@/public/(.*)$",

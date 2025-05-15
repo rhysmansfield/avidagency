@@ -1,8 +1,10 @@
+import { render } from '@react-email/components';
 import { NextRequest, NextResponse } from 'next/server';
-import { set } from 'react-hook-form';
 
-import { createKlaviyoCustomer } from '@/utils/create-klaviyo-customer';
+import ContactThankYou from '@/emails/contact-thank-you';
+
 import { loggedError } from '@/utils/logged-error';
+import { sendEmail } from '@/utils/send-email';
 import { validateRecaptcha } from '@/utils/validate-recaptcha';
 
 import { ApiRequest, ApiResponse } from '@/types/api/axios.type';
@@ -21,13 +23,23 @@ export const POST = async (
 
   if (recaptchaError) return recaptchaError;
 
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  const emailHtml = await render(
+    <ContactThankYou title="Thanks for getting in touch!" {...data} />,
+  );
 
-  return loggedError({
-    source: 'api/contact',
-    error: 'Contact form is not implemented yet.',
-    data,
+  const emailSuccess = await sendEmail({
+    to: email,
+    subject: 'Avid Agency: Thanks for getting in touch!',
+    html: emailHtml,
   });
+
+  if (!emailSuccess) {
+    return loggedError({
+      source: 'api/contact',
+      error: 'Email could not be sent.',
+      data,
+    });
+  }
 
   return NextResponse.json({ message: 'success' }, { status: 200 });
 };

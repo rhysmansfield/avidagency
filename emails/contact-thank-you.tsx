@@ -3,25 +3,23 @@ import {
   Column,
   Container,
   Font,
-  Heading,
   Html,
   Img,
   Preview,
   Row,
   Section,
-  Text,
 } from '@react-email/components';
 import Head from 'next/head';
 
 import { ContactThankYouProps } from '@/emails/emails.type';
 
-export default function ContactThankYou({
-  title = 'Thanks for getting in touch!',
-  name = 'Rhys Mansfield',
-  email = 'rhys@avidagency.co.uk',
-  services = ['Shopify'],
-  message = 'I am interested in your services and would like to discuss further. Please get back to me at your earliest convenience. I am interested in your services and would like to discuss further. Please get back to me at your earliest convenience.',
-}: ContactThankYouProps) {
+export const ContactThankYou = ({
+  title,
+  name,
+  email,
+  services = [],
+  message,
+}: ContactThankYouProps) => {
   const firstName = name.split(' ')[0];
 
   return (
@@ -188,4 +186,6 @@ export default function ContactThankYou({
       </Body>
     </Html>
   );
-}
+};
+
+export default ContactThankYou;
