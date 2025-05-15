@@ -40,8 +40,11 @@ $spacing: max(
     width: calc(100% + 4rem);
   }
 
-  @include min-width(lg) {
+  @include min-width(md) {
     gap: 3rem;
+  }
+
+  @include min-width(lg) {
     animation-play-state: paused;
 
     &--animating {
