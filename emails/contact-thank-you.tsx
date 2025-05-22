@@ -129,7 +129,7 @@ export const ContactThankYou = ({
             style={{
               backgroundColor: '#f8f8f8',
               color: '#1c1e20',
-              padding: '32px 24px',
+              padding: '48px 24px',
             }}
           >
             <div
