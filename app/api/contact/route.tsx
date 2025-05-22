@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 import ContactThankYou from '@/emails/contact-thank-you';
 
+import { createKlaviyoCustomer } from '@/utils/create-klaviyo-customer';
 import { loggedError } from '@/utils/logged-error';
 import { sendEmail } from '@/utils/send-email';
 import { validateRecaptcha } from '@/utils/validate-recaptcha';
@@ -22,6 +23,13 @@ export const POST = async (
   );
 
   if (recaptchaError) return recaptchaError;
+
+  const klaviyoError = await createKlaviyoCustomer<ContactResponse>(
+    'api/newsletter',
+    email,
+  );
+
+  if (klaviyoError) return klaviyoError;
 
   const emailHtml = await render(
     <ContactThankYou title="Thanks for getting in touch!" {...data} />,
