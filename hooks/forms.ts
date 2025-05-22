@@ -1,6 +1,8 @@
 import { useCustomForm } from '@/hooks/use-custom-form';
 import { UseCustomFormResult } from '@/hooks/use-custom-form.type';
 
+import { API_URLS } from '@/data/urls';
+
 import { ContactRequest, ContactResponse } from '@/types/api/contact.type';
 import {
   NewsletterRequest,
@@ -13,7 +15,7 @@ export const useNewsletterForm = (): UseCustomFormResult<
 > =>
   useCustomForm<NewsletterRequest, NewsletterResponse>({
     mutationKey: ['Newsletter'],
-    url: '/api/newsletter',
+    url: API_URLS.NEWSLETTER,
     defaultValues: {
       email: '',
     },
@@ -25,7 +27,7 @@ export const useContactForm = (): UseCustomFormResult<
 > =>
   useCustomForm<ContactRequest, ContactResponse>({
     mutationKey: ['Contact'],
-    url: '/api/contact',
+    url: API_URLS.CONTACT,
     defaultValues: {
       name: '',
       email: '',

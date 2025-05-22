@@ -1,4 +1,4 @@
-import { ApiUrls, ServiceUrls, SocialUrls, Urls } from './urls.type';
+import { ApiUrls, ExternalUrls, SocialUrls, Urls } from './urls.type';
 
 export const URLS: Urls = {
   HOME: '/',
@@ -8,9 +8,14 @@ export const URLS: Urls = {
   PRIVACY_POLICY: '/privacy-policy',
 };
 
-// export const API_URLS: ApiUrls = {
-//   CONTACT: '/api/contact',
-// };
+export const EXTERNAL_URLS: ExternalUrls = {
+  CALENDLY: 'https://calendly.com/avidagency/30min',
+};
+
+export const API_URLS: ApiUrls = {
+  CONTACT: '/api/contact',
+  NEWSLETTER: '/api/newsletter',
+};
 
 export const SOCIAL_URLS: SocialUrls = [
   {

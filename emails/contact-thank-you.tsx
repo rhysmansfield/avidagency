@@ -13,6 +13,8 @@ import Head from 'next/head';
 
 import { ContactThankYouProps } from '@/emails/emails.type';
 
+import { EXTERNAL_URLS } from '@/data/urls';
+
 export const ContactThankYou = ({
   title,
   name,
@@ -190,7 +192,7 @@ export const ContactThankYou = ({
                 >
                   If you have any questions in the meantime, either reply to
                   this email or{' '}
-                  <a href="https://calendly.com/" style={{ color: '#f54891' }}>
+                  <a href={EXTERNAL_URLS.CALENDLY} style={{ color: '#f54891' }}>
                     book a call
                   </a>
                   .
