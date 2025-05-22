@@ -35,9 +35,7 @@ export const FooterContactForm = ({
   } = useContactForm();
 
   return (
-    <section
-      className={classList('wrapper', styles.root, styles[`theme-${theme}`])}
-    >
+    <section className={classList('wrapper', styles.root)}>
       <div className={styles['image__wrapper']}>
         <Image
           unoptimized
