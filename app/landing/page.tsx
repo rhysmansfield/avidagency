@@ -1,3 +1,5 @@
+import { env } from 'process';
+
 import { FooterContactForm } from '@/components/footer-contact-form/footer-contact-form';
 import { LandingForm } from '@/components/landing-form/landing-form';
 import { ResultShowcase } from '@/components/result-showcase/result-showcase';
@@ -94,7 +96,7 @@ const Landing = () => (
       title="Have a project in mind?"
       text="Whether you have questions, project ideas, or need assistance, we're here to help. Complete the form below to explore how we can elevate your brand's digital presence together."
       image={{
-        src: 'https://placehold.co/1280x1280',
+        src: `${env.S3_URL}/shared/footer-contact.png`,
         alt: 'Hand holding a phone showing The DFC Experience website',
       }}
     />

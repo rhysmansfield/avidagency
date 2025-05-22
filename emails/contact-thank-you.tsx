@@ -10,6 +10,7 @@ import {
   Section,
 } from '@react-email/components';
 import Head from 'next/head';
+import { env } from 'process';
 
 import { ContactThankYouProps } from '@/emails/emails.type';
 
@@ -73,7 +74,7 @@ export const ContactThankYou = ({
               >
                 <a href="https://avidagency.co.uk">
                   <Img
-                    src={`${process.env.S3_URL}/email/avid-white.png`}
+                    src={`${env.S3_URL}/email/avid-white.png`}
                     alt="Avid Agency"
                     width="64"
                   />
@@ -116,7 +117,7 @@ export const ContactThankYou = ({
                     }}
                   >
                     <Img
-                      src={`${process.env.S3_URL}/email/shopify-white.png`}
+                      src={`${env.S3_URL}/email/shopify-white.png`}
                       alt="Shopify"
                       width="56"
                     />
