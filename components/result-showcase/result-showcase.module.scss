@@ -1,14 +1,16 @@
 @use '@/styles/mixins/breakpoints' as *;
 
 .root {
-  padding: 5rem 0;
+  &:not(.theme-night) {
+    padding: 5rem 0;
 
-  @include min-width(md) {
-    padding: 7.5rem 0;
-  }
+    @include min-width(md) {
+      padding: 7.5rem 0;
+    }
 
-  @include min-width(lg) {
-    padding: 10rem 0;
+    @include min-width(lg) {
+      padding: 10rem 0;
+    }
   }
 
   &.theme {
@@ -23,8 +25,17 @@
     }
 
     &-night {
-      background-color: var(--c-black);
+      background-color: var(--c-brand-night);
       color: var(--c-brand-day);
+      margin: 5rem 0;
+
+      @include min-width(md) {
+        margin: 7.5rem 0;
+      }
+
+      @include min-width(lg) {
+        margin: 10rem 0;
+      }
 
       .item {
         border-color: var(--c-brand-day-24);
