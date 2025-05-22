@@ -3,7 +3,7 @@
 .root {
   margin: 5rem auto;
   display: grid;
-  gap: 3rem;
+  gap: 4rem;
 
   @include min-width(lg) {
     grid-template-columns: 1fr 1fr;
@@ -20,7 +20,19 @@
 
 .text {
   font: var(--font-dm-sans-b2);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.link {
+  font: var(--font-dm-sans-b2-m);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+
+  svg {
+    width: 1rem;
+    transform: rotate(-45deg);
+  }
 }
 
 .form__wrapper {

@@ -12,33 +12,33 @@
       grid-column: 1 / -1;
     }
   }
-}
 
-.form__success,
-.form__error {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-  font: var(--font-dm-sans-b2);
-  font-size: 1rem !important;
-  padding: 0.625rem 0.75rem;
-  margin-bottom: 1.5rem;
-  border-radius: 0.5rem;
+  &__success,
+  &__error {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    font: var(--font-dm-sans-b2);
+    font-size: 1rem !important;
+    padding: 0.625rem 0.75rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
 
-  svg {
-    width: 1.125rem;
-    height: 1.125rem;
+    svg {
+      width: 1.125rem;
+      height: 1.125rem;
+    }
   }
-}
 
-.form__success {
-  background-color: var(--c-success);
-  color: var(--c-brand-night-92);
-}
+  &__success {
+    background-color: var(--c-success);
+    color: var(--c-brand-night-92);
+  }
 
-.form__error {
-  background-color: var(--c-error);
-  color: var(--c-brand-day-92);
+  &__error {
+    background-color: var(--c-error);
+    color: var(--c-brand-day-92);
+  }
 }
 
 .button {
