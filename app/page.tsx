@@ -1,18 +1,16 @@
 import { env } from 'process';
 
-import { ContactForm } from '@/components/contact-form/contact-form';
 import { FooterContactForm } from '@/components/footer-contact-form/footer-contact-form';
 import { Hero } from '@/components/hero/hero';
 import { ImpactText } from '@/components/impact-text/impact-text';
 import { LogoSwiper } from '@/components/logo-swiper/logo-swiper';
 import { ProjectArticleList } from '@/components/project-article-list/project-article-list';
-import { ProjectArticle } from '@/components/project-article/project-article';
 import { RadialImage } from '@/components/radial-image/radial-image';
 import { ResultShowcase } from '@/components/result-showcase/result-showcase';
 import { ServiceGrid } from '@/components/service-grid/service-grid';
 
 import { PROJECTS } from '@/data/projects';
-import { EXTERNAL_URLS, URLS } from '@/data/urls';
+import { URLS } from '@/data/urls';
 
 const Home = () => (
   <>
@@ -146,19 +144,6 @@ const Home = () => (
           title: 'Returning customers',
           text: 'Client name',
           result: '+XX%',
-        },
-      ]}
-    />
-
-    <ContactForm
-      theme="azul"
-      title="Amplify your business with Avid"
-      text="Don't hesitate to get in touch - we're here to help you achieve your digital goals. Depending on your project needs we can tailor our solutions to meet your specific existing and future business needs."
-      links={[
-        {
-          href: EXTERNAL_URLS.CALENDLY,
-          label: 'Book a call',
-          external: true,
         },
       ]}
     />

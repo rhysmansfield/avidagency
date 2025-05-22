@@ -24,7 +24,7 @@ export const ContactForm = ({
   return (
     <section className={classList('wrapper', styles.root)}>
       <div className={styles.content}>
-        <h2 className={styles.title}>{title}</h2>
+        <h1 className={styles.title}>{title}</h1>
         <p className={styles.text}>{text}</p>
 
         {!!links?.length && (
