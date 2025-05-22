@@ -1,5 +1,6 @@
 import { env } from 'process';
 
+import { ContactForm } from '@/components/contact-form/contact-form';
 import { FooterContactForm } from '@/components/footer-contact-form/footer-contact-form';
 import { Hero } from '@/components/hero/hero';
 import { ImpactText } from '@/components/impact-text/impact-text';
@@ -147,6 +148,12 @@ const Home = () => (
           result: '+XX%',
         },
       ]}
+    />
+
+    <ContactForm
+      theme="azul"
+      title="Amplify your business with Avid"
+      text="Don't hesitate to get in touch - we're here to help you achieve your digital goals. Depending on your project needs we can tailor our solutions to meet your specific existing and future business needs."
     />
 
     <FooterContactForm

@@ -6,33 +6,9 @@
   gap: 3rem;
 
   @include min-width(lg) {
-    align-items: center;
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
     margin: 10rem auto;
-  }
-}
-
-.image {
-  aspect-ratio: 1;
-  object-fit: cover;
-
-  &__wrapper {
-    max-width: 36rem;
-    margin: 0 auto;
-
-    @include min-width(lg) {
-      max-width: 100%;
-      order: 1;
-    }
-  }
-}
-
-.content {
-  scroll-margin-top: 1.5rem;
-
-  @include min-width(lg) {
-    scroll-margin-top: 2.5rem;
   }
 }
 
@@ -45,4 +21,12 @@
 .text {
   font: var(--font-dm-sans-b2);
   margin-bottom: 1.5rem;
+}
+
+.form__wrapper {
+  scroll-margin-top: 1.5rem;
+
+  @include min-width(lg) {
+    scroll-margin-top: 2.5rem;
+  }
 }
