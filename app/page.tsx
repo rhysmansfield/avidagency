@@ -103,7 +103,7 @@ const Home = () => (
           title: 'Project Name 4',
         },
         {
-          theme: 'wink',
+          theme: 'azul',
           href: URLS.PROJECTS,
           label: 'View all projects',
         },
@@ -149,7 +149,7 @@ const Home = () => (
     />
 
     <FooterContactForm
-      theme="azul"
+      theme="wink"
       title="Have a project in mind?"
       text="Whether you have questions, project ideas, or need assistance, we're here to help. Complete the form below to explore how we can elevate your brand's digital presence together."
       image={{
