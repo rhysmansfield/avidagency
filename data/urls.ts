@@ -6,6 +6,7 @@ export const URLS: Urls = {
   PROJECTS: '/projects',
   CONTACT: '/contact',
   PRIVACY_POLICY: '/privacy-policy',
+  LANDING: '/landing',
 };
 
 export const EXTERNAL_URLS: ExternalUrls = {
@@ -15,6 +16,7 @@ export const EXTERNAL_URLS: ExternalUrls = {
 export const API_URLS: ApiUrls = {
   CONTACT: '/api/contact',
   NEWSLETTER: '/api/newsletter',
+  LANDING: '/api/landing',
 };
 
 export const SOCIAL_URLS: SocialUrls = [

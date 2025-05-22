@@ -4,6 +4,7 @@ import { UseCustomFormResult } from '@/hooks/use-custom-form.type';
 import { API_URLS } from '@/data/urls';
 
 import { ContactRequest, ContactResponse } from '@/types/api/contact.type';
+import { LandingRequest, LandingResponse } from '@/types/api/landing.type';
 import {
   NewsletterRequest,
   NewsletterResponse,
@@ -33,5 +34,20 @@ export const useContactForm = (): UseCustomFormResult<
       email: '',
       services: [],
       message: '',
+    },
+  });
+
+export const useLandingForm = (): UseCustomFormResult<
+  LandingRequest,
+  LandingResponse
+> =>
+  useCustomForm<LandingRequest, LandingResponse>({
+    mutationKey: ['Landing'],
+    url: API_URLS.LANDING,
+    defaultValues: {
+      name: '',
+      email: '',
+      phone: '',
+      website: '',
     },
   });
