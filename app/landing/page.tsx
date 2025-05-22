@@ -8,7 +8,7 @@ import { EXTERNAL_URLS, URLS } from '@/data/urls';
 const Landing = () => (
   <>
     <LandingForm
-      theme="verde"
+      theme="azul"
       title="Lead magnet headline"
       text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       links={[
