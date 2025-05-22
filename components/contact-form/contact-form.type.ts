@@ -1,4 +1,4 @@
-import { CommonTheme } from '@/types/common.type';
+import { CommonLink, CommonTheme } from '@/types/common.type';
 
 export type ContactFormProps = {
   theme: Exclude<
@@ -11,4 +11,5 @@ export type ContactFormProps = {
   >;
   title: string;
   text: string;
+  links?: CommonLink[];
 };

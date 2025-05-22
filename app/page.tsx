@@ -12,7 +12,7 @@ import { ResultShowcase } from '@/components/result-showcase/result-showcase';
 import { ServiceGrid } from '@/components/service-grid/service-grid';
 
 import { PROJECTS } from '@/data/projects';
-import { URLS } from '@/data/urls';
+import { EXTERNAL_URLS, URLS } from '@/data/urls';
 
 const Home = () => (
   <>
@@ -154,6 +154,13 @@ const Home = () => (
       theme="azul"
       title="Amplify your business with Avid"
       text="Don't hesitate to get in touch - we're here to help you achieve your digital goals. Depending on your project needs we can tailor our solutions to meet your specific existing and future business needs."
+      links={[
+        {
+          href: EXTERNAL_URLS.CALENDLY,
+          label: 'Book a call',
+          external: true,
+        },
+      ]}
     />
 
     <FooterContactForm
