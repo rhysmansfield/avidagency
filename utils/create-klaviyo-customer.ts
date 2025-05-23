@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { ApiKeySession, ProfilesApi } from 'klaviyo-api';
 import { env } from 'process';
 
 import { loggedError } from '@/utils/logged-error';
@@ -8,6 +8,7 @@ import { ApiResponse } from '@/types/api/axios.type';
 export async function createKlaviyoCustomer<TResponse>(
   source: string,
   email: string,
+  phoneNumber?: string,
 ): Promise<null | ApiResponse<TResponse>> {
   if (!email) {
     return loggedError({
@@ -17,48 +18,47 @@ export async function createKlaviyoCustomer<TResponse>(
   }
 
   try {
-    const { status } = await axios.post(
-      `https://a.klaviyo.com/client/subscriptions?company_id=${env.KLAVIYO_COMPANY_ID}`,
-      {
-        data: {
-          type: 'subscription',
-          attributes: {
-            profile: {
-              data: {
+    const session = new ApiKeySession(env.KLAVIYO_API_KEY!);
+    const profilesApi = new ProfilesApi(session);
+
+    const {
+      response: { status, statusText },
+    } = await profilesApi.bulkSubscribeProfiles({
+      data: {
+        type: 'profile-subscription-bulk-create-job',
+        attributes: {
+          profiles: {
+            data: [
+              {
                 type: 'profile',
                 attributes: {
                   subscriptions: {
                     email: { marketing: { consent: 'SUBSCRIBED' } },
-                    sms: {
-                      marketing: { consent: 'SUBSCRIBED' },
-                      transactional: { consent: 'SUBSCRIBED' },
-                    },
                   },
                   email,
+                  phoneNumber,
                 },
               },
+            ],
+          },
+        },
+        relationships: {
+          list: {
+            data: {
+              type: 'list',
+              id: env.KLAVIYO_LIST_ID!,
             },
           },
-          relationships: {
-            list: { data: { type: 'list', id: env.KLAVIYO_LIST_ID } },
-          },
         },
       },
-      {
-        headers: {
-          accept: 'application/vnd.api+json',
-          revision: '2025-01-15',
-          'content-type': 'application/vnd.api+json',
-        },
-      },
-    );
+    });
 
     if (status !== 202) {
       return loggedError({
         source,
         error: 'Klaviyo API call failed - Fetch complete',
         data: {
-          status,
+          statusText,
         },
       });
     }
