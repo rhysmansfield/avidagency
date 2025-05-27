@@ -1,13 +1,12 @@
 'use client';
 
+import parsePhoneNumberFromString from 'libphonenumber-js';
 import Link from 'next/link';
 
 import { useContactForm, useLandingForm } from '@/hooks/forms';
 
 import { Button } from '@/components/button/button';
 import { InputField } from '@/components/form/input-field/input-field';
-import { MultiSelectField } from '@/components/form/multiselect-field/multiselect-field';
-import { TextareaField } from '@/components/form/textarea-field/textarea-field';
 import { Icon } from '@/components/icon/icon';
 import { LandingFormProps } from '@/components/landing-form/landing-form.type';
 
@@ -68,14 +67,26 @@ export const LandingForm = ({
         <form onSubmit={onSubmit} className={styles.form}>
           <InputField
             control={control}
-            label="Name"
+            label="First name"
             type="text"
-            name="name"
-            placeholder="Full name"
+            name="firstName"
+            placeholder="First name"
             rules={{
-              required: 'Please enter your full name',
+              required: 'Please enter your first name',
             }}
-            error={fieldErrors.name}
+            error={fieldErrors.firstName}
+          />
+
+          <InputField
+            control={control}
+            label="Last name"
+            type="text"
+            name="lastName"
+            placeholder="Last name"
+            rules={{
+              required: 'Please enter your last name',
+            }}
+            error={fieldErrors.lastName}
           />
 
           <InputField
@@ -98,7 +109,7 @@ export const LandingForm = ({
             control={control}
             label="Phone"
             type="text"
-            name="phone"
+            name="phoneNumber"
             placeholder="+447123 456789"
             rules={{
               required: 'Please enter a valid phone number',
@@ -106,17 +117,16 @@ export const LandingForm = ({
                 value: REGEX_MOBILE_VALIDATION,
                 message: 'Please enter a valid phone number',
               },
-            }}
-            error={fieldErrors.phone}
-          />
+              validate: (value) => {
+                const parsed = parsePhoneNumberFromString(value, 'GB');
+                if (parsed && parsed.isValid()) {
+                  return true;
+                }
 
-          <InputField
-            control={control}
-            label="Website"
-            type="text"
-            name="website"
-            placeholder="https://yourdomain.com"
-            error={fieldErrors.website}
+                return 'Please enter a valid phone number';
+              },
+            }}
+            error={fieldErrors.phoneNumber}
           />
 
           <div>

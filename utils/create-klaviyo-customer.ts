@@ -1,21 +1,37 @@
 import { ApiKeySession, ProfilesApi } from 'klaviyo-api';
+import parsePhoneNumberFromString from 'libphonenumber-js';
 import { env } from 'process';
 
+import { CreateKlaviyoCustomerProps } from '@/utils/create-klaviyo-customer.type';
 import { loggedError } from '@/utils/logged-error';
 
 import { ApiResponse } from '@/types/api/axios.type';
 
-export async function createKlaviyoCustomer<TResponse>(
-  source: string,
-  email: string,
-  phoneNumber?: string,
-): Promise<null | ApiResponse<TResponse>> {
+export const createKlaviyoCustomer = async <TResponse>({
+  source,
+  email,
+  phoneNumber,
+  listId,
+}: CreateKlaviyoCustomerProps): Promise<null | ApiResponse<TResponse>> => {
   if (!email) {
     return loggedError({
       source,
       error: 'Email is required',
     });
   }
+
+  if (phoneNumber) {
+    const parsed = parsePhoneNumberFromString(phoneNumber, 'GB');
+    if (parsed && parsed.isValid()) phoneNumber = parsed.format('E.164');
+    else phoneNumber = undefined;
+  }
+
+  console.log({
+    email,
+    phoneNumber,
+    listId,
+    source,
+  });
 
   try {
     const session = new ApiKeySession(env.KLAVIYO_API_KEY!);
@@ -46,7 +62,7 @@ export async function createKlaviyoCustomer<TResponse>(
           list: {
             data: {
               type: 'list',
-              id: env.KLAVIYO_LIST_ID!,
+              id: listId,
             },
           },
         },
@@ -71,4 +87,4 @@ export async function createKlaviyoCustomer<TResponse>(
   }
 
   return null;
-}
+};

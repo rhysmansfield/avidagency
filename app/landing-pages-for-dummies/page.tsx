@@ -11,7 +11,7 @@ const Landing = () => (
   <>
     <LandingForm
       theme="azul"
-      title="Lead magnet headline"
+      title="Landing pages for dummies"
       text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       links={[
         {

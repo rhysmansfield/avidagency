@@ -24,10 +24,11 @@ export const POST = async (
 
   if (recaptchaError) return recaptchaError;
 
-  const klaviyoError = await createKlaviyoCustomer<ContactResponse>(
-    'api/newsletter',
+  const klaviyoError = await createKlaviyoCustomer<ContactResponse>({
+    source: 'api/newsletter',
     email,
-  );
+    listId: 'RfxUXe',
+  });
 
   if (klaviyoError) return klaviyoError;
 

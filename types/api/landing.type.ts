@@ -1,8 +1,8 @@
 export type LandingRequest = {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
-  phone: string;
-  website?: string;
+  phoneNumber: string;
 };
 
 export type LandingResponse = {
