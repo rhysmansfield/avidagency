@@ -3,7 +3,7 @@
 import parsePhoneNumberFromString from 'libphonenumber-js';
 import Link from 'next/link';
 
-import { useContactForm, useLandingForm } from '@/hooks/forms';
+import { useLandingForm } from '@/hooks/forms';
 
 import { Button } from '@/components/button/button';
 import { InputField } from '@/components/form/input-field/input-field';
