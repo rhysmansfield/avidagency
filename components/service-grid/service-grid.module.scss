@@ -32,10 +32,13 @@
 
   &__text {
     font: var(--font-dm-sans-b2);
-    margin-bottom: 1.5rem;
+  }
+
+  &__cta {
+    margin-top: 1.5rem;
 
     @include min-width(md) {
-      margin-bottom: 2rem;
+      margin-top: 2rem;
     }
   }
 }
@@ -46,7 +49,6 @@
   align-items: flex-start;
   padding: 1.5rem;
   border-radius: 1rem;
-  transition: scale var(--transition);
 
   @include min-width(md) {
     padding: 2rem;
@@ -57,35 +59,31 @@
     outline-offset: 0.25rem;
   }
 
-  &:active {
-    scale: 0.97;
-  }
-
-  &:first-of-type {
+  &:nth-child(2) {
     background-color: var(--c-brand-verde);
     color: var(--c-brand-night);
     outline-color: var(--c-brand-verde);
   }
 
-  &:nth-of-type(2) {
+  &:nth-child(3) {
     background-color: var(--c-brand-azul);
     color: var(--c-brand-day);
     outline-color: var(--c-brand-azul);
   }
 
-  &:nth-of-type(3) {
+  &:nth-child(4) {
     background-color: var(--c-brand-wink);
     color: var(--c-brand-day);
     outline-color: var(--c-brand-wink);
   }
 
-  &:nth-of-type(4) {
+  &:nth-child(5) {
     background-color: var(--c-black);
     color: var(--c-brand-day);
     outline-color: var(--c-brand-day);
   }
 
-  &:last-of-type {
+  &:nth-child(6) {
     background-color: var(--c-white);
     color: var(--c-brand-night);
     outline-color: var(--c-white);
@@ -118,15 +116,26 @@
 
   &__text {
     font: var(--font-dm-sans-b2);
-    margin-bottom: 1.5rem;
-
-    @include min-width(md) {
-      margin-bottom: 2rem;
-    }
   }
 
   &__cta {
     font: var(--font-dm-sans-b2-m);
     margin-top: auto;
+  }
+}
+
+a.item {
+  transition: scale var(--transition);
+
+  &:active {
+    scale: 0.97;
+  }
+
+  .item__text {
+    margin-bottom: 1.5rem;
+
+    @include min-width(md) {
+      margin-bottom: 2rem;
+    }
   }
 }

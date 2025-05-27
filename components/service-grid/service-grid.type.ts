@@ -6,7 +6,7 @@ type Service = {
 };
 
 export type ServiceGridProps = {
-  cta: CommonLink;
+  cta?: CommonLink;
   title: string;
   text: string;
   items: [Service, Service, Service, Service, Service];
