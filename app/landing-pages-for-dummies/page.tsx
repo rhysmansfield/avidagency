@@ -12,7 +12,7 @@ const Landing = () => (
     <LandingForm
       theme="azul"
       title="Landing pages for dummies"
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      text="Sign up and we'll send you a free guide on how to create effective landing pages that convert visitors into customers. Learn the secrets of successful landing pages and start boosting your conversion rates today!"
       links={[
         {
           href: EXTERNAL_URLS.CALENDLY,
