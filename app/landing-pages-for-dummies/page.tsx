@@ -23,10 +23,6 @@ const Landing = () => (
     />
 
     <ServiceGrid
-      cta={{
-        href: URLS.SERVICES,
-        label: 'View all services',
-      }}
       title="Our services"
       text="We offer a range of tailored services to elevate your brand's online presence. Everything from website development to strategic marketing."
       items={[
