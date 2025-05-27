@@ -54,11 +54,6 @@
     padding: 2rem;
   }
 
-  &:focus-visible {
-    outline: 2px solid transparent;
-    outline-offset: 0.25rem;
-  }
-
   &:nth-child(2) {
     background-color: var(--c-brand-verde);
     color: var(--c-brand-night);
@@ -126,6 +121,11 @@
 
 a.item {
   transition: scale var(--transition);
+
+  &:focus-visible {
+    outline: 2px solid transparent;
+    outline-offset: 0.25rem;
+  }
 
   &:active {
     scale: 0.97;

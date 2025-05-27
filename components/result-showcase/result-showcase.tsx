@@ -22,19 +22,35 @@ export const ResultShowcase = ({
       </div>
 
       <div>
-        {items.map(({ url, title, text, result }) => (
-          <Link href={url} key={title} className={styles.item}>
-            <div>
-              <h3 className={styles['item__title']}>{title}</h3>
-              <div className={styles['item__excerpt-wrapper']}>
-                <Icon name="arrow-right" className={styles['item__icon']} />
-                <p className={styles['item__excerpt']}>{text}</p>
-                <p className={styles['item__view-more']}>View project</p>
+        {items.map(({ url, title, text, result }) => {
+          const children = (
+            <>
+              <div>
+                <h3 className={styles['item__title']}>{title}</h3>
+                <div className={styles['item__excerpt-wrapper']}>
+                  <Icon name="arrow-right" className={styles['item__icon']} />
+                  <p className={styles['item__excerpt']}>{text}</p>
+                  <p className={styles['item__view-more']}>View project</p>
+                </div>
               </div>
+              <p className={styles['item__percentage']}>{result}</p>
+            </>
+          );
+
+          if (url) {
+            return (
+              <Link href={url} key={`${title}-${text}`} className={styles.item}>
+                {children}
+              </Link>
+            );
+          }
+
+          return (
+            <div key={`${title}-${text}`} className={styles.item}>
+              {children}
             </div>
-            <p className={styles['item__percentage']}>{result}</p>
-          </Link>
-        ))}
+          );
+        })}
       </div>
     </div>
   </section>

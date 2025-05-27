@@ -55,34 +55,29 @@ const Landing = () => (
       text="Explore some of our exceptional client results and discover why brands seeking success choose us."
       items={[
         {
-          url: URLS.PROJECTS,
-          title: 'Boosted engagement',
-          text: 'Client name',
-          result: '+XX%',
+          title: 'Increase in revenue',
+          text: 'Pannelli UK',
+          result: '+180%',
         },
         {
-          url: URLS.PROJECTS,
-          title: 'Increase in organic traffic',
-          text: 'Client name',
-          result: '+XX%',
+          title: 'Average order value',
+          text: 'Pannelli UK',
+          result: '+30%',
         },
         {
-          url: URLS.PROJECTS,
-          title: 'Increase in conversion',
-          text: 'Client name',
-          result: '+X.X%',
+          title: 'Increase in revenue',
+          text: 'Slice Golf Balls',
+          result: '+235%',
         },
         {
-          url: URLS.PROJECTS,
-          title: 'Lighthouse performance score',
-          text: 'Client name',
-          result: '+XXX%',
+          title: 'Average order value',
+          text: 'Slice Golf Balls',
+          result: '+31%',
         },
         {
-          url: URLS.PROJECTS,
-          title: 'Returning customers',
-          text: 'Client name',
-          result: '+XX%',
+          title: 'Increase in revenue',
+          text: 'Fresher Fighter',
+          result: '+326%',
         },
       ]}
     />

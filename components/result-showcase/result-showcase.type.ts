@@ -1,7 +1,7 @@
 import { CommonTheme } from '@/types/common.type';
 
 type ResultShowcaseItem = {
-  url: string;
+  url?: string;
   title: string;
   text: string;
   result: string;
