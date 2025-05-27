@@ -50,7 +50,7 @@ const Landing = () => (
     />
 
     <ResultShowcase
-      theme="night"
+      theme="verde"
       title="Why our clients choose us"
       text="Explore some of our exceptional client results and discover why brands seeking success choose us."
       items={[
