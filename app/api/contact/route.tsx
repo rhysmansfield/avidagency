@@ -15,7 +15,7 @@ export const POST = async (
   request: NextRequest,
 ): ApiResponse<ContactResponse> => {
   const { data }: ApiRequest<ContactRequest> = await request.json();
-  const { recaptcha, email } = data;
+  const { recaptcha, email, name } = data;
 
   const recaptchaError = await validateRecaptcha<ContactResponse>(
     'api/Contact',
@@ -27,6 +27,7 @@ export const POST = async (
   const klaviyoError = await createKlaviyoCustomer<ContactResponse>({
     source: 'api/newsletter',
     email,
+    name,
     listId: 'RfxUXe',
   });
 
