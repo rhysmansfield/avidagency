@@ -53,10 +53,6 @@ const Home = () => (
     />
 
     <ServiceGrid
-      cta={{
-        href: URLS.SERVICES,
-        label: 'View all services',
-      }}
       title="Our services"
       text="We offer a range of tailored services to elevate your brand's online presence. Everything from website development to strategic marketing."
       items={[
@@ -83,67 +79,35 @@ const Home = () => (
       ]}
     />
 
-    <ProjectArticleList
-      title="Some of our recent projects"
-      items={[
-        {
-          ...PROJECTS[0],
-          title: 'Project Name 1',
-        },
-        {
-          ...PROJECTS[0],
-          title: 'Project Name 2',
-        },
-        {
-          ...PROJECTS[0],
-          title: 'Project Name 3',
-        },
-        {
-          ...PROJECTS[0],
-          title: 'Project Name 4',
-        },
-        {
-          theme: 'azul',
-          href: URLS.PROJECTS,
-          label: 'View all projects',
-        },
-      ]}
-    />
-
     <ResultShowcase
       theme="verde"
       title="Why our clients choose us"
       text="Explore some of our exceptional client results and discover why brands seeking success choose us."
       items={[
         {
-          url: URLS.PROJECTS,
-          title: 'Boosted engagement',
-          text: 'Client name',
-          result: '+XX%',
+          title: 'Increase in revenue',
+          text: 'Pannelli UK',
+          result: '+180%',
         },
         {
-          url: URLS.PROJECTS,
-          title: 'Increase in organic traffic',
-          text: 'Client name',
-          result: '+XX%',
+          title: 'Average order value',
+          text: 'Pannelli UK',
+          result: '+30%',
         },
         {
-          url: URLS.PROJECTS,
-          title: 'Increase in conversion',
-          text: 'Client name',
-          result: '+X.X%',
+          title: 'Increase in revenue',
+          text: 'Slice Golf Balls',
+          result: '+235%',
         },
         {
-          url: URLS.PROJECTS,
-          title: 'Lighthouse performance score',
-          text: 'Client name',
-          result: '+XXX%',
+          title: 'Average order value',
+          text: 'Slice Golf Balls',
+          result: '+31%',
         },
         {
-          url: URLS.PROJECTS,
-          title: 'Returning customers',
-          text: 'Client name',
-          result: '+XX%',
+          title: 'Increase in revenue',
+          text: 'Fresher Fighter',
+          result: '+326%',
         },
       ]}
     />

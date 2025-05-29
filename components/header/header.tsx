@@ -38,20 +38,21 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
 
       <nav className={styles['desktop-nav']}>
         <ul className={styles['desktop-nav__list']}>
-          {items.map(({ href, label, external }) => (
-            <li key={label}>
-              <Link
-                href={href}
-                target={external ? '_blank' : undefined}
-                className={classList(
-                  'underline__wrapper',
-                  styles['desktop-nav__link'],
-                )}
-              >
-                <span className="underline__text">{label}</span>
-              </Link>
-            </li>
-          ))}
+          {!!items?.length &&
+            items.map(({ href, label, external }) => (
+              <li key={label}>
+                <Link
+                  href={href}
+                  target={external ? '_blank' : undefined}
+                  className={classList(
+                    'underline__wrapper',
+                    styles['desktop-nav__link'],
+                  )}
+                >
+                  <span className="underline__text">{label}</span>
+                </Link>
+              </li>
+            ))}
           <li>
             <Button
               theme="wink"
@@ -84,26 +85,27 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
         )}
       >
         <ul className={styles['mobile-nav__list']}>
-          {items.map(({ href, label, external }, index) => (
-            <li key={label}>
-              <Link
-                href={href}
-                target={external ? '_blank' : undefined}
-                onClick={closeMobileMenu}
-                className={classList(
-                  styles['mobile-nav__animated'],
-                  styles['mobile-nav__link'],
-                )}
-                style={
-                  {
-                    '--transition-index': index,
-                  } as CSSProperties
-                }
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
+          {!!items?.length &&
+            items.map(({ href, label, external }, index) => (
+              <li key={label}>
+                <Link
+                  href={href}
+                  target={external ? '_blank' : undefined}
+                  onClick={closeMobileMenu}
+                  className={classList(
+                    styles['mobile-nav__animated'],
+                    styles['mobile-nav__link'],
+                  )}
+                  style={
+                    {
+                      '--transition-index': index,
+                    } as CSSProperties
+                  }
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
 
           <li>
             <Link
@@ -117,7 +119,7 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
               )}
               style={
                 {
-                  '--transition-index': items.length,
+                  '--transition-index': items?.length || 0,
                 } as CSSProperties
               }
             >
@@ -142,7 +144,7 @@ export const Header = ({ items, cta, socials }: HeaderProps) => {
                 )}
                 style={
                   {
-                    '--transition-index': items.length + 1 + index,
+                    '--transition-index': (items?.length || 0) + 1 + index,
                   } as CSSProperties
                 }
               >
