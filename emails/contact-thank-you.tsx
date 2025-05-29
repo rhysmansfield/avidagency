@@ -47,7 +47,9 @@ export const ContactThankYou = ({
           backgroundColor: '#eee',
         }}
       >
-        <Preview>{title}</Preview>
+        <Preview>
+          Hey {firstName}, {title}
+        </Preview>
         <Container
           style={{
             maxWidth: '640px',
