@@ -1,4 +1,4 @@
-export const REGEX_NAME_VALIDATION = /^(?:\p{L}|[ ,\u2019'-])+$/iu;
+export const REGEX_NAME_VALIDATION = /^[a-zA-Z]+(?:\s[a-zA-Z]+){1,}$/;
 
 export const REGEX_EMAIL_VALIDATION =
   /^[\w+-.]{1,64}@([\w-]{1,45}\.)+[\w-]{2,4}$/;

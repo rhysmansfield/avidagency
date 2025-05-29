@@ -10,7 +10,7 @@ export const POST = async (
   request: NextRequest,
 ): ApiResponse<LandingResponse> => {
   const { data }: ApiRequest<LandingRequest> = await request.json();
-  const { recaptcha, email, phoneNumber } = data;
+  const { recaptcha, email, phoneNumber, name, website } = data;
 
   const recaptchaError = await validateRecaptcha<LandingResponse>(
     'api/landing',
@@ -24,6 +24,8 @@ export const POST = async (
     listId: 'S98Y5c',
     email,
     phoneNumber,
+    name,
+    website,
   });
 
   if (klaviyoError) return klaviyoError;

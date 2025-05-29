@@ -14,6 +14,7 @@ import { classList } from '@/utils/class-list';
 import {
   REGEX_EMAIL_VALIDATION,
   REGEX_MOBILE_VALIDATION,
+  REGEX_NAME_VALIDATION,
 } from '@/utils/patterns';
 
 import styles from './landing-form.module.scss';
@@ -67,26 +68,14 @@ export const LandingForm = ({
         <form onSubmit={onSubmit} className={styles.form}>
           <InputField
             control={control}
-            label="First name"
+            label="Name"
             type="text"
-            name="firstName"
-            placeholder="First name"
+            name="name"
+            placeholder="Full name"
             rules={{
-              required: 'Please enter your first name',
+              required: 'Please enter your full name',
             }}
-            error={fieldErrors.firstName}
-          />
-
-          <InputField
-            control={control}
-            label="Last name"
-            type="text"
-            name="lastName"
-            placeholder="Last name"
-            rules={{
-              required: 'Please enter your last name',
-            }}
-            error={fieldErrors.lastName}
+            error={fieldErrors.name}
           />
 
           <InputField
@@ -127,6 +116,18 @@ export const LandingForm = ({
               },
             }}
             error={fieldErrors.phoneNumber}
+          />
+
+          <InputField
+            control={control}
+            label="Website"
+            type="text"
+            name="website"
+            placeholder="https://yourdomain.com"
+            rules={{
+              required: "Please enter your website's url",
+            }}
+            error={fieldErrors.website}
           />
 
           <div>

@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { ApiKeySession, ProfilesApi } from 'klaviyo-api';
 import parsePhoneNumberFromString from 'libphonenumber-js';
 import { env } from 'process';
@@ -11,6 +12,8 @@ export const createKlaviyoCustomer = async <TResponse>({
   source,
   email,
   phoneNumber,
+  name,
+  website,
   listId,
 }: CreateKlaviyoCustomerProps): Promise<null | ApiResponse<TResponse>> => {
   if (!email) {
@@ -26,55 +29,57 @@ export const createKlaviyoCustomer = async <TResponse>({
     else phoneNumber = undefined;
   }
 
-  console.log({
-    email,
-    phoneNumber,
-    listId,
-    source,
-  });
+  const [firstName, lastName] = name?.split(' ') ?? [];
 
   try {
-    const session = new ApiKeySession(env.KLAVIYO_API_KEY!);
-    const profilesApi = new ProfilesApi(session);
-
-    const {
-      response: { status, statusText },
-    } = await profilesApi.bulkSubscribeProfiles({
-      data: {
-        type: 'profile-subscription-bulk-create-job',
-        attributes: {
-          profiles: {
-            data: [
-              {
+    const response = await axios.post(
+      `https://a.klaviyo.com/client/subscriptions?company_id=${env.KLAVIYO_PUBLIC_KEY}`,
+      {
+        data: {
+          type: 'subscription',
+          attributes: {
+            profile: {
+              data: {
                 type: 'profile',
                 attributes: {
                   subscriptions: {
                     email: { marketing: { consent: 'SUBSCRIBED' } },
                   },
                   email,
-                  phoneNumber,
+                  phone_number: phoneNumber,
+                  first_name: firstName,
+                  last_name: lastName,
+                  properties: website
+                    ? {
+                        website,
+                      }
+                    : undefined,
                 },
               },
-            ],
-          },
-        },
-        relationships: {
-          list: {
-            data: {
-              type: 'list',
-              id: listId,
             },
+          },
+          relationships: {
+            list: { data: { type: 'list', id: listId } },
           },
         },
       },
-    });
+      {
+        headers: {
+          accept: 'application/vnd.api+json',
+          revision: '2025-01-15',
+          'content-type': 'application/vnd.api+json',
+        },
+      },
+    );
 
-    if (status !== 202) {
+    console.log(response);
+
+    if (response.status !== 202) {
       return loggedError({
         source,
         error: 'Klaviyo API call failed - Fetch complete',
         data: {
-          statusText,
+          status,
         },
       });
     }

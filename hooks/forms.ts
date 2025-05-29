@@ -45,9 +45,9 @@ export const useLandingForm = (): UseCustomFormResult<
     mutationKey: ['Landing'],
     url: API_URLS.LANDING,
     defaultValues: {
-      firstName: '',
-      lastName: '',
+      name: '',
       email: '',
       phoneNumber: '',
+      website: '',
     },
   });
