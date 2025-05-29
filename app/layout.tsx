@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: 'https://avidagency.co.uk',
     images: [
       {
-        url: `${env.S3_URL}/og-image.jpg`,
+        url: `${env.S3_URL}/shared/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: 'Avid Agency',
