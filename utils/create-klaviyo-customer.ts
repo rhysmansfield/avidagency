@@ -72,8 +72,6 @@ export const createKlaviyoCustomer = async <TResponse>({
       },
     );
 
-    console.log(response);
-
     if (response.status !== 202) {
       return loggedError({
         source,
