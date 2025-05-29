@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: 'https://avidagency.co.uk',
     images: [
       {
-        url: 'https://avidagency.co.uk/images/opengraph-image.png',
+        url: `${env.S3_URL}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: 'Avid Agency',
