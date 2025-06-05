@@ -1,13 +1,5 @@
 @use '@/styles/mixins/breakpoints' as *;
 
-.root {
-  margin: 5rem auto;
-
-  @include min-width(md) {
-    margin: 10rem auto;
-  }
-}
-
 .title {
   font: var(--font-dm-sans-s1);
   text-align: center;

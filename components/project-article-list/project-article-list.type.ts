@@ -14,4 +14,5 @@ export type ProjectArticleItem =
 export type ProjectArticleListProps = {
   title: string;
   items: ProjectArticleItem[];
+  className?: string;
 };

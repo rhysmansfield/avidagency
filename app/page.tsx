@@ -58,6 +58,10 @@ const Home = () => (
     <ServiceGrid
       title="Our services"
       text="We offer a range of tailored services to elevate your brand's online presence. Everything from website development to strategic marketing."
+      cta={{
+        href: URLS.SERVICES,
+        label: 'View all services',
+      }}
       items={[
         {
           title: 'Web Development',
@@ -81,6 +85,34 @@ const Home = () => (
         },
       ]}
       className="space-28 lg:space-56"
+    />
+
+    <ProjectArticleList
+      title="Some of our recent projects"
+      items={[
+        {
+          ...PROJECTS[0],
+          title: 'Project Name 1',
+        },
+        {
+          ...PROJECTS[0],
+          title: 'Project Name 2',
+        },
+        {
+          ...PROJECTS[0],
+          title: 'Project Name 3',
+        },
+        {
+          ...PROJECTS[0],
+          title: 'Project Name 4',
+        },
+        {
+          theme: 'azul',
+          href: URLS.PROJECTS,
+          label: 'View all projects',
+        },
+      ]}
+      className="space-20 md:space-40"
     />
 
     <ResultShowcase
