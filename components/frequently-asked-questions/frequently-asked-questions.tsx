@@ -56,10 +56,10 @@ export const FrequentlyAskedQuestions = ({
               initial={animationControls}
               animate={animationControls}
               transition={transition}
-              className={styles['item__text']}
-              style={{
-                visibility: isItemOpen ? 'visible' : 'hidden',
-              }}
+              className={classList(
+                styles['item__text'],
+                isItemOpen && styles['item__text--active'],
+              )}
             >
               {text}
             </motion.p>
