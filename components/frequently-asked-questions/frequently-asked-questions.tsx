@@ -1,6 +1,6 @@
 'use client';
 
-import { Target, TargetAndTransition, motion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 import { useState } from 'react';
 
 import { FrequentlyAskedQuestionsProps } from '@/components/frequently-asked-questions/frequently-asked-questions.type';
@@ -30,12 +30,6 @@ export const FrequentlyAskedQuestions = ({
 
       {items.map(({ title, text }) => {
         const isItemOpen = isOpen === title;
-        const animationControls: Target = isItemOpen
-          ? { height: 'auto', opacity: 1 }
-          : {
-              height: 0,
-              opacity: 0,
-            };
 
         return (
           <div
@@ -52,17 +46,19 @@ export const FrequentlyAskedQuestions = ({
               {title}
             </motion.button>
 
-            <motion.p
-              initial={animationControls}
-              animate={animationControls}
-              transition={transition}
-              className={classList(
-                styles['item__text'],
-                isItemOpen && styles['item__text--active'],
+            <AnimatePresence initial={false}>
+              {isItemOpen && (
+                <motion.p
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={transition}
+                  className={classList(styles['item__text'])}
+                >
+                  {text}
+                </motion.p>
               )}
-            >
-              {text}
-            </motion.p>
+            </AnimatePresence>
           </div>
         );
       })}

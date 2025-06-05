@@ -19,9 +19,4 @@
 
 .item__text {
   overflow: hidden;
-  visibility: hidden;
-}
-
-.item.item--active .item__text {
-  visibility: visible;
 }
