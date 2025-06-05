@@ -1,6 +1,6 @@
-import { Transition } from 'motion/react';
+import { TransitionProps } from '@/data/transition.type';
 
-export const transition: Transition = {
+export const transition: TransitionProps = {
   duration: 0.3,
   ease: [0.5, 0.25, 0, 1],
 };

@@ -45,12 +45,12 @@ export const FrequentlyAskedQuestions = ({
               isItemOpen && styles['item--active'],
             )}
           >
-            <button
+            <motion.button
               className={styles['item__title']}
-              onClick={() => toggleOpen(title)}
+              onTap={() => toggleOpen(title)}
             >
               {title}
-            </button>
+            </motion.button>
 
             <motion.p
               initial={animationControls}

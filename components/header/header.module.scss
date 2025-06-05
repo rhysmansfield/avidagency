@@ -88,34 +88,9 @@ a.desktop-nav__cta {
   margin-top: var(--header-height);
   padding: 2.5rem var(--wrapper-padding);
   background-color: var(--c-brand-night);
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity var(--transition),
-    visibility var(--transition);
 
   @include min-width(md) {
     display: none;
-  }
-
-  &--open {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  &__animated {
-    opacity: 0;
-    transform: translate3d(0, 1.25rem, 0);
-    will-change: opacity, transform;
-  }
-
-  &--open &__animated {
-    animation: fade-slide-up var(--transition)
-      calc(
-        var(--transition-duration) +
-          (var(--transition-index) * var(--transition-duration) * 0.75)
-      )
-      forwards;
   }
 
   &__button {
@@ -171,16 +146,5 @@ a.desktop-nav__cta {
       width: 1.875rem;
       aspect-ratio: 1;
     }
-  }
-}
-
-@keyframes fade-slide-up {
-  0% {
-    transform: translate3d(0, 1.25rem, 0);
-    opacity: 0;
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
   }
 }

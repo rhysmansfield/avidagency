@@ -64,10 +64,10 @@ const RootLayout = ({ children }: CommonLayoutProps) => {
         >
           <body className={dmSans.className}>
             <Header
-              // items={[
-              //   { label: 'Services', href: URLS.SERVICES },
-              //   { label: 'Projects', href: URLS.PROJECTS },
-              // ]}
+              items={[
+                { label: 'Services', href: URLS.SERVICES },
+                { label: 'Projects', href: URLS.PROJECTS },
+              ]}
               cta={{
                 label: "Let's talk",
                 href: URLS.CONTACT,
@@ -78,27 +78,27 @@ const RootLayout = ({ children }: CommonLayoutProps) => {
             <Footer
               formHeading="Join our newsletter to stay up to date on features and releases."
               menus={[
-                // {
-                //   title: 'Sitemap',
-                //   items: [
-                //     {
-                //       label: 'Home',
-                //       href: URLS.HOME,
-                //     },
-                //     {
-                //       label: 'Services',
-                //       href: URLS.SERVICES,
-                //     },
-                //     {
-                //       label: 'Projects',
-                //       href: URLS.PROJECTS,
-                //     },
-                //     {
-                //       label: 'Contact',
-                //       href: URLS.CONTACT,
-                //     },
-                //   ],
-                // },
+                {
+                  title: 'Sitemap',
+                  items: [
+                    {
+                      label: 'Home',
+                      href: URLS.HOME,
+                    },
+                    {
+                      label: 'Services',
+                      href: URLS.SERVICES,
+                    },
+                    {
+                      label: 'Projects',
+                      href: URLS.PROJECTS,
+                    },
+                    {
+                      label: 'Contact',
+                      href: URLS.CONTACT,
+                    },
+                  ],
+                },
                 {
                   title: 'Follow us',
                   items: SOCIAL_URLS,
