@@ -124,6 +124,7 @@ const Home = () => (
         src: `${env.S3_URL}/shared/footer-contact.png`,
         alt: 'Hand holding a phone showing The DFC Experience website',
       }}
+      className="space-20 md:space-28 xl:space-40"
     />
   </>
 );

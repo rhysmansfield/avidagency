@@ -12,4 +12,5 @@ export type FooterContactFormProps = {
   title: string;
   text: string;
   image: CommonImage;
+  className?: string;
 };
