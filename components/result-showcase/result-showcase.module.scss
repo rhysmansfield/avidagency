@@ -68,7 +68,7 @@
 
 .wrapper {
   display: grid;
-  gap: 3rem;
+  gap: 2.5rem;
 
   @include min-width(lg) {
     grid-template-columns: 0.9fr 1.1fr;

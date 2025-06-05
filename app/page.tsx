@@ -170,7 +170,7 @@ const Home = () => (
           text: 'Our project turnaround time varies depending on the scope and complexity of the project. We will provide an estimated timeline during the initial consultation.',
         },
       ]}
-      className="space-20 md:space-40"
+      className="space-24 md:space-40"
     />
 
     <FooterContactForm
@@ -181,7 +181,7 @@ const Home = () => (
         src: `${env.S3_URL}/shared/footer-contact.png`,
         alt: 'Hand holding a phone showing The DFC Experience website',
       }}
-      className="space-20 md:space-28 xl:space-36"
+      className="space-28 xl:space-36"
     />
   </>
 );
