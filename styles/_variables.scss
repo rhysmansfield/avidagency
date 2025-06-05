@@ -97,3 +97,15 @@
     --font-dm-sans-b4-m: 500 0.75rem/130% var(--font-body);
   }
 }
+
+.space-hero {
+  margin: 2.5rem auto;
+
+  @include min-width(md) {
+    margin: 5rem auto;
+  }
+}
+
+.space-1 {
+  margin: 0.25rem inherit;
+}

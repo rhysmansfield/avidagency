@@ -12,4 +12,5 @@ export type ContactFormProps = {
   title: string;
   text: string;
   links?: CommonLink[];
+  className?: string;
 };

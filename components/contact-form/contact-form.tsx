@@ -18,11 +18,12 @@ export const ContactForm = ({
   title,
   text,
   links,
+  className,
 }: ContactFormProps) => {
   const { ref, ...fieldProps } = useContactForm();
 
   return (
-    <section className={classList('wrapper', styles.root)}>
+    <section className={classList('wrapper', styles.root, className)}>
       <div className={styles.content}>
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.text}>{text}</p>

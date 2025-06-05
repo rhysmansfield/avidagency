@@ -14,6 +14,7 @@ const Contact = () => (
         external: true,
       },
     ]}
+    className="space-hero"
   />
 );
 
