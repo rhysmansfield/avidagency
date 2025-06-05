@@ -80,6 +80,7 @@ const Home = () => (
           text: 'We enhance your online visibility across search engine results pages, attracting more organic traffic and potential customers.',
         },
       ]}
+      className="space-28 lg:space-56"
     />
 
     <ResultShowcase

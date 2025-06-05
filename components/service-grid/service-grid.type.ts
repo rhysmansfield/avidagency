@@ -10,4 +10,5 @@ export type ServiceGridProps = {
   title: string;
   text: string;
   items: [Service, Service, Service, Service, Service];
+  className?: string;
 };

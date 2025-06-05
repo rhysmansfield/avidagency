@@ -9,8 +9,14 @@ import { ServiceGridProps } from './service-grid.type';
 
 import styles from './service-grid.module.scss';
 
-export const ServiceGrid = ({ cta, title, text, items }: ServiceGridProps) => (
-  <section className={classList('wrapper', styles.root)}>
+export const ServiceGrid = ({
+  cta,
+  title,
+  text,
+  items,
+  className,
+}: ServiceGridProps) => (
+  <section className={classList('wrapper', styles.root, className)}>
     <div className={styles.intro}>
       <h2 className={styles['intro__title']}>{title}</h2>
       <p className={styles['intro__text']}>{text}</p>
