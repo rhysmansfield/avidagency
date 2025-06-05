@@ -15,8 +15,32 @@
 }
 
 .item {
+  border-bottom: 1px solid var(--c-brand-day-24);
+}
+
+.item__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font: var(--font-dm-sans-b1);
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 1rem 0;
+}
+
+.item__title svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.item__text-wrapper {
+  overflow: hidden;
 }
 
 .item__text {
-  overflow: hidden;
+  font: var(--font-dm-sans-b2);
+  color: var(--c-brand-day-80);
+  padding-bottom: 1rem;
 }

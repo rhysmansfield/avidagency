@@ -8,6 +8,7 @@ export type IconName =
   | 'tick'
   | 'alert'
   | 'arrow-right'
+  | 'chevron-down'
   | 'facebook'
   | 'instagram'
   | 'tiktok'

@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { useState } from 'react';
 
 import { FrequentlyAskedQuestionsProps } from '@/components/frequently-asked-questions/frequently-asked-questions.type';
+import { Icon } from '@/components/icon/icon';
 
 import { classList } from '@/utils/class-list';
 
@@ -44,19 +45,26 @@ export const FrequentlyAskedQuestions = ({
               onTap={() => toggleOpen(title)}
             >
               {title}
+              <motion.span
+                initial={{ rotate: 0 }}
+                animate={{ rotate: isItemOpen ? 180 : 0 }}
+                transition={transition}
+              >
+                <Icon name="chevron-down" />
+              </motion.span>
             </motion.button>
 
             <AnimatePresence initial={false}>
               {isItemOpen && (
-                <motion.p
+                <motion.div
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
                   transition={transition}
-                  className={classList(styles['item__text'])}
+                  className={classList(styles['item__text-wrapper'])}
                 >
-                  {text}
-                </motion.p>
+                  <p className={classList(styles['item__text'])}>{text}</p>
+                </motion.div>
               )}
             </AnimatePresence>
           </div>

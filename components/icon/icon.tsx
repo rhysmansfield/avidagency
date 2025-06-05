@@ -5,6 +5,7 @@ import { PetsSvg } from '@/components/icon//svgs/pets';
 import { TiktokSvg } from '@/components/icon//svgs/tiktok';
 import { AlertSvg } from '@/components/icon/svgs/alert';
 import { ArrowRightSvg } from '@/components/icon/svgs/arrow-right';
+import { ChevronDownSvg } from '@/components/icon/svgs/chevron-down';
 import { CloseSvg } from '@/components/icon/svgs/close';
 import { FacebookSvg } from '@/components/icon/svgs/facebook';
 import { FootasylumSvg } from '@/components/icon/svgs/footasylum';
@@ -28,6 +29,7 @@ export const Icon = ({ name, ...props }: IconProps) => {
     tick: <TickSvg />,
     alert: <AlertSvg />,
     'arrow-right': <ArrowRightSvg />,
+    'chevron-down': <ChevronDownSvg />,
     facebook: <FacebookSvg />,
     instagram: <InstagramSvg />,
     tiktok: <TiktokSvg />,

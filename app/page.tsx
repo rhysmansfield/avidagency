@@ -150,7 +150,7 @@ const Home = () => (
     />
 
     <FrequentlyAskedQuestions
-      title="Frequently Asked Questions"
+      title="Frequently asked questions"
       text="This is a basic description, supporting the title of this section. It should simply inform the user and provide an effective button below if applicable."
       items={[
         {
