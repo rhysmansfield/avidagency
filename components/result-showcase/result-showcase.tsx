@@ -13,8 +13,11 @@ export const ResultShowcase = ({
   title,
   text,
   items,
+  className,
 }: ResultShowcaseProps) => (
-  <section className={classList(styles.root, styles[`theme-${theme}`])}>
+  <section
+    className={classList(styles.root, styles[`theme-${theme}`], className)}
+  >
     <div className={classList('wrapper', styles.wrapper)}>
       <div>
         <h2 className={styles.title}>{title}</h2>

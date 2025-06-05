@@ -19,4 +19,5 @@ export type ResultShowcaseProps = {
   title: string;
   text: string;
   items: ResultShowcaseItem[];
+  className?: string;
 };
