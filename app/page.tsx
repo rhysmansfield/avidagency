@@ -22,6 +22,7 @@ const Home = () => (
         label: "Let's work together",
         theme: 'verde',
       }}
+      className="space-hero"
     />
 
     <LogoSwiper

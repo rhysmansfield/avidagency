@@ -6,8 +6,8 @@ import { HeroProps } from './hero.type';
 
 import styles from './hero.module.scss';
 
-export const Hero = ({ title, text, cta }: HeroProps) => (
-  <section className={classList('wrapper', styles.root)}>
+export const Hero = ({ title, text, cta, className }: HeroProps) => (
+  <section className={classList('wrapper', styles.root, className)}>
     <h1 className={styles.title}>{title}</h1>
     <div>
       <p className={styles.text}>{text}</p>

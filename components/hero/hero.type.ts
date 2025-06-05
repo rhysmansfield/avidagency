@@ -4,4 +4,5 @@ export type HeroProps = {
   title: string;
   text: string;
   cta?: CommonButton;
+  className?: string;
 };
