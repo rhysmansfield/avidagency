@@ -52,6 +52,7 @@ const Home = () => (
           <span>results, not just promises.</span>
         </>
       }
+      className="space-24 sm:space-40"
     />
 
     <ServiceGrid

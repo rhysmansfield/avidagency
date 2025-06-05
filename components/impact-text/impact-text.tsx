@@ -4,6 +4,6 @@ import { ImpactTextProps } from './impact-text.type';
 
 import styles from './impact-text.module.scss';
 
-export const ImpactText = ({ title }: ImpactTextProps) => (
-  <h2 className={classList('wrapper', styles.root)}>{title}</h2>
+export const ImpactText = ({ title, className }: ImpactTextProps) => (
+  <h2 className={classList('wrapper', styles.root, className)}>{title}</h2>
 );
