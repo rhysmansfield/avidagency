@@ -3,6 +3,8 @@
 @use 'sass:math';
 
 $breakpoints: (
+  '': 0,
+
   // 640px
   'sm': 40rem,
 
@@ -16,7 +18,7 @@ $breakpoints: (
   'xl': 80rem,
 
   // 1536px
-  'xxl': 96rem
+  'xxl': 96rem,
 );
 
 @function breakpoint($key) {

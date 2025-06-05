@@ -6,8 +6,8 @@ import { RadialImageProps } from './radial-image.type';
 
 import styles from './radial-image.module.scss';
 
-export const RadialImage = ({ image }: RadialImageProps) => (
-  <section className={styles.root}>
+export const RadialImage = ({ image, className }: RadialImageProps) => (
+  <section className={classList(styles.root, className)}>
     <div className={styles['image__wrapper']}>
       <Image
         unoptimized

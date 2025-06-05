@@ -1,0 +1,42 @@
+@use '@/styles/mixins/breakpoints' as *;
+
+$space-unit: 0.25rem;
+$space-max: 56;
+
+// Mixin to generate spacing classes
+@mixin generate-spacing($prefix: '', $min-width: 0) {
+  @if $min-width > 0 {
+    @media (min-width: $min-width) {
+      @include spacing-classes($prefix);
+    }
+  } @else {
+    @include spacing-classes($prefix);
+  }
+}
+
+// Helper mixin to generate the actual classes
+@mixin spacing-classes($prefix) {
+  @for $i from 1 through $space-max {
+    .#{$prefix}space-#{$i} {
+      margin-top: $i * $space-unit;
+      margin-bottom: $i * $space-unit;
+    }
+  }
+}
+
+@mixin spacing {
+  .space-hero {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    @include min-width(md) {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  @each $bp-name, $bp-value in $breakpoints {
+    $prefix: if($bp-name == '', '', '#{$bp-name}\\:');
+    @include generate-spacing($prefix, $bp-value);
+  }
+}
