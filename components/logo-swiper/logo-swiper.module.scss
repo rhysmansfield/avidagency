@@ -7,12 +7,7 @@ $spacing: max(
 
 .root {
   color: var(--c-brand-day-80);
-  margin: 2.5rem auto;
   overflow: hidden;
-
-  @include min-width(md) {
-    margin: 5rem auto;
-  }
 }
 
 .title {
