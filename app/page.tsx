@@ -1,6 +1,7 @@
 import { env } from 'process';
 
 import { FooterContactForm } from '@/components/footer-contact-form/footer-contact-form';
+import { FrequentlyAskedQuestions } from '@/components/frequently-asked-questions/frequently-asked-questions';
 import { Hero } from '@/components/hero/hero';
 import { ImpactText } from '@/components/impact-text/impact-text';
 import { LogoSwiper } from '@/components/logo-swiper/logo-swiper';
@@ -146,6 +147,30 @@ const Home = () => (
           result: '+326%',
         },
       ]}
+    />
+
+    <FrequentlyAskedQuestions
+      title="Frequently Asked Questions"
+      text="This is a basic description, supporting the title of this section. It should simply inform the user and provide an effective button below if applicable."
+      items={[
+        {
+          title: 'What services do you offer?',
+          text: 'We offer a range of digital services including web design, development, SEO, paid advertising, and social media marketing.',
+        },
+        {
+          title: 'How can I get a quote?',
+          text: 'You can get a quote by contacting us through our contact form or by emailing us directly.',
+        },
+        {
+          title: 'Do you work with international clients?',
+          text: 'Yes, we work with clients from all over the world.',
+        },
+        {
+          title: 'What is your project turnaround time?',
+          text: 'Our project turnaround time varies depending on the scope and complexity of the project. We will provide an estimated timeline during the initial consultation.',
+        },
+      ]}
+      className="space-20 md:space-40"
     />
 
     <FooterContactForm
