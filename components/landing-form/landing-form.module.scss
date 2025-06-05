@@ -3,11 +3,6 @@
 .root {
   display: grid;
   gap: 4rem;
-  margin: 2.5rem auto;
-
-  @include min-width(md) {
-    margin: 5rem auto;
-  }
 
   @include min-width(lg) {
     grid-template-columns: 1fr 1fr;

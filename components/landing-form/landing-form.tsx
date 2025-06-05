@@ -11,11 +11,7 @@ import { Icon } from '@/components/icon/icon';
 import { LandingFormProps } from '@/components/landing-form/landing-form.type';
 
 import { classList } from '@/utils/class-list';
-import {
-  REGEX_EMAIL_VALIDATION,
-  REGEX_MOBILE_VALIDATION,
-  REGEX_NAME_VALIDATION,
-} from '@/utils/patterns';
+import { REGEX_EMAIL_VALIDATION } from '@/utils/patterns';
 
 import styles from './landing-form.module.scss';
 
@@ -24,12 +20,13 @@ export const LandingForm = ({
   title,
   text,
   links,
+  className,
 }: LandingFormProps) => {
   const { ref, control, onSubmit, fieldErrors, isPending, isError, isSuccess } =
     useLandingForm();
 
   return (
-    <section className={classList('wrapper', styles.root)}>
+    <section className={classList('wrapper', styles.root, className)}>
       <div className={styles.content}>
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.text}>{text}</p>
@@ -102,10 +99,6 @@ export const LandingForm = ({
             placeholder="+447123 456789"
             rules={{
               required: 'Please enter a valid phone number',
-              pattern: {
-                value: REGEX_MOBILE_VALIDATION,
-                message: 'Please enter a valid phone number',
-              },
               validate: (value) => {
                 const parsed = parsePhoneNumberFromString(value, 'GB');
                 if (parsed && parsed.isValid()) {

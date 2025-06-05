@@ -12,4 +12,5 @@ export type LandingFormProps = {
   title: string;
   text: string;
   links?: CommonLink[];
+  className?: string;
 };
