@@ -1,51 +1,5 @@
 @use '@/styles/mixins/breakpoints' as *;
-
-.root {
-  display: grid;
-  gap: 4rem;
-
-  @include min-width(lg) {
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-  }
-}
-
-.title {
-  font: var(--font-dm-sans-h4);
-  text-wrap-style: balance;
-  margin-bottom: 1rem;
-}
-
-.text {
-  font: var(--font-dm-sans-b2);
-  margin-bottom: 2.5rem;
-}
-
-.links {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.link {
-  font: var(--font-dm-sans-b2-m);
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-
-  svg {
-    width: 1rem;
-    transform: rotate(-45deg);
-  }
-}
-
-.form__wrapper {
-  scroll-margin-top: 1.5rem;
-
-  @include min-width(lg) {
-    scroll-margin-top: 2.5rem;
-  }
-}
+@use '@/components/contact-form/contact-form.module';
 
 .form {
   display: grid;
