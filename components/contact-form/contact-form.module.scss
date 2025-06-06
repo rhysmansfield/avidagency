@@ -2,7 +2,11 @@
 
 .root {
   display: grid;
-  gap: 4rem;
+  gap: 2.5rem;
+
+  @include min-width(md) {
+    gap: 4rem;
+  }
 
   @include min-width(lg) {
     grid-template-columns: 1fr 1fr;
@@ -13,12 +17,18 @@
 .title {
   font: var(--font-dm-sans-h4);
   text-wrap-style: balance;
-  margin-bottom: 1rem;
+  margin-bottom: 2.25rem;
 }
 
 .text {
   font: var(--font-dm-sans-b2);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@include min-width(md) {
+  .text {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .links {
