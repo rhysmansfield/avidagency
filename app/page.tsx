@@ -40,7 +40,7 @@ const Home = () => (
 
     <RadialImage
       image={{
-        src: `${env.S3_URL}/homepage/hero-phone.webp`,
+        src: `${env.S3_URL}/homepage/hero-phone-060625.webp`,
         alt: 'Hand holding a phone showing The DFC Experience website',
       }}
       className="space-20 sm:space-32"
