@@ -1,0 +1,63 @@
+@use '@/styles/mixins/breakpoints' as *;
+
+.header {
+  max-width: 48rem;
+}
+
+.title {
+  font: var(--font-dm-sans-s1);
+  margin-bottom: 1rem;
+}
+
+.text {
+  font: var(--font-dm-sans-b2);
+  margin-bottom: 2.5rem;
+
+  @include min-width(md) {
+    margin-bottom: 4rem;
+  }
+}
+
+.card {
+  &--verde {
+    background-color: var(--c-brand-verde);
+    color: var(--c-brand-night);
+  }
+
+  &--azul {
+    background-color: var(--c-brand-azul);
+    color: var(--c-brand-day);
+  }
+
+  &--wink {
+    background-color: var(--c-brand-wink);
+    color: var(--c-brand-day);
+  }
+
+  &--day {
+    background-color: var(--c-brand-day);
+    color: var(--c-brand-night);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+
+    @include min-width(sm) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include min-width(lg) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  &__header {
+    border-bottom: 0.0625rem solid var(--c-brand-night-24);
+  }
+
+  &__icon {
+    max-width: 2.5rem;
+  }
+}
