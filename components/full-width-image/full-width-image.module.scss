@@ -1,0 +1,13 @@
+.root {
+  aspect-ratio: 1280 / 640;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  border: 2px solid var(--c-brand-day-24);
+}

@@ -28,8 +28,8 @@
     }
 
     &:focus-visible + .option {
-      outline: 2px solid var(--c-brand-night);
-      outline-offset: -4px;
+      outline: 0.125rem solid var(--c-brand-night);
+      outline-offset: -0.25rem;
     }
   }
 }

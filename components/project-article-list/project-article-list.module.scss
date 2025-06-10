@@ -39,7 +39,7 @@
     transition: scale var(--transition);
 
     &:focus-visible {
-      outline: 2px solid transparent;
+      outline: 0.125rem solid transparent;
     }
 
     &:active {

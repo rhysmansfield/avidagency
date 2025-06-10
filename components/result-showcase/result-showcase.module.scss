@@ -91,7 +91,7 @@
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 2.5rem;
-  border-bottom: 1px solid transparent;
+  border-bottom: 0.0625rem solid transparent;
   padding: 0.625rem 0.5rem;
 
   @include min-width(md) {

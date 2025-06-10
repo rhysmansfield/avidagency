@@ -3,8 +3,8 @@
   display: inline-block;
   font: var(--font-dm-sans-b2-m);
   padding: 0.5rem 1rem;
-  border: 1px solid transparent;
-  border-radius: 9999px;
+  border: 0.0625rem solid transparent;
+  border-radius: 500rem;
   transition:
     scale var(--transition),
     background-color var(--transition),
@@ -19,7 +19,7 @@
   }
 
   &:focus-visible {
-    outline: 2px solid transparent;
+    outline: 0.125rem solid transparent;
     outline-offset: 0.125rem;
   }
 
