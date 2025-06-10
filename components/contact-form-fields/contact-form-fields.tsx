@@ -1,11 +1,12 @@
 import { Button } from '@/components/button/button';
-import { ContactFormFieldsProps } from '@/components/contact-form-fields/contact-form-fields.type';
 import { InputField } from '@/components/form/input-field/input-field';
 import { MultiSelectField } from '@/components/form/multiselect-field/multiselect-field';
 import { TextareaField } from '@/components/form/textarea-field/textarea-field';
 import { Icon } from '@/components/icon/icon';
 
 import { REGEX_EMAIL_VALIDATION } from '@/utils/patterns';
+
+import { ContactFormFieldsProps } from './contact-form-fields.type';
 
 import styles from './contact-form-fields.module.scss';
 

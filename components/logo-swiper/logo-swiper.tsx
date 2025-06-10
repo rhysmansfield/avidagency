@@ -3,10 +3,10 @@
 import { useState } from 'react';
 
 import { Icon } from '@/components/icon/icon';
-import { IconName } from '@/components/icon/icon.type';
-import { LogoSwiperProps } from '@/components/logo-swiper/logo-swiper.type';
 
 import { classList } from '@/utils/class-list';
+
+import { LogoSwiperProps } from './logo-swiper.type';
 
 import styles from './logo-swiper.module.scss';
 

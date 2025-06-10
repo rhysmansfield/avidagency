@@ -8,10 +8,11 @@ import { useLandingForm } from '@/hooks/forms';
 import { Button } from '@/components/button/button';
 import { InputField } from '@/components/form/input-field/input-field';
 import { Icon } from '@/components/icon/icon';
-import { LandingFormProps } from '@/components/landing-form/landing-form.type';
 
 import { classList } from '@/utils/class-list';
 import { REGEX_EMAIL_VALIDATION } from '@/utils/patterns';
+
+import { LandingFormProps } from './landing-form.type';
 
 import styles from './landing-form.module.scss';
 

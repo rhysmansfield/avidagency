@@ -3,12 +3,13 @@
 import { AnimatePresence, motion } from 'motion/react';
 import { useState } from 'react';
 
-import { FrequentlyAskedQuestionsProps } from '@/components/frequently-asked-questions/frequently-asked-questions.type';
 import { Icon } from '@/components/icon/icon';
 
 import { classList } from '@/utils/class-list';
 
 import { transition } from '@/data/transition';
+
+import { FrequentlyAskedQuestionsProps } from './frequently-asked-questions.type';
 
 import styles from './frequently-asked-questions.module.scss';
 

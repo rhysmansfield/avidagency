@@ -6,10 +6,11 @@ import Link from 'next/link';
 import { useContactForm } from '@/hooks/forms';
 
 import { ContactFormFields } from '@/components/contact-form-fields/contact-form-fields';
-import { ContactFormProps } from '@/components/contact-form/contact-form.type';
 import { Icon } from '@/components/icon/icon';
 
 import { classList } from '@/utils/class-list';
+
+import { ContactFormProps } from './contact-form.type';
 
 import styles from './contact-form.module.scss';
 
