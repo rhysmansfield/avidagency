@@ -8,12 +8,14 @@ import styles from './full-width-image.module.scss';
 
 export const FullWidthImage = ({ image, className }: FullWidthImageProps) => (
   <section className={classList('wrapper', styles.root, className)}>
-    <Image
-      unoptimized
-      {...image}
-      width={1920}
-      height={1080}
-      className={styles.image}
-    />
+    <div className={styles['image__wrapper']}>
+      <Image
+        unoptimized
+        {...image}
+        width={1920}
+        height={1080}
+        className={styles.image}
+      />
+    </div>
   </section>
 );

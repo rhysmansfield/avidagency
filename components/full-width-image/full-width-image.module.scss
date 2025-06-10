@@ -1,13 +1,33 @@
-.root {
-  aspect-ratio: 1280 / 640;
-  width: 100%;
-  height: 100%;
-}
+@use '@/styles/mixins/breakpoints' as *;
 
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 1.5rem;
-  border: 2px solid var(--c-brand-day-24);
+
+  &__wrapper {
+    aspect-ratio: 1280 / 640;
+    border: 0.125rem solid var(--c-brand-day-24);
+    border-radius: 1.5rem;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 0) 20%,
+        var(--c-brand-night-48) 75%
+      );
+
+      @include min-width(md) {
+        background: radial-gradient(
+          circle,
+          rgba(0, 0, 0, 0) 20%,
+          var(--c-brand-night-48) 100%
+        );
+      }
+    }
+  }
 }
