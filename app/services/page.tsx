@@ -1,4 +1,7 @@
+import { env } from 'process';
+
 import { BrandCards } from '@/components/brand-cards/brand-cards';
+import { FooterContactForm } from '@/components/footer-contact-form/footer-contact-form';
 import { FullWidthImage } from '@/components/full-width-image/full-width-image';
 import { Hero } from '@/components/hero/hero';
 import { ServiceList } from '@/components/service-list/service-list';
@@ -86,6 +89,17 @@ const Services = () => (
         },
       ]}
       className="space-36 md:space-48"
+    />
+
+    <FooterContactForm
+      theme="wink"
+      title="Have a project in mind?"
+      text="Whether you have questions, project ideas, or need assistance, we're here to help. Complete the form below to explore how we can elevate your brand's digital presence together."
+      image={{
+        src: `${env.S3_URL}/shared/footer-contact.png`,
+        alt: 'Hand holding a phone showing The DFC Experience website',
+      }}
+      className="space-20 md:space-28 xl:space-36"
     />
   </>
 );
