@@ -23,26 +23,26 @@ const Services = () => (
       items={[
         {
           key: 'A',
-          title: 'Amplify your digital presence',
+          title: 'Amplify',
           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.',
         },
         {
           key: 'V',
-          title: 'Visualise your goals',
+          title: 'Visualise',
           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.',
         },
         {
           key: 'I',
-          title: 'Innovate through tested strategies',
+          title: 'Innovate',
           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.',
         },
         {
           key: 'D',
-          title: 'Delivery quality results',
+          title: 'Deliver',
           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.',
         },
       ]}
-      className="space-36"
+      className="space-24 md:space-36"
     />
   </>
 );

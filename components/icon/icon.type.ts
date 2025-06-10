@@ -2,6 +2,10 @@ import { HTMLAttributes, ReactElement } from 'react';
 
 export type IconName =
   | 'logo'
+  | 'logo-A'
+  | 'logo-V'
+  | 'logo-I'
+  | 'logo-D'
   | 'shopify'
   | 'menu'
   | 'close'

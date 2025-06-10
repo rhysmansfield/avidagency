@@ -36,10 +36,10 @@ export const BrandCards = ({
         {items.map(({ key, title, text }) => (
           <div key={key} className={classList(styles.card, getCardTheme(key))}>
             <div className={styles['card__header']}>
-              <Icon name="logo" className={styles['card__icon']} />
+              <Icon name={`logo-${key}`} className={styles['card__icon']} />
             </div>
-            <h3>{title}</h3>
-            <p>{text}</p>
+            <h3 className={styles['card__title']}>{title}</h3>
+            <p className={styles['card__text']}>{text}</p>
           </div>
         ))}
       </div>

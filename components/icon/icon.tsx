@@ -11,6 +11,10 @@ import { FacebookSvg } from '@/components/icon/svgs/facebook';
 import { FootasylumSvg } from '@/components/icon/svgs/footasylum';
 import { HeatSvg } from '@/components/icon/svgs/heat';
 import { LogoSvg } from '@/components/icon/svgs/logo';
+import { LogoASvg } from '@/components/icon/svgs/logo-a';
+import { LogoDSvg } from '@/components/icon/svgs/logo-d';
+import { LogoISvg } from '@/components/icon/svgs/logo-i';
+import { LogoVSvg } from '@/components/icon/svgs/logo-v';
 import { MenuSvg } from '@/components/icon/svgs/menu';
 import { MetaSvg } from '@/components/icon/svgs/meta';
 import { ShopifySvg } from '@/components/icon/svgs/shopify';
@@ -23,6 +27,10 @@ import { IconComponents, IconProps } from './icon.type';
 export const Icon = ({ name, ...props }: IconProps) => {
   const icons: IconComponents = {
     logo: <LogoSvg />,
+    'logo-A': <LogoASvg />,
+    'logo-V': <LogoVSvg />,
+    'logo-I': <LogoISvg />,
+    'logo-D': <LogoDSvg />,
     shopify: <ShopifySvg />,
     menu: <MenuSvg />,
     close: <CloseSvg />,
