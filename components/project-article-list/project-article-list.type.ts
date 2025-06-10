@@ -12,7 +12,7 @@ export type ProjectArticleItem =
     });
 
 export type ProjectArticleListProps = {
-  title: string;
+  title?: string;
   items: ProjectArticleItem[];
   className?: string;
 };

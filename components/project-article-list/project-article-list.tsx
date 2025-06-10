@@ -24,7 +24,7 @@ export const ProjectArticleList = ({
   className,
 }: ProjectArticleListProps) => (
   <section className={classList('wrapper', className)}>
-    <h2 className={styles.title}>{title}</h2>
+    {title && <h2 className={styles.title}>{title}</h2>}
     <div className={styles.items}>
       {items.map((item) =>
         isProject(item) ? (
