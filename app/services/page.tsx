@@ -13,7 +13,6 @@ const Services = () => (
         src: 'https://i.imgur.com/BBTRwm9.jpeg',
         alt: 'A person working on a laptop with a coffee cup beside them',
       }}
-      className="space-20 sm:space-32"
     />
   </>
 );
