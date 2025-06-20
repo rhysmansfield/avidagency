@@ -18,7 +18,10 @@ import { CommonLayoutProps } from '@/types/common.type';
 import './global.scss';
 
 export const metadata: Metadata = {
-  title: 'Website & Digital Marketing Agency | Avid Agency',
+  title: {
+    default: 'Website & Digital Marketing Agency',
+    template: '%s | Avid Agency',
+  },
   description:
     "Unlock your brand's full potential with our innovative marketing agency. From strategic planning to creative execution.",
   openGraph: {

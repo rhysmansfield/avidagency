@@ -43,7 +43,7 @@ type SearchParams = {
 };
 
 export type CommonPageProps = Readonly<{
-  params: PageParams;
+  params: Promise<PageParams>;
   searchParams?: SearchParams;
 }>;
 

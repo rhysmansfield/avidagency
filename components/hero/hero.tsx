@@ -6,9 +6,23 @@ import { HeroProps } from './hero.type';
 
 import styles from './hero.module.scss';
 
-export const Hero = ({ title, text, cta, className }: HeroProps) => (
-  <section className={classList('wrapper', styles.root, className)}>
-    <h1 className={styles.title}>{title}</h1>
+export const Hero = ({ title, tags, text, cta, className }: HeroProps) => (
+  <section
+    className={classList('wrapper', styles.root, 'space-hero', className)}
+  >
+    <div className={styles.left}>
+      <h1 className={styles.title}>{title}</h1>
+      {tags && (
+        <ul className={styles.tags}>
+          {tags.map((tag) => (
+            <li key={tag} className={styles.tag}>
+              {tag}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+
     <div>
       <p className={styles.text}>{text}</p>
       {cta && (
