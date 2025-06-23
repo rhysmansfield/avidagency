@@ -5,11 +5,14 @@ import { Icon } from '@/components/icon/icon';
 
 import { URLS } from '@/data/urls';
 
-import { ProjectArticleProps } from './project-article.type';
+import {
+  ProjectArticleProps,
+  ProjectArticleTagProps,
+} from './project-article.type';
 
 import styles from './project-article.module.scss';
 
-export const ProjectArticleTag = ({ label }: { label: string }) => (
+export const ProjectArticleTag = ({ label }: ProjectArticleTagProps) => (
   <span className={styles.tag}>{label}</span>
 );
 

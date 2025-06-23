@@ -1,4 +1,5 @@
 import { Button } from '@/components/button/button';
+import { ProjectArticleTag } from '@/components/project-article/project-article';
 
 import { classList } from '@/utils/class-list';
 
@@ -15,9 +16,7 @@ export const Hero = ({ title, tags, text, cta, className }: HeroProps) => (
       {tags && (
         <ul className={styles.tags}>
           {tags.map((tag) => (
-            <li key={tag} className={styles.tag}>
-              {tag}
-            </li>
+            <ProjectArticleTag key={tag} label={tag} />
           ))}
         </ul>
       )}
@@ -26,12 +25,7 @@ export const Hero = ({ title, tags, text, cta, className }: HeroProps) => (
     <div>
       <p className={styles.text}>{text}</p>
       {cta && (
-        <Button
-          theme={cta.theme}
-          href={cta.href}
-          target={cta.external ? '_blank' : undefined}
-          className={styles.cta}
-        >
+        <Button {...cta} className={styles.cta}>
           {cta.label}
         </Button>
       )}

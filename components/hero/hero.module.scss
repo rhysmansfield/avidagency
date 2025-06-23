@@ -15,6 +15,13 @@
   text-wrap-style: balance;
 }
 
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
 .text {
   font: var(--font-dm-sans-b2);
   color: var(--c-brand-day-80);

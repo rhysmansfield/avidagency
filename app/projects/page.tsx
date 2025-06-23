@@ -2,7 +2,10 @@ import { env } from 'process';
 
 import { FooterContactForm } from '@/components/footer-contact-form/footer-contact-form';
 import { Hero } from '@/components/hero/hero';
-import { ProjectArticleList } from '@/components/project-article-list/project-article-list';
+import {
+  ProjectArticleList,
+  SharedArticleList,
+} from '@/components/project-article-list/project-article-list';
 
 import { PROJECTS } from '@/data/projects';
 
@@ -13,30 +16,7 @@ const Projects = () => (
       text="We transform ordinary results into extraordinary outcomes, without adding strain to your business, with our comprehensive digital solutions. Say goodbye to fluctuations and hello to consistent, quality results."
     />
 
-    <ProjectArticleList
-      items={[
-        {
-          ...PROJECTS[0],
-          title: 'Project Name 1',
-        },
-        {
-          ...PROJECTS[0],
-          title: 'Project Name 2',
-        },
-        {
-          ...PROJECTS[0],
-          title: 'Project Name 3',
-        },
-        {
-          ...PROJECTS[0],
-          title: 'Project Name 4',
-        },
-        {
-          ...PROJECTS[0],
-          title: 'Project Name 5',
-        },
-      ]}
-    />
+    <SharedArticleList />
 
     <FooterContactForm
       theme="wink"

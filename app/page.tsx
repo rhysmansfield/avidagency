@@ -5,7 +5,10 @@ import { FrequentlyAskedQuestions } from '@/components/frequently-asked-question
 import { Hero } from '@/components/hero/hero';
 import { ImpactText } from '@/components/impact-text/impact-text';
 import { LogoSwiper } from '@/components/logo-swiper/logo-swiper';
-import { ProjectArticleList } from '@/components/project-article-list/project-article-list';
+import {
+  ProjectArticleList,
+  SharedArticleList,
+} from '@/components/project-article-list/project-article-list';
 import { RadialImage } from '@/components/radial-image/radial-image';
 import { ResultShowcase } from '@/components/result-showcase/result-showcase';
 import { ServiceGrid } from '@/components/service-grid/service-grid';
@@ -87,33 +90,7 @@ const Home = () => (
       className="space-28 lg:space-56"
     />
 
-    <ProjectArticleList
-      title="Some of our recent projects"
-      items={[
-        {
-          ...PROJECTS[0],
-          title: 'Project Name 1',
-        },
-        {
-          ...PROJECTS[0],
-          title: 'Project Name 2',
-        },
-        {
-          ...PROJECTS[0],
-          title: 'Project Name 3',
-        },
-        {
-          ...PROJECTS[0],
-          title: 'Project Name 4',
-        },
-        {
-          theme: 'azul',
-          href: URLS.PROJECTS,
-          label: 'View all projects',
-        },
-      ]}
-      className="space-20 md:space-40"
-    />
+    <SharedArticleList className="space-20 md:space-40" />
 
     <ResultShowcase
       theme="verde"

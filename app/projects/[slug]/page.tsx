@@ -42,11 +42,28 @@ export const Project = async ({ params }: CommonPageProps) => {
   const project = await getProject({ params });
   if (!project) return notFound();
 
-  const { title, tags, description } = project;
+  const { title, tags, description, externalUrl } = project;
 
   return (
     <>
-      <Hero title={title} tags={tags} text={description} />
+      <Hero
+        title={title}
+        tags={tags}
+        text={description}
+        cta={
+          externalUrl && {
+            href: externalUrl.href,
+            label: externalUrl.label,
+            external: true,
+            theme: 'day-outline',
+          }
+        }
+      />
+      <div
+        style={{
+          height: '100vh',
+        }}
+      ></div>
     </>
   );
 };

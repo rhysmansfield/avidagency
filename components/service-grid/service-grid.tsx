@@ -22,10 +22,9 @@ export const ServiceGrid = ({
       <p className={styles['intro__text']}>{text}</p>
       {cta && (
         <Button
+          {...cta}
           theme="day-outline"
           appearance="link"
-          href={cta.href}
-          external={cta.external}
           className={styles['intro__cta']}
         >
           {cta.label}
