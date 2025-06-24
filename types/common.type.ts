@@ -34,16 +34,14 @@ export type CommonImage = {
   alt: string;
 };
 
-type PageParams = {
-  slug: string;
-};
+type PageParams = Promise<{ slug: string }>;
 
-type SearchParams = {
+type SearchParams = Promise<{
   [key: string]: string | string[] | undefined;
-};
+}>;
 
 export type CommonPageProps = Readonly<{
-  params: Promise<PageParams>;
+  params: PageParams;
   searchParams?: SearchParams;
 }>;
 

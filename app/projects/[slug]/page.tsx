@@ -38,7 +38,7 @@ export const generateMetadata = async ({
   };
 };
 
-export const Project = async ({ params }: CommonPageProps) => {
+const Project = async ({ params }: CommonPageProps) => {
   const project = await getProject({ params });
   if (!project) return notFound();
 
