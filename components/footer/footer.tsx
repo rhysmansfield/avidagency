@@ -39,7 +39,7 @@ export const Footer = ({ formHeading, menus }: FooterProps) => {
             )}
             {isSuccess && (
               <p className={styles['form__success']}>
-                You have successfully subscribed to our newsletter.
+                You have been subscribed to our newsletter.
               </p>
             )}
 
