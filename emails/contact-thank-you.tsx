@@ -193,8 +193,8 @@ export const ContactThankYou = ({
                     marginTop: '20px',
                   }}
                 >
-                  If you have any questions in the meantime, either reply to
-                  this email or{' '}
+                  If you have any questions in the meantime either reply to this
+                  email or{' '}
                   <a href={EXTERNAL_URLS.CALENDLY} style={{ color: '#f54891' }}>
                     book a call
                   </a>
