@@ -10,7 +10,13 @@
   border-radius: 1.5rem;
   cursor: pointer;
   user-select: none;
-  transition: background-color var(--transition);
+  transition:
+    background-color var(--transition),
+    scale var(--transition);
+
+  &:active {
+    scale: 0.95;
+  }
 
   &__wrapper {
     display: flex;
