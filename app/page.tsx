@@ -5,15 +5,11 @@ import { FrequentlyAskedQuestions } from '@/components/frequently-asked-question
 import { Hero } from '@/components/hero/hero';
 import { ImpactText } from '@/components/impact-text/impact-text';
 import { LogoSwiper } from '@/components/logo-swiper/logo-swiper';
-import {
-  ProjectArticleList,
-  SharedArticleList,
-} from '@/components/project-article-list/project-article-list';
+import { SharedArticleList } from '@/components/project-article-list/project-article-list';
 import { RadialImage } from '@/components/radial-image/radial-image';
 import { ResultShowcase } from '@/components/result-showcase/result-showcase';
 import { ServiceGrid } from '@/components/service-grid/service-grid';
 
-import { PROJECTS } from '@/data/projects';
 import { URLS } from '@/data/urls';
 
 const Home = () => (
