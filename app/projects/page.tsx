@@ -8,6 +8,7 @@ import {
 } from '@/components/project-article-list/project-article-list';
 
 import { PROJECTS } from '@/data/projects';
+import { URLS } from '@/data/urls';
 
 const Projects = () => (
   <>
@@ -16,7 +17,30 @@ const Projects = () => (
       text="We transform ordinary results into extraordinary outcomes, without adding strain to your business, with our comprehensive digital solutions. Say goodbye to fluctuations and hello to consistent, quality results."
     />
 
-    <SharedArticleList />
+    <ProjectArticleList
+      items={[
+        {
+          ...PROJECTS[0],
+          title: `${PROJECTS[0].title} 1`,
+        },
+        {
+          ...PROJECTS[0],
+          title: `${PROJECTS[0].title} 2`,
+        },
+        {
+          ...PROJECTS[0],
+          title: `${PROJECTS[0].title} 3`,
+        },
+        {
+          ...PROJECTS[0],
+          title: `${PROJECTS[0].title} 4`,
+        },
+        {
+          ...PROJECTS[0],
+          title: `${PROJECTS[0].title} 5`,
+        },
+      ]}
+    />
 
     <FooterContactForm
       theme="wink"
