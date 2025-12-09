@@ -39,5 +39,5 @@ export const Icon = ({ name, ...props }: IconProps) => {
     sparklayer: <SparkLayerSvg />,
   };
 
-  return cloneElement(icons[name], props);
+  return cloneElement(icons[name], { ...props, role: 'img' } as IconProps);
 };
