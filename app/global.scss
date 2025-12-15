@@ -4,29 +4,33 @@
 @use '@/styles/mixins/underline.scss' as *;
 @use '@/styles/mixins/spacing.scss' as *;
 
-html {
-  background-color: var(--c-brand-night);
-  color: var(--c-brand-day);
-}
+@layer reset, base;
 
-body {
-  position: relative;
-}
+@layer base {
+  html {
+    background-color: var(--c-brand-night);
+    color: var(--c-brand-day);
+  }
 
-body.body--no-scroll {
-  position: fixed;
-  width: 100%;
-  overflow: hidden;
-}
+  body {
+    position: relative;
+  }
 
-* {
-  outline-color: var(--c-brand-day);
-}
+  body.body--no-scroll {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+  }
 
-.grecaptcha-badge {
-  display: none !important;
-}
+  * {
+    outline-color: var(--c-brand-day);
+  }
 
-@include wrappers;
-@include spacing;
-@include underline;
+  .grecaptcha-badge {
+    display: none !important;
+  }
+
+  @include wrappers;
+  @include spacing;
+  @include underline;
+}
