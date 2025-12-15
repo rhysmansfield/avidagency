@@ -69,7 +69,7 @@ const RootLayout = ({ children }: CommonLayoutProps) => {
             <Header
               items={[
                 { label: 'Services', href: URLS.SERVICES },
-                { label: 'Projects', href: URLS.PROJECTS },
+                // { label: 'Projects', href: URLS.PROJECTS },
               ]}
               cta={{
                 label: "Let's talk",
@@ -92,10 +92,10 @@ const RootLayout = ({ children }: CommonLayoutProps) => {
                       label: 'Services',
                       href: URLS.SERVICES,
                     },
-                    {
-                      label: 'Projects',
-                      href: URLS.PROJECTS,
-                    },
+                    // {
+                    //   label: 'Projects',
+                    //   href: URLS.PROJECTS,
+                    // },
                     {
                       label: 'Contact',
                       href: URLS.CONTACT,
