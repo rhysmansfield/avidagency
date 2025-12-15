@@ -36,7 +36,12 @@ $space-max: 56;
   }
 
   @each $bp-name, $bp-value in $breakpoints {
-    $prefix: if($bp-name == '', '', '#{$bp-name}\\:');
+    $prefix: '';
+
+    @if $bp-name != '' {
+      $prefix: '#{$bp-name}\\:';
+    }
+
     @include generate-spacing($prefix, $bp-value);
   }
 }
