@@ -86,7 +86,7 @@ const Home = () => (
       className="space-28 lg:space-56"
     />
 
-    {/* <SharedArticleList className="space-20 md:space-40" /> */}
+    <SharedArticleList className="space-20 md:space-40" />
 
     <ResultShowcase
       theme="verde"
