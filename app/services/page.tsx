@@ -15,7 +15,7 @@ const Services = () => (
 
     <FullWidthImage
       image={{
-        src: 'https://i.imgur.com/BBTRwm9.jpeg',
+        src: `${env.S3_URL}/services/hero.jpg`,
         alt: 'A person working on a laptop with a coffee cup beside them',
       }}
     />
@@ -52,8 +52,8 @@ const Services = () => (
       items={[
         {
           image: {
-            src: 'https://i.imgur.com/BBTRwm9.jpeg',
-            alt: 'A person working on a laptop with a coffee cup beside them',
+            src: `${env.S3_URL}/services/bespoke-websites.jpg`,
+            alt: 'Coding on a computer screen',
           },
           title: 'Bespoke websites',
           text: 'Every website is tailored and fine-tuned to your business needs. We blend innovative design, cutting-edge technology, and strategic content to deliver visually appealing, engaging, and highly functional websites that convert, elevating your brand to the next level.',
@@ -66,8 +66,8 @@ const Services = () => (
         },
         {
           image: {
-            src: 'https://i.imgur.com/BBTRwm9.jpeg',
-            alt: 'A person working on a laptop with a coffee cup beside them',
+            src: `${env.S3_URL}/services/tailored-marketing.jpg`,
+            alt: 'A dashboard showing marketing analytics',
           },
           title: 'Tailored marketing',
           text: 'We tailor marketing strategies to fit your unique needs. From targeted ad campaigns to engaging content creation, we increase your brand visibility and drive customer engagement with our proven marketing solutions.',
@@ -75,7 +75,7 @@ const Services = () => (
         },
         {
           image: {
-            src: 'https://i.imgur.com/BBTRwm9.jpeg',
+            src: `${env.S3_URL}/services/ecommerce-solutions.jpg`,
             alt: 'A person working on a laptop with a coffee cup beside them',
           },
           title: 'E-Commerce solutions',
