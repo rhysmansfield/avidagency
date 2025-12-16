@@ -27,22 +27,22 @@ const Services = () => (
         {
           key: 'A',
           title: 'Amplify',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.',
+          text: 'Push your business forward with strategy, clever tech, and marketing that scales. Turn ideas into action and growth you can measure.',
         },
         {
           key: 'V',
           title: 'Visualise',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.',
+          text: 'Bold design meets seamless UX. Digital experiences that look great and drive measurable results.',
         },
         {
           key: 'I',
           title: 'Innovate',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.',
+          text: 'No templates. No shortcuts. Just fresh ideas, clever tech, and marketing that keeps you one step ahead.',
         },
         {
           key: 'D',
           title: 'Deliver',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.',
+          text: 'Big ideas are nothing without results. We launch fast, scale smart, and deliver growth you can actually measure.',
         },
       ]}
       className="space-24 md:space-36"
